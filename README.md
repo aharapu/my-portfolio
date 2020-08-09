@@ -1,3 +1,13 @@
+### Hello World!
+
+As a webDev, how could I not build my own portfolio website? That would be crazy!
+This repo is a demo in itself. I integrated a bunch of technologies just to prove that I can.
+
+Here's a list:
+- react for a cool pwa feel
+- faker to get mock data during development
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
