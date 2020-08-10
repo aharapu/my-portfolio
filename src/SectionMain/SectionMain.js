@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import LinkWithIcon from '../LinkWithIcon/LinkWithIcon';
-import './SectionLinkOutside.css';
+import ProjectCard from '../ProjectCard/ProjectCard'
+import './SectionMain.css';
 
-const SectionLinkOutside = (props) => {
+const SectionMain = () => {
 	const [isLoading, setIsLoading] = useState(true);
-	const [linkData, setLinkData] = useState(null);
+	const [projectData, setProjectData] = useState(null);
 
 	if (isLoading) {
 		const contentful = require('contentful');
@@ -17,10 +17,10 @@ const SectionLinkOutside = (props) => {
 		// This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
 		client
 			.getEntries({
-                content_type: 'link'
-              })
-			.then((entry) => {
-				setLinkData(entry);
+				content_type: 'projectCard',
+			})
+			.then((entries) => {
+				setProjectData(entries);
 				setIsLoading(false);
 			})
 			.catch((err) => console.log(err));
@@ -28,11 +28,12 @@ const SectionLinkOutside = (props) => {
 		return <div>wait for it...</div>;
 	}
 
+
 	return (
-		<div className="section-link-outside">
-            {linkData.items.map(item => <LinkWithIcon key={item.sys.id} info={item} />)}
+		<div className='section-main'>
+            {projectData.items.map(project => <ProjectCard key={project.sys.id} cardData={project}/>)}
 		</div>
 	);
 };
 
-export default SectionLinkOutside;
+export default SectionMain;

@@ -7,7 +7,7 @@ const LinkWithIcon = (props) => {
 	const linkUrl = props.info.fields.linkSrc;
 
 	return (
-		<a className='link-outside' href={linkUrl} target='_blank'>
+		<a className='link-outside' href={linkUrl} target='_blank' rel='noopener noreferrer'>
 			<h5>{name}</h5>
 			<img alt={name} src={imgUrl} />
 		</a>
