@@ -12,6 +12,12 @@
 	font-size: 1.4rem;
 }
 
+.link-outside img {
+    width: 2rem;
+    height: 2rem;
+}
+
+
 @media only screen and (max-width: 800px) {
     .link-outside {
         margin: 0 0.5rem;
