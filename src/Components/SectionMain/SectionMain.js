@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectCard from '../ProjectCard';
 import ModalSpinner from '../ModalSpinner';
+import ErrorMessage from '../ErrorMessage';
 import './SectionMain.css';
 export class SectionMain extends React.Component {
 	state = { projectData: null, err: null };
@@ -23,13 +24,14 @@ export class SectionMain extends React.Component {
 	}
 
 	render() {
-		return <ModalSpinner className='section-main'/>;
 		if (!this.state.projectData && !this.state.err) {
-			return <ModalSpinner />;
+			const loadingText = '...loading content'
+			return <ModalSpinner className='section-main' text={loadingText} />;
 		}
+
 		if (this.state.err) {
-			console.log('loading error', this.state.err);
-			return <div>huston, we have a problem</div>;
+			const errorText = '...there was an error, but it works on my machine';
+			return <ErrorMessage className='section-main' text={errorText} />;
 		}
 		return (
 			<div className='section-main'>
