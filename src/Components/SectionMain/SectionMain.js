@@ -1,5 +1,6 @@
 import React from 'react';
-import ProjectCard from '../ProjectCard/ProjectCard';
+import ProjectCard from '../ProjectCard';
+import ModalSpinner from '../ModalSpinner';
 import './SectionMain.css';
 export class SectionMain extends React.Component {
 	state = { projectData: null, err: null };
@@ -10,6 +11,7 @@ export class SectionMain extends React.Component {
 			space: 'al1ikk93hxev',
 			accessToken: 'MGR6ZpY44sfKOtgk33ias_3tZmj0yip5rv2zJfA0kHw',
 		});
+
 		client
 			.getEntries({
 				content_type: 'projectCard',
@@ -17,17 +19,18 @@ export class SectionMain extends React.Component {
 			.then((entries) => {
 				this.setState({ projectData: entries });
 			})
-            .catch((err) => this.setState({err: err}));
+			.catch((err) => this.setState({ err: err }));
 	}
 
 	render() {
+		return <ModalSpinner className='section-main'/>;
 		if (!this.state.projectData && !this.state.err) {
-			return <div>loading...</div>;
-        }
-        if (this.state.err) {
-            console.log('loading error', this.state.err);
-            return <div>huston, we have a problem</div>
-        }
+			return <ModalSpinner />;
+		}
+		if (this.state.err) {
+			console.log('loading error', this.state.err);
+			return <div>huston, we have a problem</div>;
+		}
 		return (
 			<div className='section-main'>
 				{this.state.projectData.items.map((project) => (

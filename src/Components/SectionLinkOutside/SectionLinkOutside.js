@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LinkWithIcon from '../LinkWithIcon/LinkWithIcon';
+import LinkWithIcon from '../LinkWithIcon';
 import './SectionLinkOutside.css';
 
 const SectionLinkOutside = (props) => {

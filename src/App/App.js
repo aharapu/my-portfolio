@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from '../Section/Section';
-import SectionLinkOutside from '../SectionLinkOutside/SectionLinkOutside';
-import SectionMain from '../SectionMain/SectionMain';
+import Section from '../Components/Section';
+import SectionLinkOutside from '../Components/SectionLinkOutside';
+import SectionMain from '../Components/SectionMain';
 import './App.css';
 
 const App = () => {
