@@ -1,5 +1,6 @@
 .section-main {
-	background-color: green;
+	color: #2E1F47;
+	background-color: #D8E3E8;
 	padding: 2rem;
 	grid-column-start: 4;
 	grid-column-end: 16;

@@ -10,7 +10,19 @@ Here's a list:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Design Doc
+
+Color palette
+/* CSS HEX */
+--alice-blue: #d8e3e8ff;
+--cool-grey: #959bbaff;
+--purple-navy: #52528cff;
+--russian-violet: #2e1f47ff;
+--saffron: #e7bc23ff;
+--maize-crayola: #ebc747ff;
+
+Project GIFs - 500x281, 64colors
+
 
 In the project directory, you can run:
 

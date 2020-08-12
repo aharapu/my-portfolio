@@ -1,5 +1,5 @@
 .section-link-outside {
-	background-color: blue;
+	background-color: #2E1F47;
 	padding-right: 0.5rem;
 	grid-column-start: 1;
 	grid-column-end: 4;
@@ -11,6 +11,7 @@
 
 @media only screen and (max-width: 800px) {
 	.section-link-outside {
+		background-color: #EBC747;
 		grid-column-start: 1;
 		grid-column-end: 17;
 		grid-row-start: 4;
@@ -21,6 +22,7 @@
 
 @media only screen and (min-width: 1200px) {
     .section-link-outside {
+		
 		grid-column-start: 1;
 		grid-column-end: 5;
 		align-items: flex-end;

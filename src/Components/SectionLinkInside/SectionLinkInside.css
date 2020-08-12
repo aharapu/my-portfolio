@@ -1,5 +1,5 @@
 .section-link-inside {
-	background-color: blueviolet;
+	background-color: #52528C;
 	padding-left: 0.5rem;
 	grid-column-start: 16;
 	grid-column-end: 17;
@@ -20,6 +20,7 @@
 
 @media only screen and (max-width: 800px) {
 	.section-link-inside {
+		background-color: #E7BC23;
 		padding: 0.2rem 0 0.2rem;
 		grid-column-start: 1;
 		grid-column-end: 17;
