@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Section from '../Components/Section';
 import SectionLinkOutside from '../Components/SectionLinkOutside';
 import SectionMain from '../Components/SectionMain';
@@ -6,12 +7,12 @@ import './App.css';
 
 const App = () => {
 	return (
-		<>
+		<Router>
 			<Section styleClass='section-header'>
 				<h2>Valentin's WebDev Portfolio.</h2>
 			</Section>
 			<SectionLinkOutside />
-            <SectionMain />
+			<SectionMain />
 			<Section styleClass='section-link-inside'>
 				<a href='http://localhost:3000/' className='link-inside'>
 					/about-me\
@@ -32,7 +33,7 @@ const App = () => {
 					by Valentin. ©️2020
 				</h4>
 			</Section>
-		</>
+		</Router>
 	);
 };
 

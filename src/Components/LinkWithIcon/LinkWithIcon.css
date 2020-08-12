@@ -8,13 +8,22 @@
 	align-items: center;
 }
 
+.link-outside:hover {
+	color: brown;
+}
+
 .link-outside h5 {
 	font-size: 1.4rem;
 }
 
 .link-outside img {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.link-outside img:hover {
+    width: 3rem;
+    height: 3rem;
 }
 
 
@@ -31,10 +40,11 @@
 @media only screen and (min-width: 1200px) {
 	.link-outside {
 		flex-direction: row;
-		align-items: flex-end;
+		align-items: center;
 	}
 
 	.link-outside h5 {
 		font-size: 2rem;
+		padding-right: 1rem;
 	}
 }
