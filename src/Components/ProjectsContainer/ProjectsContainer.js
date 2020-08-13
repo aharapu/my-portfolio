@@ -1,4 +1,5 @@
 import React from 'react';
+import faker from 'faker';
 import ProjectCard from '../ProjectCard';
 import ModalSpinner from '../ModalSpinner';
 import ErrorMessage from '../ErrorMessage';
@@ -36,9 +37,13 @@ export class ProjectsContainer extends React.Component {
 		}
 		return (
 			<>
-				{this.state.projectData.items.map((project) => (
-					<ProjectCard key={project.sys.id} cardData={project} />
-				))}
+				<h2>My Projects</h2>
+				<p>{faker.lorem.sentences()}</p>
+				<div className='container-cards'>
+					{this.state.projectData.items.map((project) => (
+						<ProjectCard key={project.sys.id} cardData={project} />
+					))}
+				</div>
 			</>
 		);
 	}

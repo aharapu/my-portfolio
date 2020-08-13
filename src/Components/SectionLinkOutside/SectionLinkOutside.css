@@ -12,6 +12,7 @@
 @media only screen and (max-width: 800px) {
 	.section-link-outside {
 		background-color: #EBC747;
+		border-top: solid #2E1F47 1px;
 		grid-column-start: 1;
 		grid-column-end: 17;
 		grid-row-start: 4;

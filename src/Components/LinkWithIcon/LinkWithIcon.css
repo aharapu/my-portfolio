@@ -1,7 +1,4 @@
 .link-outside {
-	color: black;
-	text-decoration: none;
-	background-color: blanchedalmond;
 	margin: 0.5rem 0;
 	display: flex;
 	flex-direction: column-reverse;
@@ -13,32 +10,41 @@
 }
 
 .link-outside h5 {
+	color: #d8e3e8;
+	text-decoration: none;
+	font-family: 'Noto Sans', sans-serif;
 	font-size: 1.4rem;
+	font-weight: 300;
 }
 
 .link-outside img {
-    width: 3rem;
-    height: 3rem;
+	width: 3rem;
+	height: 3rem;
 }
 
 .link-outside img:hover {
-    width: 3rem;
-    height: 3rem;
+	width: 3.5rem;
+	height: 3.5rem;
 }
 
-
 @media only screen and (max-width: 800px) {
-    .link-outside {
-        margin: 0 0.5rem;
-    }
+	.link-outside {
+		margin: 0.2rem 0.5rem;
+	}
 
 	.link-outside h5 {
 		display: none;
+	}
+
+	.link-outside img {
+		width: 2rem;
+		height: 2rem;
 	}
 }
 
 @media only screen and (min-width: 1200px) {
 	.link-outside {
+		padding-right: 1.5rem;
 		flex-direction: row;
 		align-items: center;
 	}

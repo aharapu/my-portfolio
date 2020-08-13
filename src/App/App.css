@@ -24,15 +24,21 @@ h6 {
 }
 
 .section-header {
-	padding-bottom: 1rem;
+	color: #2E1F47;
+	text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.4);
+	background: linear-gradient(90deg, #EBC747, #E7BC23 50%, #EBC747);
 	background-color: #E7BC23;
+	padding: 1.3rem;
 	border-bottom: solid #2E1F47 1px;
 	grid-column-start: 1;
 	grid-column-end: 17;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
+}
+
+.section-header h2 {
+	text-align: center;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 2rem;
+
 }
 
 .section-footer {
@@ -50,12 +56,12 @@ h6 {
 	}
 	.section-header {
 		background-color: #52528C;
-		padding-bottom: 0.3rem;
+		padding: 1.3rem;
 	}
 
 	.section-header h2 {
 		font-size: 1.4rem;
-		text-align: center;
+		text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4);
 	}
 
 	.section-footer {
@@ -65,11 +71,14 @@ h6 {
 }
 
 @media only screen and (min-width: 1200px) {
+	.grid-container {
+		grid-template-rows: 6rem auto 3rem;
+	}
 
 	.section-header {
-		padding-bottom: 0.5rem;
+		padding: 1.5rem 0 1rem;
 	}
 	.section-header h2 {
-		font-size: 2.4rem;
+		font-size: 3rem;
 	}
 }
