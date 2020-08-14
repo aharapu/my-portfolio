@@ -31,6 +31,10 @@ Here's a list:
 Fun fact, there is a `JSON.statham()` being used to enhance the power
 of JavaScript objects. If the object is not strong enough, however, it may get killed. Use with caution!
 
+
+###### NOTE
+This is a note. There are many like it, but this one is mine.
+
 <!-- Github specific markdown -->
 
 ```bash
