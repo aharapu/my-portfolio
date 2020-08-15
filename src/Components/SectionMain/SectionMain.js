@@ -1,8 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import ProjectsContainer from '../ProjectsContainer';
-
-import './SectionMain.css';
+import './SectionMain.scss';
 export class SectionMain extends React.Component {
 	render() {
 		return (

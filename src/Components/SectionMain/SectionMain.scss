@@ -1,7 +1,7 @@
 .section-main {
-	color: #2E1F47;
-	background-color: #D8E3E8;
-	padding: 2rem;
+	color: var(--color-third);
+	background-color: var(--color-first-light);
+	padding: 2rem 3rem;
 	grid-column-start: 4;
 	grid-column-end: 16;
 	display: flex;
@@ -11,6 +11,7 @@
 
 @media only screen and (max-width: 800px) {
 	.section-main {
+		padding: 1rem 1rem;
 		grid-column-start: 1;
 		grid-column-end: 17;
 		grid-row-start: 3;

@@ -17,12 +17,12 @@ Here's a list:
 
 ![image name](https://images.ctfassets.net/al1ikk93hxev/zqr41QDJmBiKzetFJcfO2/7c661b0e8325350c40595ddd9c09147c/portfolio-gif.gif?h=250)
 
-1. alice-blue: #d8e3e8ff;
-1. cool-grey: #959bbaff;
-1. purple-navy: #52528cff;
-1. russian-violet: #2e1f47ff;
-1. saffron: #e7bc23ff;
-1. maize-crayola: #ebc747ff;
+1. alice-blue: #d8e3e8;
+1. cool-grey: #959bba;
+1. purple-navy: #52528c;
+1. russian-violet: #2e1f47;
+1. saffron: #e7bc23;
+1. maize-crayola: #ebc747;
 
 ### Project GIFs - 500x281, 64colors
 

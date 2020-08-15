@@ -24,8 +24,8 @@ export default class SectionLinkOutside extends Component {
 		}
 		return (
 			<div className='section-link-outside'>
-				{this.state.linkData.items.map((item) => (
-					<LinkOutside key={item.sys.id} info={item.fields} />
+				{this.state.linkData.items.map(({sys, fields}) => (
+					<LinkOutside key={sys.id} info={fields} />
 				))}
 			</div>
 		);

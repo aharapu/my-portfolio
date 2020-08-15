@@ -3,7 +3,9 @@
 	padding: 1rem;
 	background-color: #2e1f47;
 	border-radius: 0.5rem;
+	box-shadow: 5px 5px 5px black;
 	margin-bottom: 20px;
+	flex: 0 1 1fr;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -12,7 +14,7 @@
 
 .project-card h3 {
 	text-align: center;
-	margin-bottom: 15px;
+	margin: 0 auto 15px;
 }
 
 .project-card img {
@@ -31,16 +33,10 @@
 	width: 90%;
 }
 
-.project-card ul li {
-}
-
-.project-card ul li a {
-}
-
 @media only screen and (max-width: 800px) {
-	.project-card h3 {
-		text-align: center;
-		margin-bottom: 15px;
+	.project-card ul {
+		columns: 2;
+		width: 100%;
 	}
 }
 

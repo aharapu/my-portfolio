@@ -26,9 +26,9 @@ export class ProjectsContainer extends React.Component {
 		}
 		return (
 			<>
-				<h2>My Projects</h2>
+				<h2 className='projects-container-title'>My Projects</h2>
 				<p>{faker.lorem.sentences()}</p>
-				<div className='container-cards'>
+				<div className='project-container-cards'>
 					{this.state.projectData.items.map((project) => (
 						<ProjectCard key={project.sys.id} cardData={project} />
 					))}

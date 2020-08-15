@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import SectionLinkInside from '../Components/SectionLinkInside'
 import SectionLinkOutside from '../Components/SectionLinkOutside';
 import SectionMain from '../Components/SectionMain';
-import './App.css';
+import './App.scss';
 
 const App = () => {
 	return (
