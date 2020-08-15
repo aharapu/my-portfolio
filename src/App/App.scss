@@ -24,12 +24,11 @@ h6 {
 }
 
 .section-header {
-	color: #2E1F47;
-	text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.4);
-	background: linear-gradient(90deg, #EBC747, #E7BC23 50%, #EBC747);
-	background-color: #E7BC23;
+	color: var(--color-third);
+	background: linear-gradient(90deg, var(--color-second-light), var(--color-second) 50%, var(--color-second-light));
+	background-color: var(--color-second);
 	padding: 1.3rem;
-	border-bottom: solid #2E1F47 1px;
+	border-bottom: solid var(--color-third) 1px;
 	grid-column-start: 1;
 	grid-column-end: 17;
 }
@@ -37,15 +36,14 @@ h6 {
 .section-header h2 {
 	text-align: center;
 	font-family: 'Noto Sans', sans-serif;
-	font-size: 2rem;
-
+	font-size: var(--fsize-medium);
 }
 
 .section-footer {
 	text-align: center;
 	padding-top: 1rem;
-	background-color: #EBC747;
-	border-top: solid #2E1F47 1px;
+	background-color: var(--color-second-light);
+	border-top: solid var(--color-third) 1px;
 	grid-column-start: 1;
 	grid-column-end: 17;
 }
@@ -57,15 +55,14 @@ h6 {
 	.section-header {
 		background-color: #52528C;
 		padding: 1.3rem;
-	}
+		h2 {
+			font-size: var(--fsize-small);
+		}
 
-	.section-header h2 {
-		font-size: 1.4rem;
-		text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4);
 	}
 
 	.section-footer {
-		background-color: #2E1F47;
+		background-color: var(--color-third);
 		padding-top: 0.1rem;
 	}
 }
@@ -77,15 +74,15 @@ h6 {
 	.section-header {
 		background-color: #52528C;
 		padding: 1.3rem;
+		h2 {
+			font-size: var(--fsize-small);
+			text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4);
+		}
 	}
 
-	.section-header h2 {
-		font-size: 1.4rem;
-		text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4);
-	}
 
 	.section-footer {
-		background-color: #2E1F47;
+		background-color: var(--color-third);
 		padding-top: 0.1rem;
 	}
 }
@@ -97,8 +94,8 @@ h6 {
 
 	.section-header {
 		padding: 1.5rem 0 1rem;
-	}
-	.section-header h2 {
-		font-size: 3rem;
+		h2 {
+			font-size: var(--fsize-xlarge);
+		}
 	}
 }

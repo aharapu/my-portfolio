@@ -1,2 +1,9 @@
+//themes and variables
+@import './helpers/scss-variables';
 @import './helpers/css-variables.scss';
-@import './helpers/scss-variables.scss';
+//components
+@import './App/App.scss';
+@import './Components/ErrorMessage/ErrorMessage.scss';
+@import './Components/LinkOutside/LinkOutside.scss';
+@import './Components/ModalSpinner/ModalSpinner.scss';
+@import './Components/ProjectCard/ProjectCard.scss';

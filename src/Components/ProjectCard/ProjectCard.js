@@ -1,5 +1,4 @@
 import React from 'react';
-import './ProjectCard.css';
 
 const ProjectCard = (props) => {
 	const title = props.cardData.fields.name;

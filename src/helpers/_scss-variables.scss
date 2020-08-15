@@ -1,0 +1,21 @@
+%icon-large {
+	width: 48px;
+	height: 48px;
+}
+%icon-medium {
+	width: 32px;
+	height: 32px;
+}
+
+@mixin icon-medium{
+	width: 32px;
+	height: 32px;
+}
+@mixin icon-large{
+	width: 48px;
+	height: 48px;
+}
+@mixin icon-xlarge{
+	width: 60px;
+	height: 60px;
+}

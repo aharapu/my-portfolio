@@ -1,5 +1,4 @@
 import React from 'react';
-import './ModalSpinner.css';
 
 const ModalSpinner = (props) => {
 	return (

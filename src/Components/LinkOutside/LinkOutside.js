@@ -1,5 +1,4 @@
 import React from 'react';
-import './LinkOutside.scss';
 export class LinkOutside extends React.PureComponent {
 	
 	render() {
