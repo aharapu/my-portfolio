@@ -4,7 +4,6 @@ import linkIcon from './link-icon.svg';
 
 const ProjectCard = (props) => {
 	const { name, description, preview, technologies, githubRepo, websiteUrl } = { ...props.cardData };
-	console.log(props.cardData);
 
 	return (
 		<div className='project-card'>
@@ -23,6 +22,7 @@ const ProjectCard = (props) => {
 				</a>
 			</div>
 			<p>{description}</p>
+			<h5>technologies used:</h5>
 			<ul>
 				{technologies.map((item, index) => (
 					<li key={index}><img style={{height: '20px'}} alt='link icon' src={`${process.env.PUBLIC_URL}/assets/static/${item}.svg`}/>{item}</li>

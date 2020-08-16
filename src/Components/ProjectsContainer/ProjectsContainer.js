@@ -1,45 +1,35 @@
 import React from 'react';
 import faker from 'faker';
-import callContentful from '../../helpers/callContentful';
+import { useRecoilState } from 'recoil';
+import { projectData, apiErr } from '../../App'
 import ProjectCard from '../ProjectCard';
 import ModalSpinner from '../ModalSpinner';
 import ErrorMessage from '../ErrorMessage';
 
-export class ProjectsContainer extends React.Component {
-	state = { projectData: null, err: null };
+const ProjectsContainer = () => {
+	const [projectDataState] = useRecoilState(projectData);
+	const [apiErrState] = useRecoilState(apiErr);
 
-	async componentDidMount() {
-		callContentful('projectCard')
-			.then((res) => {
-				this.setState({ projectData: res });
-			})
-			.catch((err) => {
-				this.setState({ err: err });
-			});
+	if (!projectDataState && !apiErrState) {
+		const loadingText = '...loading content';
+		return <ModalSpinner text={loadingText} />;
 	}
 
-	render() {
-		if (!this.state.projectData && !this.state.err) {
-			const loadingText = '...loading content';
-			return <ModalSpinner text={loadingText} />;
-		}
-
-		if (this.state.err) {
-			const errorText = '...there was an error, but it works on my machine';
-			return <ErrorMessage text={errorText} />;
-		}
-		return (
-			<>
-				<h2 className='projects-container-title'>My Projects</h2>
-				<p>{faker.lorem.sentences(5)}</p>
-				<div className='project-container-cards'>
-					{this.state.projectData.items.map((project) => (
-						<ProjectCard key={project.sys.id} cardData={project.fields} />
-					))}
-				</div>
-			</>
-		);
+	if (apiErrState) {
+		const errorText = '...there was an error, but it works on my machine';
+		return <ErrorMessage text={errorText} />;
 	}
-}
+	return (
+		<>
+			<h2 className='projects-container-title'>My Projects</h2>
+			<p>{faker.lorem.sentences(5)}</p>
+			<div className='project-container-cards'>
+				{projectDataState.items.map((project) => (
+					<ProjectCard key={project.sys.id} cardData={project.fields} />
+				))}
+			</div>
+		</>
+	);
+};
 
 export default ProjectsContainer;
