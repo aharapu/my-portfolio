@@ -9,8 +9,13 @@ export class ProjectsContainer extends React.Component {
 	state = { projectData: null, err: null };
 
 	async componentDidMount() {
-		const data = await callContentful('projectCard');
-		this.setState({ projectData: data });
+		callContentful('projectCard')
+			.then((res) => {
+				this.setState({ projectData: res });
+			})
+			.catch((err) => {
+				this.setState({ err: err });
+			});
 	}
 
 	render() {
@@ -26,10 +31,10 @@ export class ProjectsContainer extends React.Component {
 		return (
 			<>
 				<h2 className='projects-container-title'>My Projects</h2>
-				<p>{faker.lorem.sentences()}</p>
+				<p>{faker.lorem.sentences(5)}</p>
 				<div className='project-container-cards'>
 					{this.state.projectData.items.map((project) => (
-						<ProjectCard key={project.sys.id} cardData={project} />
+						<ProjectCard key={project.sys.id} cardData={project.fields} />
 					))}
 				</div>
 			</>

@@ -11,7 +11,8 @@ const ModalSpinner = (props) => {
 };
 
 ModalSpinner.defaultProps = {
-	text: '...loading',
+	text: 'there was an error',
+	className: 'CLASS-PROP-ERROR',
 };
 
 export default ModalSpinner;
