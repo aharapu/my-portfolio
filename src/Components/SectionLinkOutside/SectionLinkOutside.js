@@ -3,7 +3,6 @@ import callContentful from '../../helpers/callContentful'
 import LinkOutside from '../LinkOutside';
 import ModalSpinner from '../ModalSpinner';
 import ErrorMessage from '../ErrorMessage';
-import './SectionLinkOutside.css';
 export default class SectionLinkOutside extends Component {
 	state = { linkData: null, err: null };
 

@@ -4,7 +4,6 @@ import callContentful from '../../helpers/callContentful';
 import ProjectCard from '../ProjectCard';
 import ModalSpinner from '../ModalSpinner';
 import ErrorMessage from '../ErrorMessage';
-import './ProjectsContainer.css';
 
 export class ProjectsContainer extends React.Component {
 	state = { projectData: null, err: null };
