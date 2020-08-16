@@ -1,7 +1,8 @@
 const contentful = require('contentful');
+console.log(process.env.REACT_APP_CMS_TOKEN);
 const client = contentful.createClient({
-	space: 'al1ikk93hxev',
-	accessToken: 'MGR6ZpY44sfKOtgk33ias_3tZmj0yip5rv2zJfA0kHw',
+	space: process.env.REACT_APP_CMS_SPACE,
+	accessToken: process.env.REACT_APP_CMS_TOKEN,
 });
 
 function callContentful(content){
