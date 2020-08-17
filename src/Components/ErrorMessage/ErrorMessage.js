@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ErrorMessage = (props) => {
+const ErrorMessage = ({className, text}) => {
 	return (
-		<div id='error-message' className={props.className}>
+		<div id='error-message' className={className}>
 			<div id='message' className='ui text'>
-				<h5>{props.text}</h5>
+				<h5>{text}</h5>
 			</div>
 		</div>
 	);

@@ -2,8 +2,8 @@ import React from 'react';
 import faker from 'faker';
 import linkIcon from './link-icon.svg';
 
-const ProjectCard = (props) => {
-	const { name, description, preview, technologies, githubRepo, websiteUrl } = { ...props.cardData };
+const ProjectCard = ({cardData}) => {
+	const { name, description, preview, technologies, githubRepo, websiteUrl } = { ...cardData };
 
 	return (
 		<div className='project-card'>

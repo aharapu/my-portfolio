@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ModalSpinner = (props) => {
+const ModalSpinner = ({className, text}) => {
 	return (
-		<div id='modal-spinner' className={`${props.className}`}>
+		<div id='modal-spinner' className={`${className}`}>
 			<div id='spinner' className='ui active loader text'>
-				<h5>{props.text}</h5>
+				<h5>{text}</h5>
 			</div>
 		</div>
 	);

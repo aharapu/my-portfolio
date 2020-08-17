@@ -27,7 +27,6 @@ const App = () => {
 		callContentful('projectCard')
 			.then((res) => {
 				setProjectDataState(res);
-				console.log(res);
 			})
 			.catch((err) => {
 				setApiErrState(err);
@@ -35,7 +34,6 @@ const App = () => {
 		callContentful('link')
 			.then((res) => {
 				setLinkDataState(res);
-				console.log(res);
 			})
 			.catch((err) => {
 				setApiErrState(err);
