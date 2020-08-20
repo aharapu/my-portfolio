@@ -1,18 +1,18 @@
-
 .projects-container-title {
-    margin-bottom: 1rem;
+	font-size: var(--fsize-large);
+	margin-bottom: $rem-l;
 }
 
 .projects-container-description {
-    margin-bottom: 0.8rem;
+	padding: $rem-s 0;
+    border-top: 2px solid var(--color-first-dark);
 }
 
 .project-container-cards {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
 }
-
 
 @media only screen and (max-width: 300px) {
 }

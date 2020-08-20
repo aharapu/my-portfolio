@@ -1,20 +1,21 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import ProjectsContainer from '../ProjectsContainer';
 export class SectionMain extends React.Component {
 	render() {
 		return (
 			<div className='section-main'>
 				<Switch>
-					<Route path='/about'>
+					<Route exact path='/about'>
 						<div>about</div>
 					</Route>
-					<Route path='/background'>
+					<Route exact path='/background'>
 						<div>background</div>
 					</Route>
-					<Route path='/'>
+					<Route exact path='/projects'>
 						<ProjectsContainer />
 					</Route>
+					<Redirect to='/projects' />
 				</Switch>
 			</div>
 		);

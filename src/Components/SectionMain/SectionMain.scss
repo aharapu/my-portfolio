@@ -1,7 +1,7 @@
 .section-main {
 	color: var(--color-third);
 	background-color: var(--color-first-light);
-	padding: 2rem 3rem;
+	padding: $rem-xl $rem-huge;
 	grid-column-start: 4;
 	grid-column-end: 16;
 	display: flex;

@@ -1,10 +1,7 @@
 .project-card {
-	color: var(--color-first-light);
-	padding: 1rem;
-	background-color: var(--color-third);
-	border-radius: 0.5rem;
-	box-shadow: 5px 5px 5px var(--color-third);
-	margin-bottom: 20px;
+	color: var(--color-third);
+	border-bottom: 2px solid var(--color-first-dark);
+	padding: $rem-xl 0;
 	flex: 0 1 1fr;
 	display: flex;
 	flex-direction: column;
@@ -12,21 +9,61 @@
 	justify-content: space-between;
 
 	h3 {
+		font-size: var(--fsize-medium);
+		font-weight: 400;
 		text-align: center;
-		margin: 0 auto 15px;
+		margin: 0 auto $rem-l;
 	}
-	img {
+	.project-preview {
 		width: 100%;
-		box-shadow: 5px 3px 5px rgba(20, 20, 20, 0.9);
+		max-width: 500px;
+		box-shadow: 7px 6px var(--color-third);
 		border: 2px solid white;
-		margin-bottom: 20px;
+		margin-bottom: $rem-xl;
 	}
+	.project-card-links {
+		width: 220px;
+		margin-bottom: $rem-l;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		.card-link {
+			padding: $rem-xs $rem-m $rem-tiny $rem-xs;
+			border: 2px solid var(--color-first-dark);
+			border-radius: 0 10px 10px 10px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			.link-icon {
+				@include icon-tiny;
+				margin: 0 $rem-xs;
+			}
+			.link-text {
+				color: var(--color-third);
+				font-size: $rem-m;
+				// text-decoration: underline;
+			}
+		}
+	}
+
 	p {
 		text-align: justify;
+		max-width: 700px;
+	}
+	h5 {
+		font-size: var(--fsize-small);
+		font-weight: 400;
+		text-decoration: underline;
+		margin-bottom: $rem-m;
 	}
 	ul {
-		columns: 3;
-		width: 90%;
+		list-style-type: none;
+		display: flex;
+		justify-content: center;
+		img {
+			height: $rem-xl;
+			padding: 0 $rem-s;
+		}
 	}
 }
 
@@ -47,7 +84,7 @@
 
 @media only screen and (min-width: 1200px) {
 	.project-card {
-        width: 45%;
-        margin: 2%;
+		width: 45%;
+		margin: 2%;
 	}
 }

@@ -22,7 +22,7 @@ const ProjectsContainer = () => {
 	return (
 		<>
 			<h2 className='projects-container-title'>My Projects</h2>
-			<p>{faker.lorem.sentences(5)}</p>
+			<p className="projects-container-description">{faker.lorem.sentences(5)}</p>
 			<div className='project-container-cards'>
 				{projectDataState.items.map((project) => (
 					<ProjectCard key={project.sys.id} cardData={project.fields} />
