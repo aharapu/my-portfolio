@@ -5,6 +5,7 @@ import callContentful from '../helpers/callContentful';
 import SectionLinkInside from '../Components/SectionLinkInside';
 import SectionLinkOutside from '../Components/SectionLinkOutside';
 import SectionMain from '../Components/SectionMain';
+import Header from '../Components/Header';
 
 export const linkData = atom({
 	key: 'linkData',
@@ -42,9 +43,7 @@ const App = () => {
 
 	return (
 		<Router>
-			<div className='section-header'>
-				<h2>Valentin's WebDev Portfolio.</h2>
-			</div>
+			<Header />
 			<SectionLinkOutside />
 			<SectionMain />
 			<SectionLinkInside />

@@ -23,22 +23,6 @@ h6 {
 	grid-template-rows: 5rem auto 3rem;
 }
 
-.section-header {
-	color: var(--color-third);
-	background: linear-gradient(90deg, var(--color-second-light), var(--color-second) 50%, var(--color-second-light));
-	background-color: var(--color-second);
-	padding: 1.3rem;
-	border-bottom: solid var(--color-third) 1px;
-	grid-column-start: 1;
-	grid-column-end: 17;
-}
-
-.section-header h2 {
-	text-align: center;
-	font-family: 'Noto Sans', sans-serif;
-	font-size: var(--fsize-medium);
-}
-
 .section-footer {
 	text-align: center;
 	padding-top: 1rem;

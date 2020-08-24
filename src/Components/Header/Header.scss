@@ -1,0 +1,27 @@
+.header-container {
+	color: var(--color-third);
+	background: linear-gradient(-45deg, var(--color-first), var(--color-second));
+	background-color: var(--color-second);
+	background-size: 100% 500%;
+	background-repeat: no-repeat;
+	animation: river 5s ease-in-out alternate infinite;
+	padding: 1.3rem;
+	border-bottom: solid var(--color-third) 1px;
+	grid-column-start: 1;
+	grid-column-end: 17;
+
+	h2 {
+		text-align: center;
+		font-family: 'Noto Sans', sans-serif;
+		font-size: var(--fsize-medium);
+	}
+}
+
+@keyframes river {
+	from {
+		background-position: 0% 0%;
+	}
+	to {
+		background-position: 0% 100%;
+	}
+}
