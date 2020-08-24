@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
+import { Stagger, Fade } from 'react-animation-components';
 import { linkData, apiErr } from '../../App';
 import LinkOutside from '../LinkOutside';
 import ModalSpinner from '../ModalSpinner';
@@ -19,11 +20,13 @@ const SectionLinkOutside = () => {
 		return <ErrorMessage className='section-link-outside' text={errorText} />;
 	}
 	return (
-		<div className='section-link-outside'>
+		<Stagger in delay={130} duration={1000} className='section-link-outside'>
 			{linkDataState.items.map(({ sys, fields }) => (
-				<LinkOutside key={sys.id} info={fields} />
+				<Fade in  key={sys.id}>
+					<LinkOutside info={fields} />
+				</Fade>
 			))}
-		</div>
+		</Stagger>
 	);
 };
 

@@ -10,8 +10,8 @@
 
 .project-container-cards {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
+	flex-flow: column;
+	align-items: center;
 }
 
 @media only screen and (max-width: 300px) {

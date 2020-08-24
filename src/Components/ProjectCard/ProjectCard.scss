@@ -2,7 +2,7 @@
 	color: var(--color-third);
 	border-bottom: 2px solid var(--color-first-dark);
 	padding: $rem-xl 0;
-	flex: 0 1 1fr;
+	// flex: 0 1 1fr;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -29,11 +29,13 @@
 		justify-content: space-around;
 		.card-link {
 			padding: $rem-xs $rem-m $rem-tiny $rem-xs;
-			border: 2px solid var(--color-first-dark);
+			border: 2.5px solid var(--color-first-dark);
 			border-radius: 0 10px 10px 10px;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
+			transition-duration: 0.5s;
+
 			.link-icon {
 				@include icon-tiny;
 				margin: 0 $rem-xs;
@@ -41,7 +43,9 @@
 			.link-text {
 				color: var(--color-third);
 				font-size: $rem-m;
-				// text-decoration: underline;
+			}
+			&:hover{
+				background-color: var(--color-second-light);
 			}
 		}
 	}
@@ -84,7 +88,7 @@
 
 @media only screen and (min-width: 1200px) {
 	.project-card {
-		width: 45%;
+		width: 80%;
 		margin: 2%;
 	}
 }

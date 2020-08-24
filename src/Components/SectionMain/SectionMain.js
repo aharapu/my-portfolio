@@ -1,22 +1,47 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 import ProjectsContainer from '../ProjectsContainer';
 export class SectionMain extends React.Component {
 	render() {
 		return (
 			<div className='section-main'>
-				<Switch>
-					<Route exact path='/about'>
-						<div>about</div>
-					</Route>
-					<Route exact path='/background'>
-						<div>background</div>
-					</Route>
-					<Route exact path='/projects'>
-						<ProjectsContainer />
-					</Route>
-					<Redirect to='/projects' />
-				</Switch>
+				<Route key='/about' exact path='/about'>
+					{({ match }) => (
+						<CSSTransition
+							in={match != null}
+							timeout={700}
+							classNames='page'
+							unmountOnExit>
+							<div className='page'>about and contact form</div>
+						</CSSTransition>
+					)}
+				</Route>
+				<Route key='/background' exact path='/background'>
+					{({ match }) => (
+						<CSSTransition
+							in={match != null}
+							timeout={700}
+							classNames='page'
+							unmountOnExit>
+							<div className='page'>background</div>
+						</CSSTransition>
+					)}
+				</Route>
+				<Route exact path='/projects'>
+					{({ match }) => (
+						<CSSTransition
+							in={match != null}
+							timeout={700}
+							classNames='page'
+							unmountOnExit>
+							<div className='page'>
+								<ProjectsContainer />
+							</div>
+						</CSSTransition>
+					)}
+				</Route>
+				<Redirect to='/projects' />
 			</div>
 		);
 	}

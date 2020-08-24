@@ -9,10 +9,13 @@
     "contentful": "^7.14.6",
     "faker": "^4.1.0",
     "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-animation-components": "^3.0.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.3",
+    "react-transition-group": "^4.4.1",
     "recoil": "0.0.10"
   },
   "scripts": {

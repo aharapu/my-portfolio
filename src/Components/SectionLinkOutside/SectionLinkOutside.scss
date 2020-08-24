@@ -1,6 +1,6 @@
 .section-link-outside {
 	background-color: var(--color-third);
-	padding-right: 0.5rem;
+	padding-right: $rem-m;
 	grid-column-start: 1;
 	grid-column-end: 4;
 	display: flex;

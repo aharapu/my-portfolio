@@ -1,12 +1,13 @@
 .section-main {
 	color: var(--color-third);
-	background-color: var(--color-first-light);
-	padding: $rem-xl $rem-huge;
+	background-color: whitesmoke, var(--color-first-light);
+	padding: $rem-xl 5%;
 	grid-column-start: 4;
 	grid-column-end: 16;
 	display: flex;
-    flex-direction: column;
-    overflow: auto;
+	flex-direction: column;
+	overflow: auto;
+	position: relative;
 }
 
 @media only screen and (max-width: 800px) {
@@ -15,8 +16,8 @@
 		grid-column-start: 1;
 		grid-column-end: 17;
 		grid-row-start: 3;
-        grid-row-end: 4;
-        overflow: unset;
+		grid-row-end: 4;
+		overflow: unset;
 	}
 }
 
@@ -25,4 +26,25 @@
 		grid-column-start: 5;
 		grid-column-end: 15;
 	}
+}
+
+// routing animation classes
+.page {
+	position: absolute;
+	width: 90%;
+}
+
+.page-enter {
+	transform: translateX(-100vw);
+	transition: transform 700ms;
+}
+
+.page-enter-active {
+	transform: translateX(0);
+	transition: transform 700ms;
+}
+
+.page-exit {
+	transform: translateX(100vw);
+	transition: transform 700ms;
 }

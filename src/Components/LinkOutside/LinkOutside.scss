@@ -29,7 +29,7 @@
 
 @media only screen and (min-width: 1200px) {
 	.link-outside {
-		padding: 0.5rem 1.5rem;
+		padding: $rem-s $rem-l;
 		margin: unset;
 		flex-direction: row;
 		align-items: center;
@@ -44,6 +44,7 @@
 	}
 
 	.link-outside:hover {
+		border-right: 2px solid var(--color-first-dark);
 		h5 {
 			font-size: var(--fsize-large);
 		}
