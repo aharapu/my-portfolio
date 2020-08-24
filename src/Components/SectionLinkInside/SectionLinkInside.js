@@ -1,19 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Stagger, Fade } from 'react-animation-components';
+
 
 const SectionLinkInside = () => {
 	return (
-		<div className='section-link-inside'>
-			<Link to='/about'>
-				<div className='link-inside'>about me</div>
-			</Link>
-			<Link to='/projects'>
-				<div className='link-inside'>projects</div>
-			</Link>
-			<Link to='/background'>
-				<div className='link-inside'>background</div>
-			</Link>
-		</div>
+		<Stagger in delay={130} duration={1000} className='section-link-inside'>
+			<Fade in>
+				<Link to='/about'>
+					<div className='link-inside'>about me</div>
+				</Link>
+			</Fade>
+			<Fade in>
+				<Link to='/projects'>
+					<div className='link-inside'>projects</div>
+				</Link>
+			</Fade>
+			<Fade in>
+				<Link to='/background'>
+					<div className='link-inside'>background</div>
+				</Link>
+			</Fade>
+		</Stagger>
 	);
 };
 

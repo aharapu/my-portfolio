@@ -14,13 +14,17 @@
 		text-align: center;
 		margin: 0 auto $rem-l;
 	}
-	.project-preview {
-		width: 100%;
-		max-width: 500px;
-		box-shadow: 7px 6px var(--color-third);
-		border: 2px solid white;
+	.preview-link-wrap {
 		margin-bottom: $rem-xl;
+		.project-preview {
+			width: 100%;
+			max-width: 500px;
+			box-shadow: 7px 6px var(--color-third);
+			border: 2px solid white;
+			border-radius: 0 15px 15px 15px;
+		}
 	}
+
 	.project-card-links {
 		width: 220px;
 		margin-bottom: $rem-l;
@@ -29,6 +33,7 @@
 		justify-content: space-around;
 		.card-link {
 			padding: $rem-xs $rem-m $rem-tiny $rem-xs;
+			background: var(--color-first-light);
 			border: 2.5px solid var(--color-first-dark);
 			border-radius: 0 10px 10px 10px;
 			display: flex;
@@ -44,7 +49,7 @@
 				color: var(--color-third);
 				font-size: $rem-m;
 			}
-			&:hover{
+			&:hover {
 				background-color: var(--color-second-light);
 			}
 		}

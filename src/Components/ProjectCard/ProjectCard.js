@@ -8,7 +8,9 @@ const ProjectCard = ({ cardData }) => {
 	return (
 		<div className='project-card'>
 			<h3>{name}</h3>
-			<img className="project-preview" alt='project preview' src={preview.fields.file.url} />
+			<a className='preview-link-wrap' href={websiteUrl} target='_blank' rel='noopener noreferrer'>
+				<img className="project-preview" alt='project preview' src={preview.fields.file.url} />
+			</a>
 			<div className='project-card-links'>
 				<a className="card-link" href={githubRepo} target='_blank' rel='noopener noreferrer'>
 					<img className="link-icon" alt='link icon' src={linkIcon} />

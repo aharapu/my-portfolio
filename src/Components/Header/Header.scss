@@ -1,5 +1,5 @@
 .header-container {
-	color: var(--color-third);
+	cursor: url(/assets/external-link-square-alt-solid.png) 10 10, auto;
 	background: linear-gradient(-45deg, var(--color-first), var(--color-second));
 	background-color: var(--color-second);
 	background-size: 100% 500%;
@@ -11,9 +11,11 @@
 	grid-column-end: 17;
 
 	h2 {
+		color: var(--color-third);
 		text-align: center;
 		font-family: 'Noto Sans', sans-serif;
-		font-size: var(--fsize-medium);
+		font-weight: 500;
+		font-size: var(--fsize-large);
 	}
 }
 

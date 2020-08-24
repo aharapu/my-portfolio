@@ -41,15 +41,16 @@
 		img {
 			transition-duration: 0.5s;
 		}
+		&:hover {
+			border-right: 2px solid var(--color-first-dark);
+			h5 {
+				font-size: var(--fsize-medlarge);
+			}
+			img {
+				@include icon-xlarge;
+			}
+		}
 	}
 
-	.link-outside:hover {
-		border-right: 2px solid var(--color-first-dark);
-		h5 {
-			font-size: var(--fsize-large);
-		}
-		img {
-			@include icon-xlarge;
-		}
-	}
+
 }
