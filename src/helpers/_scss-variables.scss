@@ -1,20 +1,37 @@
-@mixin icon-tiny{
+@mixin position($top, $right: $top, $bottom: $top, $left: $right) {
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin position-16-9-center($objSize) {
+	$sizeAsPartsOfNine: $objSize / 100 * 9;
+	$vertDist: (9 - $sizeAsPartsOfNine) / 2 / 9 * 100;
+	$horizDist: (16 - $sizeAsPartsOfNine) / 2 / 16 * 100;
+	top: $vertDist;
+	bottom: $vertDist;
+	left: $horizDist;
+	right: $horizDist;
+}
+
+@mixin icon-tiny {
 	width: 16px;
 	height: 16px;
 }
-@mixin icon-small{
+@mixin icon-small {
 	width: 24px;
 	height: 24px;
 }
-@mixin icon-medium{
+@mixin icon-medium {
 	width: 32px;
 	height: 32px;
 }
-@mixin icon-large{
+@mixin icon-large {
 	width: 48px;
 	height: 48px;
 }
-@mixin icon-xlarge{
+@mixin icon-xlarge {
 	width: 60px;
 	height: 60px;
 }
@@ -23,6 +40,7 @@ $rem-tiny: 0.1rem;
 $rem-xs: 0.2rem;
 $rem-s: 0.4rem;
 $rem-m: 0.8rem;
+$rem-ml: 1rem;
 $rem-l: 1.2rem;
 $rem-xl: 2rem;
 $rem-huge: 3rem;

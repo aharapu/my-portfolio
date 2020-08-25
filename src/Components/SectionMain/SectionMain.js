@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import ProjectsContainer from '../ProjectsContainer';
+import AboutContainer from '../AboutContainer';
 export class SectionMain extends React.Component {
 	render() {
 		return (
@@ -13,7 +14,9 @@ export class SectionMain extends React.Component {
 							timeout={700}
 							classNames='page'
 							unmountOnExit>
-							<div className='page'>about and contact form</div>
+							<div className='page'>
+								<AboutContainer />
+							</div>
 						</CSSTransition>
 					)}
 				</Route>

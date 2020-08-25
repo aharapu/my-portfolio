@@ -39,7 +39,7 @@ const App = () => {
 			.catch((err) => {
 				setApiErrState(err);
 			});
-	}, []);
+	}, [setProjectDataState, setLinkDataState, setApiErrState, ]);
 
 	return (
 		<Router>
