@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { atom, useRecoilState } from 'recoil';
+import { atom, useRecoilState, useSetRecoilState } from 'recoil';
 import { BrowserRouter as Router } from 'react-router-dom';
 import callContentful from '../helpers/callContentful';
 import SectionLinkInside from '../Components/SectionLinkInside';
@@ -11,7 +11,7 @@ export const linkData = atom({
 	key: 'linkData',
 	default: null,
 });
-export const projectData = atom({
+export const projectDataState = atom({
 	key: 'projectData',
 	default: null,
 });
@@ -22,7 +22,7 @@ export const apiErr = atom({
 
 const App = () => {
 	const [, setLinkDataState] = useRecoilState(linkData);
-	const [, setProjectDataState] = useRecoilState(projectData);
+	const setProjectDataState = useSetRecoilState(projectDataState);
 	const [, setApiErrState] = useRecoilState(apiErr);
 	useEffect(() => {
 		callContentful('projectCard')

@@ -17,8 +17,8 @@ const SectionLinkInside = () => {
 				</Link>
 			</Fade>
 			<Fade in>
-				<Link to='/background'>
-					<div className='link-inside'>background</div>
+				<Link to='/resume'>
+					<div className='link-inside'>résumé</div>
 				</Link>
 			</Fade>
 		</Stagger>

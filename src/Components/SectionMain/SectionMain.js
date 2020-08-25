@@ -3,6 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import ProjectsContainer from '../ProjectsContainer';
 import AboutContainer from '../AboutContainer';
+import ResumeContainer from '../ResumeContainer';
 export class SectionMain extends React.Component {
 	render() {
 		return (
@@ -20,14 +21,16 @@ export class SectionMain extends React.Component {
 						</CSSTransition>
 					)}
 				</Route>
-				<Route key='/background' exact path='/background'>
+				<Route key='/resume' exact path='/resume'>
 					{({ match }) => (
 						<CSSTransition
 							in={match != null}
 							timeout={700}
 							classNames='page'
 							unmountOnExit>
-							<div className='page'>background</div>
+							<div className='page'>
+								<ResumeContainer />
+							</div>
 						</CSSTransition>
 					)}
 				</Route>
