@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="249.36" height="100" viewBox="0 0 249.36 100">
+  <title>logo-v02</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <g>
+          <path style="fill: #2e1f47" d="M29.62,98A27.65,27.65,0,0,1,2,70.38V2H219.74a27.65,27.65,0,0,1,27.62,27.62V70.38A27.65,27.65,0,0,1,219.74,98Z" />
+          <path style="fill: #e7bc23" d="M219.75,4a25.64,25.64,0,0,1,25.61,25.62V70.38A25.64,25.64,0,0,1,219.75,96H29.62A25.65,25.65,0,0,1,4,70.38V4H219.75m0-4H0V70.38A29.71,29.71,0,0,0,29.62,100H219.75a29.7,29.7,0,0,0,29.61-29.62V29.62A29.7,29.7,0,0,0,219.75,0Z" />
+        </g>
+        <text transform="translate(15.33 68.22) scale(1.04 1)" style="font-size: 51px;fill: #e7bc23;font-family: CenturyGothic, Century Gothic">&lt;VWD/&gt;</text>
+      </g>
+    </g>
+  </g>
+</svg>

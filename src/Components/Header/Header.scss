@@ -9,13 +9,21 @@
 	border-bottom: solid var(--color-third) 1px;
 	grid-column-start: 1;
 	grid-column-end: 17;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	img{
+		height: 100%;
+		width: auto;
+		margin-right: $rem-m;
+	}
 
 	h2 {
 		color: var(--color-third);
-		text-align: center;
 		font-family: 'Noto Sans', sans-serif;
 		font-weight: 500;
-		font-size: var(--fsize-large);
+		font-size: var(--fsize-medium);
+		line-height: 100%;
 	}
 }
 
