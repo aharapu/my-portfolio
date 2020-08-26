@@ -1,5 +1,5 @@
 .section-link-outside {
-	background-color: var(--color-third);
+	background-color: $color-third;
 	padding-right: $rem-m;
 	grid-column-start: 1;
 	grid-column-end: 4;
@@ -11,8 +11,8 @@
 
 @media only screen and (max-width: 800px) {
 	.section-link-outside {
-		background-color: var(--color-second-light);
-		border-top: solid var(--color-third) 1px;
+		background-color: $color-second-light;
+		border-top: solid $color-third 1px;
 		grid-column-start: 1;
 		grid-column-end: 17;
 		grid-row-start: 4;

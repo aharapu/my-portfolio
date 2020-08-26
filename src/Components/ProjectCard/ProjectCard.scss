@@ -1,6 +1,6 @@
 .project-card {
-	color: var(--color-third);
-	border-bottom: 2px solid var(--color-first-dark);
+	color: $color-third;
+	border-bottom: 2px solid $color-first-dark;
 	padding: $rem-xl 0;
 	// flex: 0 1 1fr;
 	display: flex;
@@ -9,7 +9,7 @@
 	justify-content: space-between;
 
 	h3 {
-		font-size: var(--fsize-medium);
+		font-size: $fsize-medium;
 		font-weight: 400;
 		text-align: center;
 		margin: 0 auto $rem-l;
@@ -23,7 +23,7 @@
 		.project-preview {
 			width: 100%;
 			max-width: 500px;
-			box-shadow: 7px 6px var(--color-third);
+			box-shadow: 7px 6px $color-third;
 			border: 2px solid white;
 			border-radius: 0 15px 15px 15px;
 			display: block;
@@ -32,7 +32,7 @@
 
 		&::after {
 			content: 'GO TO WEBSITE';
-			font-size: var(--fsize-xsmall);
+			font-size: $fsize-xsmall;
 			color: white;
 			text-shadow: 2px 2px 2px black;
 			position: absolute;
@@ -64,8 +64,8 @@
 		justify-content: space-around;
 		.card-link {
 			padding: $rem-xs $rem-m $rem-tiny $rem-xs;
-			background: var(--color-first-light);
-			border: 2.5px solid var(--color-first-dark);
+			background: $color-first-light;
+			border: 2.5px solid $color-first-dark;
 			border-radius: 0 10px 10px 10px;
 			display: flex;
 			flex-direction: row;
@@ -77,11 +77,11 @@
 				margin: 0 $rem-xs;
 			}
 			.link-text {
-				color: var(--color-third);
+				color: $color-third;
 				font-size: $rem-m;
 			}
 			&:hover {
-				background-color: var(--color-second-light);
+				background-color: $color-second-light;
 			}
 		}
 	}
@@ -91,7 +91,7 @@
 		max-width: 700px;
 	}
 	h5 {
-		font-size: var(--fsize-small);
+		font-size: $fsize-small;
 		font-weight: 400;
 		text-decoration: underline;
 		margin-bottom: $rem-m;

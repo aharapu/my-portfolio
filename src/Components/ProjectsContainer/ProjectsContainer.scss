@@ -1,11 +1,11 @@
 .projects-container-title {
-	font-size: var(--fsize-large);
+	font-size: $fsize-large;
 	margin-bottom: $rem-l;
 }
 
 .projects-container-description {
 	padding: $rem-s 0;
-    border-top: 2px solid var(--color-first-dark);
+    border-top: 2px solid $color-first-dark;
 }
 
 .project-container-cards {

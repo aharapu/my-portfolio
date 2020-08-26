@@ -1,6 +1,6 @@
 .section-main {
-	color: var(--color-third);
-	background-color: whitesmoke, var(--color-first-light);
+	color: $color-third;
+	background-color: whitesmoke, $color-first-light;
 	padding: $rem-xl 5%;
 	grid-column-start: 4;
 	grid-column-end: 16;

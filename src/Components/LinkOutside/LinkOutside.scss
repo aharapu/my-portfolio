@@ -4,10 +4,10 @@
 	flex-direction: column-reverse;
 	align-items: center;
 	h5 {
-		color: var(--color-first-light);
+		color: $color-first-light;
 		text-decoration: none;
 		font-family: 'Noto Sans', sans-serif;
-		font-size: var(--fsize-small);
+		font-size: $fsize-small;
 		font-weight: 300;
 	}
 	img {
@@ -34,7 +34,7 @@
 		flex-direction: row;
 		align-items: center;
 		h5 {
-			font-size: var(--fsize-medium);
+			font-size: $fsize-medium;
 			padding-right: 1rem;
 			transition-duration: 0.5s;
 		}
@@ -42,9 +42,9 @@
 			transition-duration: 0.5s;
 		}
 		&:hover {
-			border-right: 2px solid var(--color-first-dark);
+			border-right: 2px solid $color-first-dark;
 			h5 {
-				font-size: var(--fsize-medlarge);
+				font-size: $fsize-medlarge;
 			}
 			img {
 				@include icon-xlarge;
