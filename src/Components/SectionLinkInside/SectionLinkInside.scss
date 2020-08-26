@@ -1,31 +1,58 @@
 .section-link-inside {
 	background-color: $color-first-dark;
-	padding-left: .5rem;
+	padding-left: 0.5rem;
 	grid-column-start: 16;
 	grid-column-end: 17;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-}
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
 
-.link-inside {
-	color: $color-third;
-	font-weight: 600;
-	padding: 1rem 0.3rem 1rem 0.5rem;
-	border: 3px solid $color-third;
-	border-radius: 0px 0.7rem 0.7rem 0.7rem;
-	background-color: $color-first-light;
-	font-size: $fsize-small;
-	text-decoration: none;
-	writing-mode: vertical-rl;
-	text-orientation: mixed;
-	margin: 0.5rem 0;
-	transition-duration: 0.5s;
-	&:hover {
-		background-color: $color-second-light;
+	.container-link-project {
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+
+		.link-project {
+			color: $color-second;
+			padding: $rem-m 0;
+			margin-right: $rem-m;
+			font-size: $rem-l;
+			writing-mode: vertical-rl;
+			text-orientation: mixed;
+		}
+		.link-project + .link-project {
+			border-top: 2px solid $color-second-light;
+		}
+	}
+
+	.container-link-inside {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		.link-inside {
+			color: $color-third;
+			font-weight: 600;
+			padding: 1rem 0.3rem 1rem 0.5rem;
+			border: 3px solid $color-third;
+			border-radius: 0px 0.7rem 0.7rem 0.7rem;
+			background-color: $color-first-light;
+			font-size: $fsize-small;
+			text-decoration: none;
+			writing-mode: vertical-rl;
+			text-orientation: mixed;
+			margin: 0.5rem 0;
+			transition-duration: 0.5s;
+			&:hover {
+				background-color: $color-second-light;
+			}
+		}
 	}
 }
+
+
 
 @media only screen and (max-width: 300px) {
 	.section-link-inside {
@@ -73,10 +100,16 @@
 		padding-left: 1rem;
 		grid-column-start: 15;
 		grid-column-end: 17;
+		.container-link-project{
+			display: flex;
+		}
+		.link-inside {
+			font-size: $fsize-small;
+			margin: 0.7rem 0;
+		}
 	}
 
-	.link-inside {
-		font-size: $fsize-small;
-		margin: 0.7rem 0;
-	}
+	
+
+	
 }
