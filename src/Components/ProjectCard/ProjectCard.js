@@ -2,11 +2,11 @@ import React from 'react';
 import faker from 'faker';
 import linkIcon from './link-icon.svg';
 
-const ProjectCard = ({ cardData }) => {
+const ProjectCard = ({ id, cardData }) => {
 	const { name, description, preview, technologies, githubRepo, websiteUrl } = { ...cardData };
 
 	return (
-		<div className='project-card'>
+		<div id={id} className='project-card'>
 			<h3>{name}</h3>
 			<a className='preview-link-wrap' href={websiteUrl} target='_blank' rel='noopener noreferrer'>
 				<img className="project-preview" alt='project preview' src={preview.fields.file.url} />
