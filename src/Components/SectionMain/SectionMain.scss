@@ -1,7 +1,7 @@
 .section-main {
 	color: $color-third;
 	background-color: whitesmoke, $color-first-light;
-	padding: $rem-xl 5%;
+	padding: 3% 5%;
 	grid-column-start: 4;
 	grid-column-end: 16;
 	display: flex;
@@ -32,6 +32,7 @@
 .page {
 	position: absolute;
 	width: 90%;
+	min-height: 94%;
 }
 
 .page-enter {

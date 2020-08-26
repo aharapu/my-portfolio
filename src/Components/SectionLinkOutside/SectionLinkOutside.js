@@ -9,7 +9,7 @@ import ErrorMessage from '../ErrorMessage';
 const SectionLinkOutside = () => {
 	const [linkDataState] = useRecoilState(linkData);
 	const [apiErrState] = useRecoilState(apiErr);
-
+	
 	if (!linkDataState && !apiErrState) {
 		const loadingText = '...loading links';
 		return <ModalSpinner className='section-link-outside' text={loadingText} />;
