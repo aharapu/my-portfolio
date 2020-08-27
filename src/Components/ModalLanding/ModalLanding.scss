@@ -1,0 +1,55 @@
+.modal-landing {
+	color: $color-second;
+	background: #2e1f47dd;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.landing-warning {
+		display: none;
+        font-size: $fsize-medium;
+        text-align: center;
+        max-width: 50vw;
+        margin-bottom: $rem-l;
+	}
+	.landing-title {
+		font-size: $fsize-large;
+		margin-bottom: $rem-m;
+	}
+	.landing-text {
+		font-size: $fsize-small;
+		text-align: center;
+		max-width: 50vw;
+	}
+	h5 {
+		font-size: $fsize-small;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+	.modal-landing {
+		.landing-warning {
+            display: block;
+            max-width: 90vw;
+        }
+        .landing-text {
+            max-width: 90vw;
+        }
+	}
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+    .modal-landing {
+		.landing-warning {
+            display: block;
+            max-width: 70vw;
+        }
+        .landing-text {
+            max-width: 70vw;
+        }
+	}
+}

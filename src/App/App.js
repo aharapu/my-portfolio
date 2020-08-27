@@ -2,10 +2,11 @@ import React, { useEffect } from 'react';
 import { atom, useRecoilState, useSetRecoilState } from 'recoil';
 import { BrowserRouter as Router } from 'react-router-dom';
 import callContentful from '../helpers/callContentful';
-import SidebarRight from '../Components/SidebarRight';
+import ModalLanding from '../Components/ModalLanding';
+import Header from '../Components/Header';
 import SidebarLeft from '../Components/SidebarLeft/SidebarLeft';
 import SectionMain from '../Components/SectionMain';
-import Header from '../Components/Header';
+import SidebarRight from '../Components/SidebarRight';
 import Footer from '../Components/Footer';
 
 export const linkData = atom({
@@ -49,6 +50,7 @@ const App = () => {
 			<SectionMain />
 			<SidebarRight />
 			<Footer />
+			<ModalLanding />
 		</Router>
 	);
 };
