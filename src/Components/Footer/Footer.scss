@@ -1,0 +1,33 @@
+.footer {
+	background-color: $color-second-light;
+	border-top: solid $color-third 1px;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 4;
+    height: 4vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 300px) {
+	.footer {
+		background-color: $color-third;
+		padding-top: 0.1rem;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+	.footer {
+		background-color: $color-third;
+		padding-top: 0.1rem;
+	}
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+
+}

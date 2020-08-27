@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
 	return (
-		<div className='section-footer'>
+		<div className='footer'>
 			<h4>
 				Made with{' '}
 				<span role='img' aria-label='love'>

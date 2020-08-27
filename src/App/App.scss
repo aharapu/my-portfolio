@@ -24,33 +24,13 @@ h6 {
 
 .grid-container {
 	display: grid;
-	grid-template-columns: repeat(16, 1fr);
+	grid-template-columns: 18vw 70vw 12vw;
 	grid-template-rows: 12vh 84vh 4vh;
-}
-
-.section-footer {
-	text-align: center;
-	padding-top: 1rem;
-	background-color: $color-second-light;
-	border-top: solid $color-third 1px;
-	grid-column-start: 1;
-	grid-column-end: 17;
-	grid-row-start: 3;
-	grid-row-end: 4;
-	height: 4vh;
 }
 
 @media only screen and (max-width: 300px) {
 	.grid-container {
 		grid-template-rows: 4rem 3rem auto 3rem 2rem;
-	}
-	.section-header {
-		background-color: #52528C;
-		padding: 1.3rem;
-		h2 {
-			font-size: $fsize-small;
-		}
-
 	}
 
 	.section-footer {
@@ -70,8 +50,6 @@ h6 {
 	}
 }
 
-@media only screen and (min-width: 1200px) {
-	// .grid-container {
-	// 	grid-template-rows: 6rem auto 3rem;
-	// }
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+
 }

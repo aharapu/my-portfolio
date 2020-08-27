@@ -1,4 +1,4 @@
-.header-container {
+.header {
 	background: linear-gradient(-45deg, $color-first, $color-second);
 	background-color: $color-second;
 	background-size: 100% 500%;
@@ -7,10 +7,11 @@
 	padding: 1.3rem;
 	border-bottom: solid $color-third 1px;
 	grid-column-start: 1;
-	grid-column-end: 17;
+	grid-column-end: 4;
 	grid-row-start: 1;
 	grid-row-end: 2;
 	height: 12vh;
+	width: 100vw;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -39,7 +40,7 @@
 }
 
 @media only screen and (min-width: 300px) and (max-width: 800px) {
-	.section-header {
+	.header {
 		background-color: #52528C;
 		padding: 1.3rem;
 		h2 {
@@ -49,8 +50,8 @@
 	}
 }
 
-@media only screen and (min-width: 1200px) {
-	.section-header {
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+	.header {
 		padding: 1.5rem 0 1rem;
 		h2 {
 			font-size: $fsize-xlarge;

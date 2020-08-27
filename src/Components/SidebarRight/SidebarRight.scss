@@ -1,10 +1,11 @@
-.section-link-inside {
+.sidebar-right {
 	background-color: $color-first-dark;
-	grid-column-start: 16;
-	grid-column-end: 17;
+	grid-column-start: 3;
+	grid-column-end: 4;
 	grid-row-start: 2;
 	grid-row-end: 3;
 	height: 84vh;
+	width: 12vw;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -69,7 +70,7 @@
 }
 
 @media only screen and (max-width: 300px) {
-	.section-link-inside {
+	.sidebar-right {
 		padding: 0.2rem 0 0.2rem;
 		grid-column-start: 1;
 		grid-column-end: 17;
@@ -90,7 +91,7 @@
 }
 
 @media only screen and (min-width: 300px) and (max-width: 800px) {
-	.section-link-inside {
+	.sidebar-right {
 		padding: 0.2rem 0 0.2rem;
 		grid-column-start: 1;
 		grid-column-end: 17;
@@ -109,8 +110,8 @@
 	}
 }
 
-@media only screen and (min-width: 1200px) {
-	.section-link-inside {
+@media only screen and (min-width: 800px) and (max-width: 1200px){
+	.sidebar-right {
 		grid-column-start: 15;
 		grid-column-end: 17;
 

@@ -28,7 +28,7 @@ const SectionLinkInside = () => {
 	const isResumeRouted = location.pathname === '/resume';
 
 	return (
-		<div className='section-link-inside'>
+		<div className='sidebar-right'>
 			<div className='container-link-project'>
 				{projectData && isProjectsRouted ? (
 					<ProjectLinkList trigger={isProjectsRouted} data={projectData.items} />
