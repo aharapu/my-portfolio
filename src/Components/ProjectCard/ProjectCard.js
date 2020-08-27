@@ -8,31 +8,46 @@ const ProjectCard = ({ id, cardData }) => {
 	return (
 		<div id={id} className='project-card'>
 			<h3>{name}</h3>
-			<a className='preview-link-wrap' href={websiteUrl} target='_blank' rel='noopener noreferrer'>
-				<img className="project-preview" alt='project preview' src={preview.fields.file.url} />
+			<a
+				className='preview-link-wrap'
+				href={websiteUrl}
+				target='_blank'
+				rel='noopener noreferrer'>
+				<img
+					className='project-preview'
+					alt='project preview'
+					src={preview.fields.file.url}
+				/>
 			</a>
 			<div className='project-card-links'>
-				<a className="card-link" href={githubRepo} target='_blank' rel='noopener noreferrer'>
-					<img className="link-icon" alt='link icon' src={linkIcon} />
-					<h6 className="link-text">GITHUB</h6>
+				<a
+					className='card-link'
+					href={githubRepo}
+					target='_blank'
+					rel='noopener noreferrer'>
+					<img className='link-icon' alt='link icon' src={linkIcon} />
+					<h6 className='link-text'>GITHUB</h6>
 				</a>
-				<a className="card-link" href={websiteUrl} target='_blank' rel='noopener noreferrer'>
-					<img className="link-icon" alt='link icon' src={linkIcon} />
-					<h6 className="link-text">WEBSITE</h6>
+				<a
+					className='card-link'
+					href={websiteUrl}
+					target='_blank'
+					rel='noopener noreferrer'>
+					<img className='link-icon' alt='link icon' src={linkIcon} />
+					<h6 className='link-text'>WEBSITE</h6>
 				</a>
 			</div>
 			<p>{description}</p>
-			<h5>Technology Stack</h5>
-			<ul>
+			<div className='tech-stack'>
+				<h5>Tech Stack:</h5>
 				{technologies.map((item, index) => (
-					<li key={index}>
-						<img
-							alt='link icon'
-							src={`${process.env.PUBLIC_URL}/assets/static/${item}.svg`}
-						/>
-					</li>
+					<img
+						key={index}
+						alt='link icon'
+						src={`${process.env.PUBLIC_URL}/assets/static/${item}.svg`}
+					/>
 				))}
-			</ul>
+			</div>
 		</div>
 	);
 };

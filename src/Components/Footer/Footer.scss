@@ -11,21 +11,24 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+	overflow: hidden;
+	h4 {
+		font-size: $fsize-xxsmall;
+	}
 }
 
 @media only screen and (max-width: 300px) {
-	.footer {
-		background-color: $color-third;
-		padding-top: 0.1rem;
-	}
+	// .footer {
+	// 	background-color: $color-third;
+	// 	padding-top: 0.1rem;
+	// }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 800px) {
-	.footer {
-		background-color: $color-third;
-		padding-top: 0.1rem;
-	}
+	// .footer {
+	// 	background-color: $color-third;
+	// 	padding-top: 0.1rem;
+	// }
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1200px) {

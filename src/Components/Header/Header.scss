@@ -1,9 +1,9 @@
 .header {
-	background: linear-gradient(-45deg, $color-first, $color-second);
+	background: linear-gradient(45deg, rgba(231,188,35,1) 0%, rgba(46,31,71,1) 100%);
 	background-color: $color-second;
 	background-size: 100% 500%;
 	background-repeat: no-repeat;
-	animation: river 5s ease-in-out alternate infinite;
+	animation: river 3s ease-in-out alternate infinite;
 	padding: 1.3rem;
 	border-bottom: solid $color-third 1px;
 	grid-column-start: 1;
