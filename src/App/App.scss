@@ -1,16 +1,17 @@
 html {
 	font-size: 16px;
-	position: relative;
-	box-sizing: border-box;
+	
 }
 
 *, body {
 	padding: 0;
 	margin: 0;
+	position: relative;
+	box-sizing: border-box;
 }
 
 a {
-	cursor: url(/assets/pointer-v01.png) 1 1, auto;
+	// cursor: url(/assets/pointer-v01.png) 1 1, auto;
 }
 
 h1,

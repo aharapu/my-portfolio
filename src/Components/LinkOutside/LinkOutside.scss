@@ -1,17 +1,30 @@
 .link-outside {
-	margin: 0.5rem 0;
+	margin: $rem-s;
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: row-reverse;
 	align-items: center;
+
 	h5 {
 		color: $color-first-light;
 		text-decoration: none;
 		font-family: 'Noto Sans', sans-serif;
 		font-size: $fsize-small;
 		font-weight: 300;
+		transition-duration: 0.5s;
 	}
 	img {
-		@include icon-large;
+		@include icon-m;
+		margin: 0 $rem-s;
+		transition-duration: 0.5s;
+	}
+	&:hover {
+		border-left: 2px solid $color-second;
+		h5 {
+			font-size: $fsize-medsmall;
+		}
+		img {
+			@include icon-ml;
+		}
 	}
 }
 
@@ -22,12 +35,12 @@
 			display: none;
 		}
 		img {
-			@include icon-medium;
+			@include icon-m;
 		}
 	}
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
 	.link-outside {
 		padding: $rem-s $rem-l;
 		margin: unset;
@@ -41,16 +54,5 @@
 		img {
 			transition-duration: 0.5s;
 		}
-		&:hover {
-			border-right: 2px solid $color-first-dark;
-			h5 {
-				font-size: $fsize-medlarge;
-			}
-			img {
-				@include icon-xlarge;
-			}
-		}
 	}
-
-
 }

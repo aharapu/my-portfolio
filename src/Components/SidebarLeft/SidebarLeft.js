@@ -12,15 +12,15 @@ const SectionLinkOutside = () => {
 	
 	if (!linkDataState && !apiErrState) {
 		const loadingText = '...loading links';
-		return <ModalSpinner className='section-link-outside' text={loadingText} />;
+		return <ModalSpinner className='sidebar-left' text={loadingText} />;
 	}
 
 	if (apiErrState) {
 		const errorText = 'Oh, no! It crashed...';
-		return <ErrorMessage className='section-link-outside' text={errorText} />;
+		return <ErrorMessage className='sidebar-left' text={errorText} />;
 	}
 	return (
-		<Stagger in delay={130} duration={1000} className='section-link-outside'>
+		<Stagger in delay={130} duration={1000} className='sidebar-left'>
 			{linkDataState.items.map(({ sys, fields }) => (
 				<Fade in  key={sys.id}>
 					<LinkOutside info={fields} />

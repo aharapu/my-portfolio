@@ -1,4 +1,5 @@
 .sidebar-right {
+	padding: $rem-m $rem-l $rem-m $rem-ms;
 	background-color: $color-first-dark;
 	grid-column-start: 3;
 	grid-column-end: 4;
@@ -7,65 +8,43 @@
 	height: 84vh;
 	width: 12vw;
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 
-	.container-link-project {
-		width: $rem-xl;
-		background: $color-second-light;
-		display: none;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 84vh;
-		overflow: auto;
-
-		.link-project a {
-			color: $color-first-dark;
-			padding: $rem-m 0;
-			font-size: $fsize-xsmall;
-			font-weight: 700;
-			writing-mode: vertical-rl;
-			text-orientation: mixed;
-		}
-		.link-project + .link-project {
-			border-top: 2px solid $color-first-dark;
-		}
-
-		.route-text-desc {
-			color: $color-first-dark;
-			padding: $rem-m 0;
-			font-size: $fsize-xsmall;
-			font-weight: 700;
-			writing-mode: vertical-rl;
-			text-orientation: mixed;
-		}
-	}
-
-	.container-link-inside {
-		padding-left: $rem-s;
+	.route-link-list {
+		max-width: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
-		.link-inside {
-			color: $color-third;
-			font-weight: 600;
-			padding: $rem-xl $rem-l;
-			border: 3px solid $color-third;
-			border-radius: 0px 1.5rem 1.5rem 1.5rem;
-			background-color: $color-first-light;
-			font-size: $fsize-medsmall;
-			text-decoration: none;
-			writing-mode: vertical-rl;
-			text-orientation: mixed;
-			margin: 0.5rem 0;
-			transition-duration: 0.5s;
-			&:hover {
-				background-color: $color-second-light;
-			}
+		.link-list-title{
+			color: $color-second;
+			font-size: $fsize-xsmall;
+			margin-bottom: $rem-m;
 		}
+
+		a.link-project {
+			color: $color-second;
+			font-size: $fsize-xsmall;
+			font-weight: 700;
+			text-indent: $rem-ms;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			padding: $rem-s 0;
+			max-width: 100%;
+			overflow: hidden;
+		}
+		.link-project + .link-project {
+			border-top: 1px dashed $color-first;
+		}
+	}
+
+	.route-text-desc {
+		color: $color-second;
+		padding: $rem-m 0;
+		font-size: $fsize-xsmall;
+		font-weight: 700;
 	}
 }
 
@@ -110,7 +89,7 @@
 	}
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1200px){
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
 	.sidebar-right {
 		grid-column-start: 15;
 		grid-column-end: 17;

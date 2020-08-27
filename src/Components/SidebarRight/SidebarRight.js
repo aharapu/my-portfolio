@@ -10,11 +10,9 @@ export const ProjectLinkList = ({ trigger, data }) => {
 	return (
 		<>
 			{data.map(p => (
-				<Fade className='link-project' key={p.sys.id} in={trigger}>
-					<Link smooth to={`/projects#${p.sys.id}`}>
-						{p.fields.name.toUpperCase()}
-					</Link>
-				</Fade>
+				<Link className='link-project' smooth to={`/projects#${p.sys.id}`}>
+					{p.fields.name.toLowerCase()}
+				</Link>
 			))}
 		</>
 	);
@@ -29,38 +27,22 @@ const SectionLinkInside = () => {
 
 	return (
 		<div className='sidebar-right'>
-			<div className='container-link-project'>
-				{projectData && isProjectsRouted ? (
-					<ProjectLinkList trigger={isProjectsRouted} data={projectData.items} />
-				) : null}
-				{isAboutRouted ? (
-					<Fade className='route-text-desc' in={isAboutRouted}>
-						<div>Read all about me in this section.</div>
-					</Fade>
-				) : null}
-				{isResumeRouted ? (
-					<Fade className='route-text-desc' in={isResumeRouted}>
-						<div>Check out my amazing resume!</div>
-					</Fade>
-				) : null}
-			</div>
-			<Stagger in delay={130} duration={1000} className='container-link-inside'>
-				<Fade in>
-					<Link to='/about'>
-						<div className='link-inside'>about me</div>
-					</Link>
+			{projectData && isProjectsRouted ? (
+				<Fade in className='route-link-list'>
+					<h4 className='link-list-title'>Projects:</h4>
+					<ProjectLinkList trigger={isProjectsRouted} data={projectData.items} />{' '}
 				</Fade>
-				<Fade in>
-					<Link to='/projects'>
-						<div className='link-inside'>projects</div>
-					</Link>
+			) : null}
+			{isAboutRouted ? (
+				<Fade className='route-text-desc' in={isAboutRouted}>
+					Read all about me in this section.
 				</Fade>
-				<Fade in>
-					<Link to='/resume'>
-						<div className='link-inside'>résumé</div>
-					</Link>
+			) : null}
+			{isResumeRouted ? (
+				<Fade className='route-text-desc' in={isResumeRouted}>
+					Check out my amazing resume!
 				</Fade>
-			</Stagger>
+			) : null}
 		</div>
 	);
 };

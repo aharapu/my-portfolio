@@ -1,0 +1,20 @@
+.nav-bar {
+	padding-left: $rem-s;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+	.nav-link {
+		color: $color-third;
+		font-weight: 600;
+		font-size: $fsize-medsmall;
+		text-decoration: none;
+        padding: $rem-s $rem-ml $rem-ms;
+        border-radius: 0 $rem-l $rem-l $rem-l;
+		margin: 0 $rem-s;
+		transition-duration: 0.5s;
+		&:hover {
+			background-color: $color-second-light;
+		}
+	}
+}

@@ -19,19 +19,27 @@
 	width: 16px;
 	height: 16px;
 }
-@mixin icon-small {
+@mixin icon-s {
 	width: 24px;
 	height: 24px;
 }
-@mixin icon-medium {
-	width: 32px;
-	height: 32px;
+@mixin icon-ms {
+	width: 30px;
+	height: 30px;
 }
-@mixin icon-large {
+@mixin icon-m {
+	width: 36px;
+	height: 36px;
+}
+@mixin icon-ml {
+	width: 42px;
+	height: 42px;
+}
+@mixin icon-xl {
 	width: 48px;
 	height: 48px;
 }
-@mixin icon-xlarge {
+@mixin icon-xxl {
 	width: 60px;
 	height: 60px;
 }
@@ -39,6 +47,7 @@
 $rem-tiny: 0.1rem;
 $rem-xs: 0.2rem;
 $rem-s: 0.4rem;
+$rem-ms: 0.6rem;
 $rem-m: 0.8rem;
 $rem-ml: 1rem;
 $rem-l: 1.2rem;
