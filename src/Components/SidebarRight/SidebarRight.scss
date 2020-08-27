@@ -2,6 +2,9 @@
 	background-color: $color-first-dark;
 	grid-column-start: 16;
 	grid-column-end: 17;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	height: 84vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -9,12 +12,13 @@
 
 	.container-link-project {
 		width: $rem-xl;
-		height: 100%;
 		background: $color-second-light;
 		display: none;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		height: 84vh;
+		overflow: auto;
 
 		.link-project a {
 			color: $color-first-dark;

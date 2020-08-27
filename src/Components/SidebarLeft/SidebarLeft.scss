@@ -4,6 +4,9 @@
 	padding-right: $rem-m;
 	grid-column-start: 1;
 	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	height: 84vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -24,7 +27,6 @@
 
 @media only screen and (min-width: 1200px) {
     .section-link-outside {
-		
 		grid-column-start: 1;
 		grid-column-end: 5;
 		align-items: flex-end;

@@ -9,10 +9,10 @@ import ErrorMessage from '../ErrorMessage';
 const ProjectsContainer = () => {
 	const projectData = useRecoilValue(projectDataState);
 	const apiErrState = useRecoilValue(apiErr);
-	
+
 	if (!projectData && !apiErrState) {
 		const loadingText = '...loading content';
-		return <ModalSpinner text={loadingText} />;
+		return <ModalSpinner className='modal-spinner' text={loadingText} />;
 	}
 
 	if (apiErrState) {

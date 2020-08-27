@@ -1,10 +1,10 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
 import { Stagger, Fade } from 'react-animation-components';
-import { linkData, apiErr } from '../../App';
-import LinkOutside from '../LinkOutside';
-import ModalSpinner from '../ModalSpinner';
-import ErrorMessage from '../ErrorMessage';
+import { linkData, apiErr } from '../../App/App';
+import LinkOutside from '../LinkOutside/LinkOutside';
+import ModalSpinner from '../ModalSpinner/ModalSpinner';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 const SectionLinkOutside = () => {
 	const [linkDataState] = useRecoilState(linkData);

@@ -1,9 +1,11 @@
 .section-main {
 	color: $color-third;
-	background-color: whitesmoke, $color-first-light;
+	background-color: #fafafa;
 	padding: 3% 5%;
 	grid-column-start: 4;
 	grid-column-end: 16;
+	grid-row-start: 2;
+	grid-row-end: 3;
 	display: flex;
 	flex-direction: column;
 	overflow: auto;

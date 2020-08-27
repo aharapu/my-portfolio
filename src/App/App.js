@@ -2,10 +2,11 @@ import React, { useEffect } from 'react';
 import { atom, useRecoilState, useSetRecoilState } from 'recoil';
 import { BrowserRouter as Router } from 'react-router-dom';
 import callContentful from '../helpers/callContentful';
-import SectionLinkInside from '../Components/SectionLinkInside';
-import SectionLinkOutside from '../Components/SectionLinkOutside';
+import SidebarRight from '../Components/SidebarRight';
+import SidebarLeft from '../Components/SidebarLeft/SidebarLeft';
 import SectionMain from '../Components/SectionMain';
 import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 
 export const linkData = atom({
 	key: 'linkData',
@@ -26,36 +27,28 @@ const App = () => {
 	const [, setApiErrState] = useRecoilState(apiErr);
 	useEffect(() => {
 		callContentful('projectCard')
-			.then((res) => {
+			.then(res => {
 				setProjectDataState(res);
 			})
-			.catch((err) => {
+			.catch(err => {
 				setApiErrState(err);
 			});
 		callContentful('link')
-			.then((res) => {
+			.then(res => {
 				setLinkDataState(res);
 			})
-			.catch((err) => {
+			.catch(err => {
 				setApiErrState(err);
 			});
-	}, [setProjectDataState, setLinkDataState, setApiErrState, ]);
+	}, [setProjectDataState, setLinkDataState, setApiErrState]);
 
 	return (
 		<Router>
 			<Header />
-			<SectionLinkOutside />
+			<SidebarLeft />
 			<SectionMain />
-			<SectionLinkInside />
-			<div className='section-footer'>
-				<h4>
-					Made with{' '}
-					<span role='img' aria-label='love'>
-						❤️️
-					</span>{' '}
-					by Valentin. ©️2020
-				</h4>
-			</div>
+			<SidebarRight />
+			<Footer />
 		</Router>
 	);
 };

@@ -3,7 +3,7 @@ import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useRecoilValue } from 'recoil';
 import { Stagger, Fade } from 'react-animation-components';
-import { projectDataState } from '../../App';
+import { projectDataState } from '../../App/App';
 import { useLocation } from 'react-router-dom';
 
 export const ProjectLinkList = ({ trigger, data }) => {
