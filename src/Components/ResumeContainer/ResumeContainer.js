@@ -1,5 +1,4 @@
 import React from 'react';
-import faker from 'faker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
 import resume from '../../content/resume';
