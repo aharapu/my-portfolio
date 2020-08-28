@@ -1,0 +1,111 @@
+.resume-container {
+    position: relative;
+    padding-top: $rem-huge;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    section.contact {
+        position: absolute;;
+        left: -$rem-huge;
+        top: 0;
+        padding: $rem-s $rem-m;
+        user-select: none;
+    }
+
+    a.download{
+        position: absolute;;
+        right: -$rem-huge;
+        top: 0;
+        padding: $rem-s $rem-m;
+        display: flex;
+        align-items: center;
+        transition-duration: 0.5s;
+
+        p {
+            color: $color-first-dark;
+            font-size: $fsize-xsmall;
+            font-weight: 500;
+            margin-left: $rem-s;
+        }
+
+        &:hover {
+            background: $color-first-light;
+        }
+        
+    }
+
+    .intro {
+        width: 80%;
+        h2 {
+            text-align: center;
+            padding-bottom: $rem-m;
+            border-bottom: 2px solid $color-first;
+            margin-bottom: $rem-xl;
+        }
+        p{
+            padding: 0 5%;
+            margin-bottom: $rem-xl;
+        }
+    }
+
+    .stack{
+        margin-bottom: $rem-huge;
+        h3 {
+            text-align: center;
+            margin-bottom: $rem-m;
+        }
+        img {
+            height: $rem-xl;
+            margin: 0 $rem-xs;
+        }
+    }
+
+    .experience {
+        width: 80%;
+        margin-bottom: $rem-l;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h3 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: $rem-m;
+        }
+        .exp-article {
+            margin-bottom: $rem-xl;
+            .exp-article-header{
+                margin-bottom: $rem-xs;
+                .institution{
+                    font-size: $fsize-small;
+                    
+                }
+                .activity{
+                    font-size: $fsize-xsmall;
+                }
+            }
+            
+            .location{
+                font-size: $fsize-xxsmall;
+                text-indent: $rem-l;
+            }
+            .description{
+                text-indent: $rem-huge;
+            }
+        }
+    }
+
+    .simple-list{
+        margin-bottom: $rem-xl;
+        h3 {
+            font-size: 1.2rem;
+            width: 100%;
+            text-align: center;
+            margin-bottom: $rem-m;
+        }
+        ul {
+            width: 550px;
+        }
+    }
+}

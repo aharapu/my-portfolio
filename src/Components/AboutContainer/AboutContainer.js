@@ -1,7 +1,13 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
+// const ReactMarkdown = require('react-markdown');
+import ReactMarkdown from 'react-markdown';
+import { useRecoilValue } from 'recoil';
+import { aboutData } from '../../App/App';
 
 const AboutContainer = () => {
+	const aboutDataState = useRecoilValue(aboutData);
+
 	const sendEmail = e => {
 		e.preventDefault();
 
@@ -16,18 +22,38 @@ const AboutContainer = () => {
 				},
 			);
 	};
+	if (!aboutDataState) return null;
 	return (
-		<div>
-			<form className='contact-form' onSubmit={sendEmail}>
-				<input type='hidden' name='to_name' value='vasilescu' />
-				<label>Name</label>
-				<input type='text' name='from_name' />
-				<label>Email</label>
-				<input type='email' name='reply_to' />
-				<label>Message</label>
-				<textarea name='message_html' />
-				<input type='submit' value='Send' />
-			</form>
+		<div className='about-container'>
+			<img
+				className='ui small bordered image'
+				src={aboutDataState.includes.Asset[0].fields.file.url}
+				alt='portrait'
+			/>
+			<ReactMarkdown source={aboutDataState.items[0].fields.description} />
+			<section className='contact'>
+				<h3>Contact</h3>
+				<p>
+					Send me an email using the form below and I will try and respond as soon as I
+					can.
+				</p>
+				<form className='ui form' onSubmit={sendEmail}>
+					<input type='hidden' name='to_name' value='Valentin' />
+					<div class='field'>
+						<label>Name</label>
+						<input placeholder='Enter Name' type='text' name='from_name' />
+					</div>
+					<div class='field'>
+						<label>Email</label>
+						<input placeholder='Enter Email' type='email' name='reply_to' />
+					</div>
+					<div class='field'>
+						<label>Message</label>
+						<textarea placeholder='Enter Message' name='message_html' />
+					</div>
+					<input className='ui button' type='submit' value='Send' />
+				</form>
+			</section>
 		</div>
 	);
 };

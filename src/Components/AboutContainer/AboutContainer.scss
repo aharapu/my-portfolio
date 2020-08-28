@@ -1,0 +1,26 @@
+.about-container {
+    padding: 5% 8%;
+    img {
+        float: left;
+        margin: 0 $rem-l $rem-l 0;
+    }
+    p {
+        text-indent: $rem-l;
+    }
+
+    .contact {
+        h3 {
+            text-align: center;
+            width: 100%;
+            font-size: $fsize-small;
+        }
+        p {
+            font-size: $fsize-xsmall;
+            text-align: center;
+        }
+    }
+
+    div.input {
+        margin: $rem-m;
+    }
+}

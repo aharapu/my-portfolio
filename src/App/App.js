@@ -21,11 +21,16 @@ export const apiErr = atom({
 	key: 'apiErr',
 	default: null,
 });
+export const aboutData = atom({
+	key: 'aboutData',
+	default: null,
+});
 
 const App = () => {
 	const [, setLinkDataState] = useRecoilState(linkData);
 	const setProjectDataState = useSetRecoilState(projectDataState);
 	const [, setApiErrState] = useRecoilState(apiErr);
+	const setAboutDataState = useSetRecoilState(aboutData);
 	useEffect(() => {
 		callContentful('projectCard')
 			.then(res => {
@@ -41,7 +46,14 @@ const App = () => {
 			.catch(err => {
 				setApiErrState(err);
 			});
-	}, [setProjectDataState, setLinkDataState, setApiErrState]);
+		callContentful('aboutSection')
+			.then(res => {
+				setAboutDataState(res);
+			})
+			.catch(err => {
+				setApiErrState(err);
+			});
+	}, [setProjectDataState, setLinkDataState, setApiErrState, setAboutDataState]);
 
 	return (
 		<Router>

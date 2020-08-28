@@ -1,32 +1,34 @@
 import React from 'react';
 import faker from 'faker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileDownload } from '@fortawesome/free-solid-svg-icons'
+import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
+import resume from '../../content/resume';
 
 const ImageList = ({ tech }) => {
 	return (
-		<ul>
+		<>
 			{tech.map(t => (
-				<img key={t.name + t.imgSrc} src={t.imgSrc} alt={t.name} />
+				<img key={t} src={`${process.env.PUBLIC_URL}/assets/static/${t}.svg`} alt={t} />
 			))}
-		</ul>
+		</>
 	);
 };
 
-const InfoList = ({ dataArr }) => {
+const ExpList = ({ dataArr }) => {
 	return (
-		<ul>
-			{dataArr.map(x => (
-				<div key={x.desc + x.subTitle}>
-					<p>
-						<span className='title'>{x.title}</span>
+		<>
+			{dataArr.map(({ institution, activity, location, desc }) => (
+				<div key={institution} className='exp-article'>
+					<p className='exp-article-header'>
+						<span className='institution'>{institution}</span>
 						{' - '}
-						<span className='sub-title'>{x.subTitle}</span>
+						<span className='activity'>{activity}</span>
 					</p>
-					<p className='desc'>{x.desc}</p>
+					<p className='location'>{location}</p>
+					<p className='description'>{desc}</p>
 				</div>
 			))}
-		</ul>
+		</>
 	);
 };
 
@@ -34,88 +36,69 @@ const SimpleList = ({ dataArr }) => {
 	return (
 		<ul>
 			{dataArr.map(d => (
-				<p key={d.data + Math.random()}>{d.data}</p>
+				<li key={d + Math.random()}>{d}</li>
 			))}
 		</ul>
 	);
 };
 
-const AboutContainer = () => {
-	const title = faker.lorem.words(3);
-	const description = faker.lorem.words(30);
-	const tech = [{}, {}, {}];
-	tech.forEach(i => {
-		i.name = faker.lorem.word();
-		i.imgSrc = faker.image.avatar();
-	});
-	const telnum = faker.phone.phoneNumber();
-	const xp = [{}, {}, {}];
-	xp.forEach(x => {
-		x.title = faker.lorem.word();
-		x.subTitle = faker.lorem.words(5);
-		x.desc = faker.lorem.words(20);
-	});
-	const edu = [{}, {}, {}];
-	edu.forEach(ed => {
-		ed.title = faker.lorem.words(2);
-		ed.subTitle = faker.lorem.words(3);
-		ed.desc = faker.lorem.words(10);
-	});
-	const skills = [{}, {}, {}];
-	skills.forEach(sk => {
-		sk.data = faker.lorem.words(20);
-	});
-	const bonusXp = [{}, {}, {}];
-	bonusXp.forEach(x => {
-		x.title = faker.lorem.word();
-		x.subTitle = faker.lorem.words(5);
-		x.desc = faker.lorem.words(20);
-	});
-	const hobbies = [{}, {}];
-	hobbies.forEach(hb => {
-		hb.data = faker.lorem.words(15);
-	});
+const ResumeContainer = () => {
+	const { phone, name, desc, techStack, exp, edu, skills, otherWork, hobbies } = resume;
+	const eduData = edu.map(({ school, course, location, desc }) => ({
+		institution: school,
+		activity: course,
+		location: location,
+		desc: desc,
+	}));
+
+	const [expData, altExpData] = [exp, otherWork].map(arr =>
+		arr.map(({ company, title, location, desc }) => ({
+			institution: company,
+			activity: title,
+			location: location,
+			desc: desc,
+		})),
+	);
 
 	return (
-		<div>
-			<FontAwesomeIcon icon={faFileDownload} />
-			<a href='/assets/cv-harapu.pdf' download='cv-harapu.pdf'>
-				Download
+		<div className='resume-container'>
+			<section className='contact'>
+				<p>Contact: {phone}</p>
+			</section>
+			<a className='download' href='/assets/cv-harapu.pdf' download='cv-harapu.pdf'>
+				<FontAwesomeIcon icon={faFileDownload} size='lg' />
+				<p>Download</p>
 			</a>
 			<section className='intro'>
-				<h2>{title}</h2>
-				<p>{description}</p>
+				<h2>{name}</h2>
+				<p>{desc}</p>
 			</section>
 			<section className='stack'>
 				<h3>Technology Stack</h3>
-				<ImageList tech={tech} />
+				<ImageList tech={techStack} />
 			</section>
 			<section className='experience'>
 				<h3>Experience</h3>
-				<InfoList dataArr={xp} />
+				<ExpList dataArr={expData} />
 			</section>
-			<section className='education'>
+			<section className='experience'>
 				<h3>Education</h3>
-				<InfoList dataArr={edu} />
+				<ExpList dataArr={eduData} />
 			</section>
-			<section className='skills'>
-				<h3>Other work-relevant skills</h3>
+			<section className='simple-list'>
+				<h3>Other Skills</h3>
 				<SimpleList dataArr={skills} />
 			</section>
-			<section className='education'>
-				<h3>Other work experience</h3>
-				<InfoList dataArr={bonusXp} />
+			<section className='experience'>
+				<h3>Other Work Experience</h3>
+				<ExpList dataArr={altExpData} />
 			</section>
-			<section className='hobbies'>
-				<h3>Hobbies'n'interests</h3>
+			<section className='simple-list'>
+				<h3>Hobbies & Interests</h3>
 				<SimpleList dataArr={hobbies} />
-			</section>
-			<section>
-				<h4>Contact</h4>
-				<p>{telnum}</p>
 			</section>
 		</div>
 	);
 };
 
-export default AboutContainer;
+export default ResumeContainer;
