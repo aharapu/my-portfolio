@@ -1,11 +1,11 @@
 .sidebar-right {
 	padding: $rem-m $rem-l $rem-m $rem-ms;
-	background-color: $color-first-dark;
+	background-color: $color-first;
 	grid-column-start: 3;
 	grid-column-end: 4;
 	grid-row-start: 2;
 	grid-row-end: 3;
-	height: 84vh;
+	height: 86vh;
 	width: 12vw;
 	display: flex;
 	flex-direction: column;
@@ -19,7 +19,7 @@
 		justify-content: center;
 		align-items: flex-start;
 		.link-list-title{
-			color: $color-second;
+			color: $color-second-dark;
 			font-size: $fsize-xsmall;
 			text-align: center;
 			width: 100%;
@@ -27,7 +27,7 @@
 		}
 
 		a.link-project {
-			color: $color-second;
+			color: $color-second-dark;
 			font-size: $fsize-xsmall;
 			font-weight: 400;
 			text-indent: $rem-ms;

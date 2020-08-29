@@ -25,14 +25,16 @@ const AboutContainer = () => {
 	if (!aboutDataState) return null;
 	return (
 		<div className='about-container'>
+			<h3 className='about-title'>About Me</h3>
 			<img
-				className='ui small bordered image'
+				className='ui small bordered image valentin'
 				src={aboutDataState.includes.Asset[0].fields.file.url}
 				alt='portrait'
 			/>
+			
 			<ReactMarkdown source={aboutDataState.items[0].fields.description} />
 			<section className='contact'>
-				<h3>Contact</h3>
+				<h3>Get In Touch</h3>
 				<p>
 					Send me an email using the form below and I will try and respond as soon as I
 					can.
@@ -44,12 +46,12 @@ const AboutContainer = () => {
 						<input placeholder='Enter Name' type='text' name='from_name' />
 					</div>
 					<div className='field'>
-						<label>Email</label>
-						<input placeholder='Enter Email' type='email' name='reply_to' />
+						<label>Email*</label>
+						<input placeholder='Enter Email' type='email' name='reply_to' required />
 					</div>
 					<div className='field'>
-						<label>Message</label>
-						<textarea placeholder='Enter Message' name='message_html' />
+						<label>Message*</label>
+						<textarea placeholder='Enter Message' name='message_html' minlength="20" required />
 					</div>
 					<input className='ui button' type='submit' value='Send' />
 				</form>

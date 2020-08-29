@@ -43,6 +43,7 @@
             padding-bottom: $rem-m;
             border-bottom: 2px solid $color-first;
             margin-bottom: $rem-xl;
+            margin-top: $rem-xl;
         }
         p{
             padding: 0 5%;
@@ -51,15 +52,22 @@
     }
 
     .stack{
-        margin-bottom: $rem-huge;
-        h3 {
-            text-align: center;
-            margin-bottom: $rem-m;
-        }
-        img {
-            height: $rem-xl;
-            margin: 0 $rem-xs;
-        }
+        padding: $rem-l;
+        width: 80%;
+        margin: 0 auto;
+		border-radius: 0 15px 15px 15px;
+		background: rgba(200, 200, 200, 0.2);
+        display: inline-block;
+        margin-bottom: $rem-xl;
+		h3 {
+			text-align: center;
+            margin-bottom: $rem-l;
+		}
+		img {
+			height: $rem-xl;
+            padding: 0 $rem-m;
+            margin-bottom: $rem-ml;
+		}
     }
 
     .experience {

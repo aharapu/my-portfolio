@@ -5,17 +5,18 @@
 	justify-content: center;
 	align-items: flex-end;
 	.nav-link {
-		color: $color-second;
-		font-weight: 400;
-		font-size: $fsize-medsmall;
+		color: $color-first-light;
+		font-family: 'Noto Sans', sans-serif;
+		font-weight: 300;
+		font-size: $fsize-small;
 		text-decoration: none;
         padding: $rem-s $rem-ml $rem-ms;
         border-radius: 0 $rem-l $rem-l $rem-l;
 		margin: 0 $rem-s;
 		transition-duration: 0.5s;
 		&:hover {
-			color: $color-third;
-			background-color: $color-second-light;
+			color: $color-first;
+			background-color: $color-first-light-transparent;
 		}
 	}
 }

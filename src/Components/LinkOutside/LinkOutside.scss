@@ -13,17 +13,18 @@
 		transition-duration: 0.5s;
 	}
 	img {
-		@include icon-m;
+		width: 32px;
+		height: 32px;
 		margin: 0 $rem-s;
 		transition-duration: 0.5s;
 	}
 	&:hover {
-		border-left: 2px solid $color-second;
+		// border-left: 2px solid $color-second;
 		h5 {
 			font-size: $fsize-medsmall;
 		}
 		img {
-			@include icon-ml;
+			@include icon-m;
 		}
 	}
 }

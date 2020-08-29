@@ -1,7 +1,7 @@
 .project-card {
 	color: $color-third;
-	border-bottom: 2px solid $color-first-dark;
-	padding: $rem-xl 0;
+	border-bottom: 2px solid $color-first;
+	padding: 5rem 0;
 	// flex: 0 1 1fr;
 	display: flex;
 	flex-direction: column;
@@ -18,13 +18,14 @@
 		margin-bottom: $rem-xl;
 		position: relative;
 		background: rgb(0, 0, 0);
-		border-radius: 0 15px 15px 15px;
+		border-radius: 0 25px 25px 25px;
 
 		img.project-preview {
 			width: 100%;
 			max-width: 500px;
-			box-shadow: 4px 3px 2px $color-third;
-			border-radius: 0 15px 15px 15px;
+			// box-shadow: 4px 3px 2px $color-third;
+			border: 2px solid $color-first;
+			border-radius: 0 25px 25px 25px;
 			display: block;
 			transition: opacity ease-out 250ms;
 
@@ -57,6 +58,7 @@
 
 		img.preview-hover {
 			opacity: 0.6;
+			border-color: $color-second-light;
 			// &::after {
 			// 	transform: scale(1, 1);
 			// }
@@ -70,7 +72,7 @@
 		flex-direction: row;
 		justify-content: space-around;
 		a.card-link {
-			padding: $rem-s $rem-ml $rem-xs $rem-s;
+			padding: $rem-ms $rem-l $rem-s $rem-ms;
 			background: $color-first-light;
 			border-radius: 0 10px 10px 10px;
 			display: flex;
@@ -86,9 +88,12 @@
 				color: $color-third;
 				font-size: $rem-m;
 			}
-			// &:hover {
-			// 	background-color: $color-second-light;
-			// }
+			&:hover {
+				.link-text {
+					color: $color-first-light;
+				}
+				background-color: $color-second-light;
+			}
 		}
 
 		a.card-link.preview-hover{
@@ -102,7 +107,7 @@
 		max-width: 700px;
 	}
 	div.tech-stack {
-		padding: $rem-s $rem-l;
+		padding: $rem-l;
 		border-radius: 0 15px 15px 15px;
 		background: rgba(200, 200, 200, 0.2);
 		display: flex;
@@ -115,7 +120,7 @@
 		}
 		img {
 			height: $rem-xl;
-			padding: 0 $rem-s;
+			padding: 0 $rem-m;
 		}
 	}
 }

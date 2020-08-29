@@ -96,6 +96,9 @@ const ResumeContainer = () => {
 				<h3>Hobbies & Interests</h3>
 				<SimpleList dataArr={hobbies} />
 			</section>
+			<section className='cta'>
+				
+			</section>
 		</div>
 	);
 };

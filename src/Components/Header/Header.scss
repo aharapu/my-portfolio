@@ -1,16 +1,17 @@
 .header {
-	background: linear-gradient(45deg, rgba(231,188,35,1) 0%, rgba(46,31,71,1) 100%);
+	background: $gradient-secondary;
 	background-color: $color-second;
 	background-size: 100% 500%;
 	background-repeat: no-repeat;
-	animation: river 3s ease-in-out alternate infinite;
+	// animation: river 5s ease-in-out alternate infinite;
+	background-position: 0% 100%;
 	padding: 1.3rem;
 	border-bottom: solid $color-third 1px;
 	grid-column-start: 1;
 	grid-column-end: 4;
 	grid-row-start: 1;
 	grid-row-end: 2;
-	height: 12vh;
+	height: 10vh;
 	width: 100vw;
 	display: flex;
 	flex-direction: row;
@@ -27,10 +28,10 @@
 			margin-right: $rem-m;
 		}
 		h2 {
-			color: $color-third;
+			color: $color-third-dark;
 			font-family: 'Noto Sans', sans-serif;
 			font-weight: 500;
-			font-size: $fsize-medsmall;
+			font-size: $fsize-small;
 			line-height: 100%;
 		}
 	}

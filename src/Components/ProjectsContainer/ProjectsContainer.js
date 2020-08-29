@@ -32,7 +32,7 @@ const ProjectsContainer = () => {
 					/>
 				))}
 			</div>
-			<div id='somewhere'>i am somewhere</div>
+			<div id='somewhere'>i am somewhere. you found me</div>
 		</>
 	);
 };

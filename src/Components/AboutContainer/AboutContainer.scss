@@ -1,26 +1,48 @@
 .about-container {
-    padding: 5% 8%;
-    img {
-        float: left;
-        margin: 0 $rem-l $rem-l 0;
-    }
-    p {
-        text-indent: $rem-l;
-    }
+	padding: 5% 8%;
+	margin-bottom: $rem-huge;
 
-    .contact {
-        h3 {
-            text-align: center;
-            width: 100%;
+	h3.about-title {
+		text-align: center;
+		width: 100%;
+		font-size: $fsize-small;
+		margin-bottom: $rem-huge;
+	}
+	img.valentin {
+		float: left;
+        // border: 1px solid $color-second-light !important;
+        box-shadow: 5px 5px $color-second-transparent;
+        margin: 0 $rem-xl $rem-xl 0;
+        
+	}
+	p {
+		text-indent: $rem-xl;
+	}
+	p:nth-child(4) {
+		margin-bottom: 4rem;
+	}
+
+	.contact {
+		h3 {
+			text-align: center;
+			width: 100%;
             font-size: $fsize-small;
-        }
-        p {
-            font-size: $fsize-xsmall;
+            margin-bottom: $rem-l;
+		}
+		p {
+            text-indent: unset;
+            max-width: 400px;
+			font-size: $fsize-xsmall;
             text-align: center;
+            margin: 0 auto $rem-xl;
         }
-    }
+        
+        input, textarea {
+            border-color: $color-third !important;
+        }
+	}
 
-    div.input {
-        margin: $rem-m;
-    }
+	div.input {
+		margin: $rem-m;
+	}
 }
