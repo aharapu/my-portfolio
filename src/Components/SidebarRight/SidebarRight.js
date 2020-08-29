@@ -2,7 +2,7 @@ import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useRecoilValue } from 'recoil';
 import { Fade } from 'react-animation-components';
-import { projectDataState, quoteAtom } from '../../App/App';
+import { projectDataState, quoteAtom } from '../../helpers/recoil-atoms';
 import { useLocation } from 'react-router-dom';
 
 const SectionQuote = ({ route, quoteData }) => {

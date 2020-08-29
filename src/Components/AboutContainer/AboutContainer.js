@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com';
 // const ReactMarkdown = require('react-markdown');
 import ReactMarkdown from 'react-markdown';
 import { useRecoilValue } from 'recoil';
-import { aboutData } from '../../App/App';
+import { aboutData } from '../../helpers/recoil-atoms';
 
 const AboutContainer = () => {
 	const aboutDataState = useRecoilValue(aboutData);

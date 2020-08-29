@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
 import { Stagger, Fade } from 'react-animation-components';
-import { linkData, apiErr } from '../../App/App';
+import { linkData, apiErr } from '../../helpers/recoil-atoms';
 import LinkOutside from '../LinkOutside/LinkOutside';
 import ModalSpinner from '../ModalSpinner/ModalSpinner';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';

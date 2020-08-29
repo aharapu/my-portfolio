@@ -1,7 +1,7 @@
 import React from 'react';
 import faker from 'faker';
 import { useRecoilValue } from 'recoil';
-import { projectDataState, apiErr } from '../../App';
+import { projectDataState, apiErr } from '../../helpers/recoil-atoms';
 import ProjectCard from '../ProjectCard';
 import ModalSpinner from '../ModalSpinner';
 import ErrorMessage from '../ErrorMessage';
