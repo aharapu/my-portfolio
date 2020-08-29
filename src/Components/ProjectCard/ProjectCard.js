@@ -14,7 +14,6 @@ export const Preview = ({ websiteUrl, githubRepo, linkIcon, preview }) => {
 	return (
 		<>
 			<a
-				
 				onMouseEnter={toggleHoverEffect}
 				onMouseLeave={toggleHoverEffect}
 				className='preview-link-wrap'

@@ -1,25 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import { Stagger, Fade } from 'react-animation-components';
+import { sections } from '../../content/sections';
 
 const NavBar = () => {
 	return (
 		<Stagger in delay={130} duration={1000} className='nav-bar'>
-			<Fade in>
-				<Link to='/about' className='nav-link'>
-					about me
-				</Link>
-			</Fade>
-			<Fade in>
-				<Link to='/projects' className='nav-link'>
-					projects
-				</Link>
-			</Fade>
-			<Fade in>
-				<Link to='/resume' className='nav-link'>
-					résumé
-				</Link>
-			</Fade>
+			{sections.map(({ id, name, text }) => (
+				<Fade in key={id}>
+					<Link to={`/${name}#top`} className='nav-link'>
+						{text}
+					</Link>
+				</Fade>
+			))}
 		</Stagger>
 	);
 };
