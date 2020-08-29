@@ -59,9 +59,9 @@ const App = () => {
 			.catch(err => {
 				setApiErrState(err);
 			});
-		getQuote()
-			.then(data => setQuoteData(data.contents.quotes[0]))
-			.catch(err => console.error(err));
+		// getQuote()
+		// 	.then(data => setQuoteData(data.contents.quotes[0]))
+		// 	.catch(err => console.error(err));
 	}, [setProjectDataState, setLinkDataState, setApiErrState, setAboutDataState, setQuoteData]);
 
 	return (

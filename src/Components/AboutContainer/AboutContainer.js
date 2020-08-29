@@ -39,15 +39,15 @@ const AboutContainer = () => {
 				</p>
 				<form className='ui form' onSubmit={sendEmail}>
 					<input type='hidden' name='to_name' value='Valentin' />
-					<div class='field'>
+					<div className='field'>
 						<label>Name</label>
 						<input placeholder='Enter Name' type='text' name='from_name' />
 					</div>
-					<div class='field'>
+					<div className='field'>
 						<label>Email</label>
 						<input placeholder='Enter Email' type='email' name='reply_to' />
 					</div>
-					<div class='field'>
+					<div className='field'>
 						<label>Message</label>
 						<textarea placeholder='Enter Message' name='message_html' />
 					</div>

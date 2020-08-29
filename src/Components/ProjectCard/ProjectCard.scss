@@ -17,41 +17,49 @@
 	.preview-link-wrap {
 		margin-bottom: $rem-xl;
 		position: relative;
-		background: rgb(150, 150, 150);
+		background: rgb(0, 0, 0);
 		border-radius: 0 15px 15px 15px;
 
-		.project-preview {
+		img.project-preview {
 			width: 100%;
 			max-width: 500px;
 			box-shadow: 4px 3px 2px $color-third;
 			border-radius: 0 15px 15px 15px;
 			display: block;
 			transition: opacity ease-out 250ms;
+
+			// this after effect worked great when used toggled by a css hover
+			// however, triggering this effect with toggling a class seems to not work properly
+			// &::after {
+			// 	content: 'GO TO WEBSITE';
+			// 	font-size: $fsize-xsmall;
+			// 	color: white;
+			// 	text-shadow: 2px 2px 2px black;
+			// 	position: absolute;
+			// 	@include position-16-9-center(50%);
+			// 	transition: transform ease-out 250ms;
+			// 	transform: scale(1,1);
+			// 	border: 1px solid white;
+			// 	border-radius: 50%;
+			// 	display: flex;
+			// 	align-items: center;
+			// 	justify-content: center;
+			// }
+			// &:hover {
+			// 	img {
+			// 		opacity: 0.8;
+			// 	}
+			// 	&::after {
+			// 		transform: scale(1, 1);
+			// 	}
+			// }
 		}
 
-		&::after {
-			content: 'GO TO WEBSITE';
-			font-size: $fsize-xsmall;
-			color: white;
-			text-shadow: 2px 2px 2px black;
-			position: absolute;
-			@include position-16-9-center(50%);
-			transition: transform ease-out 250ms;
-			border: 1px solid white;
-			border-radius: 50%;
-			transform: scale(0, 0);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		&:hover {
-			img {
-				opacity: 0.8;
-			}
-			&::after {
-				transform: scale(1, 1);
-			}
+		img.preview-hover {
+			opacity: 0.6;
+			// &::after {
+			// 	transform: scale(1, 1);
+			// }
 		}
 	}
 
@@ -78,22 +86,25 @@
 				color: $color-third;
 				font-size: $rem-m;
 			}
-			&:hover {
-				background-color: $color-second-light;
-			}
+			// &:hover {
+			// 	background-color: $color-second-light;
+			// }
+		}
 
+		a.card-link.preview-hover{
+			background-color: $color-second-light;
 		}
 	}
 
 	p {
 		text-align: justify;
-		padding:0 15%;
+		padding: 0 15%;
 		max-width: 700px;
 	}
-	div.tech-stack{
+	div.tech-stack {
 		padding: $rem-s $rem-l;
 		border-radius: 0 15px 15px 15px;
-		background: rgba(200,200,200,0.2);
+		background: rgba(200, 200, 200, 0.2);
 		display: flex;
 		justify-content: center;
 		align-items: center;

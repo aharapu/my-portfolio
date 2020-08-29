@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import faker from 'faker';
 import linkIcon from './link-icon.svg';
 
-const ProjectCard = ({ id, cardData }) => {
-	const { name, description, preview, technologies, githubRepo, websiteUrl } = { ...cardData };
-
+export const Preview = ({ websiteUrl, githubRepo, linkIcon, preview }) => {
+	const imageWrapRef = useRef(null);
+	const projectLinkRef = useRef(null);
+	const toggleHoverEffect = event => {
+		event.preventDefault();
+		imageWrapRef.current.classList.toggle('preview-hover');
+		projectLinkRef.current.classList.toggle('preview-hover');
+		console.log('event triggered');
+	};
 	return (
-		<div id={id} className='project-card'>
-			<h3>{name}</h3>
+		<>
 			<a
+				
+				onMouseEnter={toggleHoverEffect}
+				onMouseLeave={toggleHoverEffect}
 				className='preview-link-wrap'
 				href={websiteUrl}
 				target='_blank'
 				rel='noopener noreferrer'>
 				<img
+					ref={imageWrapRef}
 					className='project-preview'
 					alt='project preview'
 					src={preview.fields.file.url}
@@ -29,6 +38,9 @@ const ProjectCard = ({ id, cardData }) => {
 					<h6 className='link-text'>GITHUB</h6>
 				</a>
 				<a
+					ref={projectLinkRef}
+					onMouseEnter={toggleHoverEffect}
+					onMouseLeave={toggleHoverEffect}
 					className='card-link'
 					href={websiteUrl}
 					target='_blank'
@@ -37,6 +49,22 @@ const ProjectCard = ({ id, cardData }) => {
 					<h6 className='link-text'>WEBSITE</h6>
 				</a>
 			</div>
+		</>
+	);
+};
+
+const ProjectCard = ({ id, cardData }) => {
+	const { name, description, preview, technologies, githubRepo, websiteUrl } = { ...cardData };
+
+	return (
+		<div id={id} className='project-card'>
+			<h3>{name}</h3>
+			<Preview
+				websiteUrl={websiteUrl}
+				githubRepo={githubRepo}
+				linkIcon={linkIcon}
+				preview={preview}
+			/>
 			<p>{description}</p>
 			<div className='tech-stack'>
 				<h5>Tech Stack:</h5>
