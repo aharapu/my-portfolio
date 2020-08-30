@@ -33,7 +33,7 @@ const AboutContainer = () => {
 			/>
 			
 			<ReactMarkdown source={aboutDataState.items[0].fields.description} />
-			<section className='contact'>
+			<section id='contact' className='contact'>
 				<h3>Get In Touch</h3>
 				<p>
 					Send me an email using the form below and I will try and respond as soon as I

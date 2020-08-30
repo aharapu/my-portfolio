@@ -1,119 +1,124 @@
 .resume-container {
-    position: relative;
-    padding-top: $rem-huge;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	position: relative;
+	padding-top: $rem-huge;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-    section.contact {
-        position: absolute;;
-        left: -$rem-huge;
-        top: 0;
-        padding: $rem-s $rem-m;
-        user-select: none;
-    }
+	section.contact {
+		position: absolute;
+		left: -$rem-huge;
+		top: 0;
+		padding: $rem-s $rem-m;
+		user-select: none;
+	}
 
-    a.download{
-        position: absolute;;
-        right: -$rem-huge;
-        top: 0;
-        padding: $rem-s $rem-m;
-        display: flex;
-        align-items: center;
-        transition-duration: 0.5s;
+	a.download {
+		position: absolute;
+		right: -$rem-huge;
+		top: 0;
+		padding: $rem-s $rem-m;
+		display: flex;
+		align-items: center;
+		transition-duration: 0.5s;
 
-        p {
-            color: $color-first-dark;
-            font-size: $fsize-xsmall;
-            font-weight: 500;
-            margin-left: $rem-s;
-        }
+		p {
+			color: $color-first-dark;
+			font-size: $fsize-xsmall;
+			font-weight: 500;
+			margin-left: $rem-s;
+		}
 
-        &:hover {
-            background: $color-first-light;
-        }
-        
-    }
+		&:hover {
+			background: $color-first-light;
+		}
+	}
 
-    .intro {
-        width: 80%;
-        h2 {
-            text-align: center;
-            padding-bottom: $rem-m;
-            border-bottom: 2px solid $color-first;
-            margin-bottom: $rem-xl;
-            margin-top: $rem-xl;
-        }
-        p{
-            padding: 0 5%;
-            margin-bottom: $rem-xl;
-        }
-    }
+	.intro {
+		width: 80%;
+		h2 {
+			text-align: center;
+			padding-bottom: $rem-m;
+			border-bottom: 2px solid $color-first;
+			margin-bottom: $rem-xl;
+			margin-top: $rem-xl;
+		}
+		p {
+			padding: 0 5%;
+			margin-bottom: $rem-xl;
+		}
+	}
 
-    .stack{
-        padding: $rem-l;
-        width: 80%;
-        margin: 0 auto;
+	.stack,
+	.cta {
+		padding: $rem-l;
+		width: 80%;
+		margin: 0 auto;
 		border-radius: 0 15px 15px 15px;
 		background: rgba(200, 200, 200, 0.2);
-        display: inline-block;
-        margin-bottom: $rem-xl;
+		display: inline-block;
+		margin-bottom: $rem-xl;
 		h3 {
 			text-align: center;
-            margin-bottom: $rem-l;
+			margin-bottom: $rem-l;
 		}
 		img {
 			height: $rem-xl;
-            padding: 0 $rem-m;
-            margin-bottom: $rem-ml;
+			padding: 0 $rem-m;
+			margin-bottom: $rem-ml;
+		}
+	}
+
+	.experience {
+		width: 80%;
+		margin-bottom: $rem-l;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		h3 {
+			width: 100%;
+			text-align: center;
+			margin-bottom: $rem-m;
+		}
+		.exp-article {
+			margin-bottom: $rem-xl;
+			.exp-article-header {
+				margin-bottom: $rem-xs;
+				.institution {
+					font-size: $fsize-small;
+				}
+				.activity {
+					font-size: $fsize-xsmall;
+				}
+			}
+
+			.location {
+				font-size: $fsize-xxsmall;
+				text-indent: $rem-l;
+			}
+			.description {
+				text-indent: $rem-huge;
+			}
+		}
+	}
+
+	.simple-list {
+		margin-bottom: $rem-xl;
+		h3 {
+			font-size: 1.2rem;
+			width: 100%;
+			text-align: center;
+			margin-bottom: $rem-m;
+		}
+		ul {
+			width: 550px;
 		}
     }
-
-    .experience {
-        width: 80%;
-        margin-bottom: $rem-l;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        h3 {
-            width: 100%;
-            text-align: center;
-            margin-bottom: $rem-m;
-        }
-        .exp-article {
-            margin-bottom: $rem-xl;
-            .exp-article-header{
-                margin-bottom: $rem-xs;
-                .institution{
-                    font-size: $fsize-small;
-                    
-                }
-                .activity{
-                    font-size: $fsize-xsmall;
-                }
-            }
-            
-            .location{
-                font-size: $fsize-xxsmall;
-                text-indent: $rem-l;
-            }
-            .description{
-                text-indent: $rem-huge;
-            }
-        }
-    }
-
-    .simple-list{
-        margin-bottom: $rem-xl;
-        h3 {
-            font-size: 1.2rem;
-            width: 100%;
-            text-align: center;
-            margin-bottom: $rem-m;
-        }
-        ul {
-            width: 550px;
+    
+    .cta{
+        a {
+            margin: 0 auto;
         }
     }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
 import resume from '../../content/resume';
@@ -97,7 +98,10 @@ const ResumeContainer = () => {
 				<SimpleList dataArr={hobbies} />
 			</section>
 			<section className='cta'>
-				
+				<h3>Would you like to contact me?</h3>
+				<Link to={`/about#contact`} className='ui button fluid'>
+					Go to contact form!
+				</Link>
 			</section>
 		</div>
 	);
