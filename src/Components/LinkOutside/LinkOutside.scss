@@ -19,7 +19,6 @@
 		transition-duration: 0.5s;
 	}
 	&:hover {
-		// border-left: 2px solid $color-second;
 		h5 {
 			font-size: $fsize-medsmall;
 		}
@@ -29,31 +28,19 @@
 	}
 }
 
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+	.link-outside {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+}
+
 @media only screen and (max-width: 800px) {
 	.link-outside {
-		margin: 0.2rem 0.5rem;
 		h5 {
 			display: none;
-		}
-		img {
-			@include icon-m;
 		}
 	}
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1200px) {
-	.link-outside {
-		padding: $rem-s $rem-l;
-		margin: unset;
-		flex-direction: row;
-		align-items: center;
-		h5 {
-			font-size: $fsize-medium;
-			padding-right: 1rem;
-			transition-duration: 0.5s;
-		}
-		img {
-			transition-duration: 0.5s;
-		}
-	}
-}
+

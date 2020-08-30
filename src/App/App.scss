@@ -1,9 +1,10 @@
 html {
 	font-size: 16px;
-	
+	scroll-behavior: smooth;
 }
 
-*, body {
+*,
+body {
 	padding: 0;
 	margin: 0;
 	position: relative;
@@ -24,33 +25,33 @@ h6 {
 }
 
 .grid-container {
+	width: 100vw;
+	height: 100vh;
 	display: grid;
 	grid-template-columns: 18vw 70vw 12vw;
 	grid-template-rows: 10vh 86vh 4vh;
 }
-
-@media only screen and (max-width: 300px) {
-	.grid-container {
-		grid-template-rows: 4rem 3rem auto 3rem 2rem;
-	}
-
-	.section-footer {
-		background-color: $color-third;
-		padding-top: 0.1rem;
-	}
-}
-
-@media only screen and (min-width: 300px) and (max-width: 800px) {
-	.grid-container {
-		grid-template-rows: 4rem 3rem auto 3rem 2rem;
-	}
-
-	.section-footer {
-		background-color: $color-third;
-		padding-top: 0.1rem;
-	}
-}
-
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
-
+	.grid-container {
+		grid-template-columns: 22vw 76vw 2vw;
+	}
 }
+
+@media only screen and (max-width: 800px) {
+	.grid-container {
+		grid-template-rows: 8rem auto 4rem 2.2rem;
+		grid-template-columns: 100vw;
+		height: unset;
+	}
+}
+
+// @media only screen and (max-width: 300px) {
+// 	.grid-container {
+// 		grid-template-rows: 4rem 3rem auto 3rem 2rem;
+// 	}
+
+// 	.section-footer {
+// 		background-color: $color-third;
+// 		padding-top: 0.1rem;
+// 	}
+// }

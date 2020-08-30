@@ -11,10 +11,10 @@ export class SectionMain extends React.Component {
 						{({ match }) => (
 							<CSSTransition
 								in={match != null}
-								timeout={700}
+								timeout={1700}
 								classNames='page'
 								unmountOnExit>
-								<div id='top' className='page'>{comp}</div>
+								<div id='page' className='page'>{comp}</div>
 							</CSSTransition>
 						)}
 					</Route>

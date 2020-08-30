@@ -7,8 +7,13 @@ const NavBar = () => {
 	return (
 		<Stagger in delay={130} duration={1000} className='nav-bar'>
 			{sections.map(({ id, name, text }) => (
-				<Fade in key={id}>
-					<Link to={`/${name}#top`} className='nav-link'>
+				<Fade className='link-fade-wrap' in key={id}>
+					<Link
+						to={`/${name}#page`}
+						smooth
+						className='nav-link'
+						scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+						>
 						{text}
 					</Link>
 				</Fade>

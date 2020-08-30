@@ -10,13 +10,27 @@
 		font-weight: 300;
 		font-size: $fsize-small;
 		text-decoration: none;
-        padding: $rem-s $rem-ml $rem-ms;
-        border-radius: 0 $rem-l $rem-l $rem-l;
+		padding: $rem-s $rem-ml $rem-ms;
+		border-radius: 0 $rem-l $rem-l $rem-l;
 		margin: 0 $rem-s;
 		transition-duration: 0.5s;
 		&:hover {
 			color: $color-first;
 			background-color: $color-first-light-transparent;
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.nav-bar {
+		padding: 0 0 0.4rem;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		.nav-link {
+			padding: 0.2rem 0.6rem 0.4rem;
+			background-color: $color-first-light-transparent;
+			margin: 0;
 		}
 	}
 }

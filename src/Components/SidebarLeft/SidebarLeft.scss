@@ -14,22 +14,25 @@
 	align-items: flex-start;
 }
 
-@media only screen and (max-width: 800px) {
-	.sidebar-left {
-		background-color: $color-second-light;
-		border-top: solid $color-third 1px;
-		grid-column-start: 1;
-		grid-column-end: 17;
-		grid-row-start: 4;
-		grid-row-end: 5;
-		flex-direction: row;
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+    .sidebar-left {
+		width: 22vw;
+		align-items: center;
 	}
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1200px) {
-    .sidebar-left {
+@media only screen and (max-width: 800px) {
+	.sidebar-left {
+		// background-color: $color-second-light;
+		// border-top: solid $color-third 1px;
 		grid-column-start: 1;
-		grid-column-end: 5;
-		align-items: flex-end;
+		grid-column-end: 2;
+		grid-row-start: 3;
+		grid-row-end: 4;
+		height: unset;
+		width: unset;
+		flex-direction: row;
+		align-items: center;
 	}
 }
+

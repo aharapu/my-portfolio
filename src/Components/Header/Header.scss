@@ -46,22 +46,32 @@
 	}
 }
 
-@media only screen and (min-width: 300px) and (max-width: 800px) {
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
 	.header {
-		background-color: #52528c;
-		padding: 1.3rem;
-		h2 {
-			font-size: $fsize-small;
-			text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4);
+		padding: 1.15rem;
+		.logo {
+			h2 {
+				font-size: 1.1rem;
+			}
 		}
 	}
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1200px) {
+@media only screen and (max-width: 800px) {
 	.header {
-		padding: 1.5rem 0 1rem;
-		h2 {
-			font-size: $fsize-xlarge;
+		background: linear-gradient(180deg, #F33337 0%, #2D3D6A 100%);
+		background-size: 100% 100%;
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		padding: 0.8rem;
+		height: unset;
+		width: unset;
+		flex-direction: column;
+		.logo {
+			height: 2.6rem;
+			width: 100%;
 		}
 	}
 }
