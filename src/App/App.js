@@ -40,11 +40,12 @@ const App = () => {
 	const setAboutDataState = useSetRecoilState(aboutData);
 	const setQuoteData = useSetRecoilState(quoteAtom);
 	useEffect(() => {
-		callContentful('projectCard')
+		callContentful('projectCard', 'fields.order')
 			.then(res => {
 				setProjectDataState(res);
 			})
 			.catch(err => {
+				console.error(err);
 				setApiErrState(err);
 			});
 		callContentful('link')
