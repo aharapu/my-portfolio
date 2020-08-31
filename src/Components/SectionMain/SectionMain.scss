@@ -58,7 +58,7 @@
 		grid-row-start: 2;
 		grid-row-end: 3;
 		height: unset;
-		width: unset;
+		width: 100vw;
 		overflow: unset;
 
 		// hide scrollbar
@@ -71,5 +71,6 @@
 
 	.page {
 		width: 100vw;
+		padding: 10% 5%;
 	}
 }

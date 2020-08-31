@@ -46,3 +46,18 @@
 		margin: $rem-m;
 	}
 }
+
+@media only screen and (max-width: 800px) {
+	.about-container {
+		padding: 0 5%;
+		img.valentin {
+			width: 80%;
+			float: unset;
+			margin: 0 10% 2.4rem;
+		}
+		p {
+			text-indent: 1.4rem;
+			text-align: justify;
+		}
+	}
+}

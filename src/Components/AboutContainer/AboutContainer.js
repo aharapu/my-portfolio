@@ -27,7 +27,7 @@ const AboutContainer = () => {
 		<div className='about-container'>
 			<h3 className='about-title'>About Me</h3>
 			<img
-				className='ui small bordered image valentin'
+				className='valentin'
 				src={aboutDataState.includes.Asset[0].fields.file.url}
 				alt='portrait'
 			/>

@@ -114,11 +114,50 @@
 		ul {
 			width: 550px;
 		}
-    }
-    
-    .cta{
-        a {
-            margin: 0 auto;
-        }
-    }
+	}
+
+	.cta {
+		a {
+			margin: 0 auto;
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.resume-container {
+		section.contact {
+			left: 0;
+			top: 14px;
+		}
+		a.download {
+			left: 0;
+			top: -18px;
+			right: unset;
+		}
+		.intro {
+			width: 90%;
+			p {
+				padding: 0 2rem 0 0;
+			}
+		}
+		.stack {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			h3 {
+				width: 100%;
+			}
+		}
+		.simple-list {
+			width: 96%;
+			ul {
+				width: 100%;
+				li {
+					margin-bottom: 0.4rem;
+				}
+			}
+		}
+
+	}
 }

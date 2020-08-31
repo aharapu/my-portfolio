@@ -1,10 +1,5 @@
 .header {
-	background: $gradient-secondary;
-	background-color: $color-second;
-	background-size: 100% 500%;
-	background-repeat: no-repeat;
-	// animation: river 5s ease-in-out alternate infinite;
-	background-position: 0% 100%;
+	background-color: #F3575ACC;
 	padding: 1.3rem;
 	border-bottom: solid $color-third 1px;
 	grid-column-start: 1;
@@ -34,15 +29,6 @@
 			font-size: $fsize-small;
 			line-height: 100%;
 		}
-	}
-}
-
-@keyframes river {
-	from {
-		background-position: 0% 0%;
-	}
-	to {
-		background-position: 0% 100%;
 	}
 }
 

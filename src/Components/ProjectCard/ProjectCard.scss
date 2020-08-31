@@ -17,15 +17,12 @@
 	.preview-link-wrap {
 		margin-bottom: $rem-xl;
 		position: relative;
-		background: rgb(0, 0, 0);
-		border-radius: 0 25px 25px 25px;
 
 		img.project-preview {
 			width: 100%;
 			max-width: 500px;
-			// box-shadow: 4px 3px 2px $color-third;
-			border: 2px solid $color-first;
 			border-radius: 0 25px 25px 25px;
+			box-shadow: 7px 6px $color-second-transparent;
 			display: block;
 			transition: opacity ease-out 250ms;
 
@@ -57,8 +54,7 @@
 		}
 
 		img.preview-hover {
-			opacity: 0.6;
-			border-color: $color-second-light;
+			filter: brightness(0.6) blur(1px);
 			// &::after {
 			// 	transform: scale(1, 1);
 			// }
@@ -110,6 +106,7 @@
 		padding: $rem-l;
 		border-radius: 0 15px 15px 15px;
 		background: rgba(200, 200, 200, 0.2);
+		max-width: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -126,10 +123,18 @@
 }
 
 @media only screen and (max-width: 800px) {
-	// .project-card ul {
-	// 	columns: 2;
-	// 	width: 100%;
-	// }
+	.project-card {
+		p {
+			padding: 0 5%;
+			margin-bottom: 2rem;
+		}
+		div.tech-stack {
+			flex-wrap: wrap;
+			img {
+				margin: 0.4rem 0;
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
