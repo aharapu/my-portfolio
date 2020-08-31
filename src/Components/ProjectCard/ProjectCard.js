@@ -5,17 +5,22 @@ import linkIcon from './link-icon.svg';
 export const Preview = ({ websiteUrl, githubRepo, linkIcon, preview }) => {
 	const imageWrapRef = useRef(null);
 	const projectLinkRef = useRef(null);
-	const toggleHoverEffect = event => {
+	const addProjectHover = event => {
 		event.preventDefault();
-		imageWrapRef.current.classList.toggle('preview-hover');
-		projectLinkRef.current.classList.toggle('preview-hover');
+		imageWrapRef.current.classList.add('preview-hover');
+		projectLinkRef.current.classList.add('preview-hover');
+	};
+	const removeProjectHover = event => {
+		event.preventDefault();
+		imageWrapRef.current.classList.remove('preview-hover');
+		projectLinkRef.current.classList.remove('preview-hover');
 		console.log('event triggered');
 	};
 	return (
 		<>
 			<a
-				onMouseEnter={toggleHoverEffect}
-				onMouseLeave={toggleHoverEffect}
+				onMouseEnter={addProjectHover}
+				onMouseLeave={removeProjectHover}
 				className='preview-link-wrap'
 				href={websiteUrl}
 				target='_blank'
@@ -38,8 +43,8 @@ export const Preview = ({ websiteUrl, githubRepo, linkIcon, preview }) => {
 				</a>
 				<a
 					ref={projectLinkRef}
-					onMouseEnter={toggleHoverEffect}
-					onMouseLeave={toggleHoverEffect}
+					onMouseEnter={addProjectHover}
+					onMouseLeave={removeProjectHover}
 					className='card-link'
 					href={websiteUrl}
 					target='_blank'
