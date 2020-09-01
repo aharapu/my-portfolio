@@ -2,7 +2,6 @@
 	color: $color-third;
 	border-bottom: 2px solid $color-first;
 	padding: 5rem 0;
-	// flex: 0 1 1fr;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -12,58 +11,30 @@
 		font-size: $fsize-medium;
 		font-weight: 400;
 		text-align: center;
-		margin: 0 auto $rem-l;
+		margin: 0 auto $rem-xl;
 	}
 	.preview-link-wrap {
-		margin-bottom: $rem-xl;
+		margin-bottom: 1.4rem;
 		position: relative;
+		width: 120%;
 
 		img.project-preview {
 			width: 100%;
-			max-width: 500px;
 			border-radius: 0 25px 25px 25px;
 			box-shadow: 7px 6px $color-second-transparent;
 			display: block;
 			transition: opacity ease-out 250ms;
 
-			// this after effect worked great when used toggled by a css hover
-			// however, triggering this effect with toggling a class seems to not work properly
-			// &::after {
-			// 	content: 'GO TO WEBSITE';
-			// 	font-size: $fsize-xsmall;
-			// 	color: white;
-			// 	text-shadow: 2px 2px 2px black;
-			// 	position: absolute;
-			// 	@include position-16-9-center(50%);
-			// 	transition: transform ease-out 250ms;
-			// 	transform: scale(1,1);
-			// 	border: 1px solid white;
-			// 	border-radius: 50%;
-			// 	display: flex;
-			// 	align-items: center;
-			// 	justify-content: center;
-			// }
-			// &:hover {
-			// 	img {
-			// 		opacity: 0.8;
-			// 	}
-			// 	&::after {
-			// 		transform: scale(1, 1);
-			// 	}
-			// }
 		}
 
 		img.preview-hover {
 			filter: brightness(0.6) blur(1px);
-			// &::after {
-			// 	transform: scale(1, 1);
-			// }
 		}
 	}
 
 	.project-card-links {
 		width: 220px;
-		margin-bottom: $rem-l;
+		margin-bottom: 2rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
@@ -101,6 +72,7 @@
 		text-align: justify;
 		padding: 0 15%;
 		max-width: 700px;
+		margin-bottom: 1.5rem;
 	}
 	div.tech-stack {
 		padding: $rem-l;

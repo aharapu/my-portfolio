@@ -1,10 +1,10 @@
 import React from 'react';
-import faker from 'faker';
 import { useRecoilValue } from 'recoil';
 import { projectDataState, apiErr } from '../../helpers/recoil-atoms';
 import ProjectCard from '../ProjectCard';
 import ModalSpinner from '../ModalSpinner';
 import ErrorMessage from '../ErrorMessage';
+import { PROJECT_DESC } from '../../content/projects'
 
 const ProjectsContainer = () => {
 	const projectData = useRecoilValue(projectDataState);
@@ -22,7 +22,7 @@ const ProjectsContainer = () => {
 	return (
 		<>
 			<h2 className='projects-container-title'>My Projects</h2>
-			<p className='projects-container-description'>{faker.lorem.sentences(5)}</p>
+			<p className='projects-container-description'>{PROJECT_DESC}</p>
 			<div className='project-container-cards'>
 				{projectData.items.map(project => (
 					<ProjectCard
