@@ -16,7 +16,7 @@
 	.preview-link-wrap {
 		margin-bottom: 1.4rem;
 		position: relative;
-		width: 120%;
+		width: 115%;
 
 		img.project-preview {
 			width: 100%;
@@ -96,6 +96,9 @@
 
 @media only screen and (max-width: 800px) {
 	.project-card {
+		.preview-link-wrap {
+			width: 100%;
+		}
 		p {
 			padding: 0 5%;
 			margin-bottom: 2rem;
@@ -110,8 +113,9 @@
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
-	// .project-card {
-	// 	width: 80%;
-	// 	margin: 2%;
-	// }
+	.project-card {
+		.preview-link-wrap {
+			width: 100%;
+		}
+	}
 }
