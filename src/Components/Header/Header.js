@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo-v02.svg';
 import NavBar from '../NavBar';
+import { ReactComponent as Logo } from './logo-v05.svg';
+
 
 export const Header = () => {
 	return (
 		<div className='header'>
 			<div className='logo'>
-				<img src={logo} alt='logo' />
+				{/* <img src={logo} alt='logo' /> */}
+				<Logo className='logo-component'/>
 				<h2>Valentin's WebDev Portfolio.</h2>
 			</div>
 			<NavBar />
