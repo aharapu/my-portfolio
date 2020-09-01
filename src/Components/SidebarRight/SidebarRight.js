@@ -4,6 +4,7 @@ import { useRecoilValue } from 'recoil';
 import { Fade } from 'react-animation-components';
 import { projectDataState, quoteAtom } from '../../helpers/recoil-atoms';
 import { useLocation } from 'react-router-dom';
+import { ABOUT_ANCHORS, RESUME_ANCHORS } from '../../helpers/constants';
 
 const SectionQuote = ({ route, quoteData }) => {
 	const { quote, author } = quoteData;
@@ -12,7 +13,7 @@ const SectionQuote = ({ route, quoteData }) => {
 		<Fade className='route-text-desc' in={route}>
 			<p>{quote}</p>
 			<p>{author}</p>
-			<span style={{zIndex:'50', fontSize:'0.9em', fontWeight: 'bold'}}>
+			<span style={{ zIndex: '50', fontSize: '0.9em', fontWeight: 'bold' }}>
 				<img
 					src='https://theysaidso.com/branding/theysaidso.png'
 					height='20'
@@ -22,7 +23,7 @@ const SectionQuote = ({ route, quoteData }) => {
 				<a
 					href='https://theysaidso.com'
 					title='Powered by quotes from theysaidso.com'
-					style={{color: '#ccc', marginLeft: '4px', verticalAlign: 'middle'}}>
+					style={{ color: '#ccc', marginLeft: '4px', verticalAlign: 'middle' }}>
 					They Said So®
 				</a>
 			</span>
@@ -30,11 +31,15 @@ const SectionQuote = ({ route, quoteData }) => {
 	);
 };
 
-export const ProjectLinkList = ({ trigger, data }) => {
+const ProjectLinkList = ({ data }) => {
 	return (
 		<>
 			{data.map(p => (
-				<Link key={p.fields.name} className='link-project' smooth to={`/projects#${p.sys.id}`}>
+				<Link
+					key={p.fields.name}
+					className='link-project'
+					smooth
+					to={`/projects#${p.sys.id}`}>
 					{p.fields.name.toLowerCase()}
 				</Link>
 			))}
@@ -42,7 +47,22 @@ export const ProjectLinkList = ({ trigger, data }) => {
 	);
 };
 
-const SectionLinkInside = () => {
+const AnchorLinkList = ({ page, title, data }) => {
+	return (
+		<>
+			<Fade in className='route-link-list'>
+				<h4 className='link-list-title'>{title}</h4>
+				{data.map(({ id, text }) => (
+					<Link key={id} className='link-project' smooth to={`/${page}#${id}`}>
+						{text.toLowerCase()}
+					</Link>
+				))}
+			</Fade>
+		</>
+	);
+};
+
+const SidebarRight = () => {
 	const projectData = useRecoilValue(projectDataState);
 	const quoteData = useRecoilValue(quoteAtom);
 	const location = useLocation();
@@ -54,14 +74,26 @@ const SectionLinkInside = () => {
 		<div className='sidebar-right'>
 			{projectData && isProjectsRouted ? (
 				<Fade in className='route-link-list'>
-					<h4 className='link-list-title'>Projects:</h4>
+					<h4 className='link-list-title'>Projects</h4>
 					<ProjectLinkList trigger={isProjectsRouted} data={projectData.items} />{' '}
 				</Fade>
 			) : null}
-			{isAboutRouted && quoteData ? <SectionQuote route={isAboutRouted} quoteData={quoteData} /> : null}
-			{isResumeRouted && quoteData ? <SectionQuote route={isResumeRouted} quoteData={quoteData} /> : null}
+			{isAboutRouted ? (
+				<AnchorLinkList
+					page={ABOUT_ANCHORS.page}
+					title={ABOUT_ANCHORS.title}
+					data={ABOUT_ANCHORS.data}
+				/>
+			) : null}
+			{isResumeRouted ? (
+				<AnchorLinkList
+					page={RESUME_ANCHORS.page}
+					title={RESUME_ANCHORS.title}
+					data={RESUME_ANCHORS.data}
+				/>
+			) : null}
 		</div>
 	);
 };
 
-export default SectionLinkInside;
+export default SidebarRight;

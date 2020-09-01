@@ -3,6 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
 import resume from '../../content/resume';
+import { RESUME_ANCHORS } from '../../helpers/constants';
 
 const ImageList = ({ tech }) => {
 	return (
@@ -73,27 +74,27 @@ const ResumeContainer = () => {
 				<h2>{name}</h2>
 				<p>{desc}</p>
 			</section>
-			<section className='stack'>
+			<section id={RESUME_ANCHORS.data[0].id} className='stack'>
 				<h3>Technology Stack</h3>
 				<ImageList tech={techStack} />
 			</section>
-			<section className='experience'>
+			<section id={RESUME_ANCHORS.data[1].id} className='experience'>
 				<h3>Experience</h3>
 				<ExpList dataArr={expData} />
 			</section>
-			<section className='experience'>
+			<section id={RESUME_ANCHORS.data[2].id} className='experience'>
 				<h3>Education</h3>
 				<ExpList dataArr={eduData} />
 			</section>
-			<section className='simple-list'>
+			<section id={RESUME_ANCHORS.data[3].id} className='simple-list'>
 				<h3>Other Skills</h3>
 				<SimpleList dataArr={skills} />
 			</section>
-			<section className='experience'>
+			<section id={RESUME_ANCHORS.data[4].id} className='experience'>
 				<h3>Other Work Experience</h3>
 				<ExpList dataArr={altExpData} />
 			</section>
-			<section className='simple-list'>
+			<section id={RESUME_ANCHORS.data[5].id} className='simple-list'>
 				<h3>Hobbies & Interests</h3>
 				<SimpleList dataArr={hobbies} />
 			</section>

@@ -1,5 +1,5 @@
 .header {
-	background-color: #F3575ACC;
+	background-color: #f3575acc;
 	padding: 1.3rem;
 	border-bottom: solid $color-third 1px;
 	grid-column-start: 1;
@@ -45,7 +45,6 @@
 
 @media only screen and (max-width: 800px) {
 	.header {
-		background: linear-gradient(180deg, #F33337 0%, #2D3D6A 100%);
 		background-size: 100% 100%;
 		grid-column-start: 1;
 		grid-column-end: 2;
@@ -56,8 +55,11 @@
 		width: unset;
 		flex-direction: column;
 		.logo {
-			height: 2.6rem;
+			height: 2rem;
 			width: 100%;
+			h2 {
+				font-size: 1.1rem;
+			}
 		}
 	}
 }

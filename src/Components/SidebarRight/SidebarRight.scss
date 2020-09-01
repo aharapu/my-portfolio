@@ -1,5 +1,7 @@
 .sidebar-right {
-	padding: $rem-m $rem-l $rem-m $rem-ms;
+	position: fixed;
+	right: 0;
+	padding: 1rem;
 	background-color: $color-first;
 	grid-column-start: 3;
 	grid-column-end: 4;
@@ -13,7 +15,7 @@
 	align-items: flex-start;
 
 	.route-link-list {
-		max-width: 100%;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -30,11 +32,12 @@
 			color: $color-second-dark;
 			font-size: $fsize-xsmall;
 			font-weight: 400;
-			text-indent: $rem-ms;
+			// text-indent: $rem-ms;
+			text-align: center;
 			white-space: nowrap;
 			text-overflow: ellipsis;
 			padding: $rem-s 0;
-			max-width: 100%;
+			width: 100%;
 			overflow: hidden;
 			&:hover {
 				background: $color-second-transparent;
@@ -50,6 +53,13 @@
 		padding: $rem-m 0;
 		font-size: $fsize-xsmall;
 		font-weight: 700;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.sidebar-right {
+		top: 10vh;
+		height: 82vh;
+		margin: 2vh 2vw 2vh 0;
 	}
 }
 

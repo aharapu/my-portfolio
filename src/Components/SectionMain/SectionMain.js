@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { sections } from '../../content/sections';
+import SidebarRight from '../SidebarRight';
 export class SectionMain extends React.Component {
 	render() {
 		return (
@@ -14,13 +15,16 @@ export class SectionMain extends React.Component {
 								timeout={1700}
 								classNames='page'
 								unmountOnExit>
-								<div id='page' className='page'>{comp}</div>
+								<div id='page' className='page'>
+									{comp}
+								</div>
 							</CSSTransition>
 						)}
 					</Route>
 				))}
-				
+
 				<Redirect to='/projects' />
+				<SidebarRight />
 			</div>
 		);
 	}

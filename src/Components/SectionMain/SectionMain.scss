@@ -2,11 +2,11 @@
 	color: $color-third;
 	background-color: #fafafa;
 	grid-column-start: 2;
-	grid-column-end: 3;
+	grid-column-end: 4;
 	grid-row-start: 2;
 	grid-row-end: 3;
 	height: 86vh;
-	width: 70vw;
+	width: 82vw;
 	display: flex;
 	flex-direction: column;
 	overflow: auto;
@@ -17,7 +17,7 @@
 .page {
 	position: relative;
 	padding: 6% 10%;
-	width: 100%;
+	width: 68vw;
 	min-height: 100%;
 }
 
@@ -48,6 +48,11 @@
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
 	.section-main {
 		width: 82vw;
+		grid-column-end: 3;
+	}
+
+	.page {
+		width: 78vw;;
 	}
 }
 

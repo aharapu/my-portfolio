@@ -1,13 +1,13 @@
 .sidebar-left {
 	position: relative;
 	background-color: $color-third-dark;
-	padding: $rem-m;
+	margin: 2vh 1vw;
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 2;
 	grid-row-end: 3;
-	height: 86vh;
-	width: 18vw;
+	height: 82vh;
+	width: 16vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
