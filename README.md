@@ -52,3 +52,6 @@ function add(num, char) {
 | ------ | --------------------------- |
 | valle  | name@valle.yeah             |
 | gugu   | bafta.luigugu@dutevino.coco |
+
+
+Some more text for testing purposes.
