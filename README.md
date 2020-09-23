@@ -40,9 +40,6 @@ This is a note. There are many like it, but this one is mine.
 ```bash
 npm install
 npm start
-function add(num, char){
-return num + char;
-}
 ```
 
 ```javascript
