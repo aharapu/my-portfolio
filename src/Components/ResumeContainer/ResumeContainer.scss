@@ -45,6 +45,7 @@
 			margin-top: $rem-xl;
 		}
 		p {
+			font-size: 1.2rem;
 			padding: 0 5%;
 			margin-bottom: $rem-xl;
 		}
@@ -117,7 +118,12 @@
 		}
 	}
 
-	.cta {
+	section.cta {
+		background: $color-second-light-op66 ;
+		margin-top: 2rem;
+		margin-bottom: 7rem;
+		display: flex;
+		flex-direction: column;
 		a {
 			margin: 0 auto;
 		}

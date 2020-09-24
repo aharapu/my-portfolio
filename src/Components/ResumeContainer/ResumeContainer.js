@@ -100,7 +100,7 @@ const ResumeContainer = () => {
 			</section>
 			<section className='cta'>
 				<h3>Would you like to contact me?</h3>
-				<Link to={`/about#contact`} smooth className='ui button fluid'>
+				<Link to={`/about#contact`} smooth className='ui button'>
 					Go to contact form!
 				</Link>
 			</section>

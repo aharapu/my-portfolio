@@ -2,7 +2,7 @@ export const linkIconUrl = '%PUBLIC%/assets/static/link-icon.svg';
 
 export const ABOUT_ANCHORS = {
 	page: 'about',
-	title: 'Sections',
+	title: 'Jump To',
 	data: [
 		{ id: 'about', text: 'about' },
 		{ id: 'contact', text: 'contact' },
@@ -10,7 +10,7 @@ export const ABOUT_ANCHORS = {
 };
 export const RESUME_ANCHORS = {
 	page: 'resume',
-	title: 'Sections',
+	title: 'Jump To',
 	data: [
 		{ id: 'stack', text: 'stack' },
 		{ id: 'experience', text: 'experience' },

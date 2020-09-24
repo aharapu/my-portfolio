@@ -1,6 +1,6 @@
 .project-card {
 	color: $color-third;
-	border-bottom: 2px solid $color-first;
+	// border-bottom: 2px solid $color-first-op88;
 	padding: 5rem 0;
 	display: flex;
 	flex-direction: column;
@@ -39,9 +39,10 @@
 		flex-direction: row;
 		justify-content: space-around;
 		a.card-link {
+			background: $color-second-light-op66;
 			padding: $rem-ms $rem-l $rem-s $rem-ms;
-			background: $color-first-light;
 			border-radius: 0 10px 10px 10px;
+			margin: 0.5rem 1.4rem;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -65,11 +66,13 @@
 
 		a.card-link.preview-hover{
 			background-color: $color-second-light;
+			h6.link-text {
+				color: $color-first-light;
+			}
 		}
 	}
 
 	p {
-		text-align: justify;
 		padding: 0 15%;
 		max-width: 700px;
 		margin-bottom: 1.5rem;
@@ -91,6 +94,19 @@
 			height: $rem-xl;
 			padding: 0 $rem-m;
 		}
+	}
+}
+
+.project-card + .project-card {
+	border-top: 2px solid $color-first-op88;
+}
+
+#somewhere {
+	color: black;
+	max-width: 200px;
+	opacity: 0;
+	&:hover{
+		opacity: 1;
 	}
 }
 

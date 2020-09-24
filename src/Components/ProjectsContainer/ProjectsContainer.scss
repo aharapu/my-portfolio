@@ -1,13 +1,15 @@
 .projects-container-title {
+	text-align: center;
 	font-size: $fsize-large;
-	padding-bottom: $rem-l;
-	// border-bottom: 2px solid $color-first-dark;
+	margin-bottom: 5rem;
 }
 
 .projects-container-description {
 	font-size: $fsize-xsmall;
-	padding: $rem-s 20% 0 0;
+	padding-bottom: 5rem;
 	border-bottom: 2px solid $color-first;
+	max-width: 60ch;
+	margin: 0 auto ;
 }
 
 .project-container-cards {

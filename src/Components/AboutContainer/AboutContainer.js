@@ -26,7 +26,7 @@ const AboutContainer = () => {
 	if (!aboutDataState) return null;
 	return (
 		<div className='about-container'>
-			<h3 id={ABOUT_ANCHORS.data[0].id} className='about-title'>About Me</h3>
+			<h3 id={ABOUT_ANCHORS.data[0].id} className='about-title'>Introduction</h3>
 			<img
 				className='valentin'
 				src={aboutDataState.includes.Asset[0].fields.file.url}
@@ -54,7 +54,7 @@ const AboutContainer = () => {
 						<label>Message*</label>
 						<textarea placeholder='Enter Message' name='message_html' minlength="20" required />
 					</div>
-					<input className='ui button' type='submit' value='Send' />
+					<input className='ui button send-btn' type='submit' value='Send' />
 				</form>
 			</section>
 		</div>

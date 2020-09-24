@@ -12,12 +12,9 @@
 		float: left;
 		width: 30%;
 		box-shadow: 5px 5px $color-second-transparent;
-        margin: 0 $rem-xl $rem-xl 0;
-        
+		margin: 0 $rem-xl $rem-xl 0;
 	}
-	p {
-		text-indent: $rem-xl;
-	}
+
 	p:nth-child(4) {
 		margin-bottom: 4rem;
 	}
@@ -26,24 +23,28 @@
 		h3 {
 			text-align: center;
 			width: 100%;
-            font-size: $fsize-small;
-            margin-bottom: $rem-l;
+			font-size: $fsize-small;
+			margin-bottom: $rem-l;
 		}
 		p {
-            text-indent: unset;
-            max-width: 400px;
+			max-width: 400px;
 			font-size: $fsize-xsmall;
-            text-align: center;
-            margin: 0 auto $rem-xl;
-        }
-        
-        input, textarea {
-            border-color: $color-third !important;
-        }
+			text-align: center;
+			margin: 0 auto $rem-xl;
+		}
+
+		input,
+		textarea {
+			border-color: $color-third !important;
+		}
 	}
 
 	div.input {
 		margin: $rem-m;
+	}
+
+	.send-btn {
+		float: right;
 	}
 }
 
@@ -58,6 +59,16 @@
 		p {
 			text-indent: 1.4rem;
 			text-align: justify;
+		}
+	}
+}
+
+@include media-xl {
+	.about-container {
+		.contact {
+			h3 {
+				margin-top: 10rem;
+			}
 		}
 	}
 }
