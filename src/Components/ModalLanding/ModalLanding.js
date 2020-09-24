@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
 
 const ModalLanding = () => {
-	const [isModalClicked, setIsModalClicked] = useState(false);
+	const [isShown, setIsShown] = useState(true);
 	const handleClick = event => {
 		event.preventDefault();
-		setIsModalClicked(true);
-		window.scrollTo(0, 0);
+		setIsShown(false);
 	};
-	if (isModalClicked) return null;
+	
+	if (!isShown) {
+		const scrollY = document.body.style.top;
+		document.body.style.position = '';
+		document.body.style.top = '';
+		window.scrollTo(0, parseInt(scrollY || '0') * -1);
+		return null;
+	} 
+
+	document.body.style.position = 'fixed';
+	document.body.style.top = `-${window.scrollY}px`;
+
 	return (
 		<div className='modal-landing' onClick={handleClick}>
 			<h2 className='landing-warning'>Warning! This website is best viewed on a desktop!</h2>
