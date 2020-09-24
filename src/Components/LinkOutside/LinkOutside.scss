@@ -15,7 +15,7 @@
 	img {
 		width: 32px;
 		height: 32px;
-		margin: 0 $rem-s;
+		margin: 2px 7px 2px 13px;
 		transition-duration: 0.5s;
 	}
 	&:hover {
@@ -43,4 +43,11 @@
 	}
 }
 
+@include media-xl {
+	.link-outside {
+		img {
+			margin: 5px 10px 5px 20px;
+		}
+	}
+}
 

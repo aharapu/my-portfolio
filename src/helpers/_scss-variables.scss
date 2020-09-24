@@ -15,6 +15,13 @@
 	right: $horizDist;
 }
 
+@mixin media-xl{
+	@media only screen and (min-width: 1800px) {
+		@content;
+	}
+}
+
+
 @mixin icon-tiny {
 	width: 16px;
 	height: 16px;
@@ -77,6 +84,7 @@ $color-second-dark: #990A0C;
 $color-second-transparent: #F3333722;
 $color-third:#2D3D6A;
 $color-third-dark: #2B385A;
+$color-third-dark-op66: #2B385A66;
 $gradient-primary: linear-gradient(45deg, #F33337 0%, #5498AF 100%);
 $gradient-secondary: linear-gradient(45deg, #F33337 0%, #2D3D6A 100%);
 

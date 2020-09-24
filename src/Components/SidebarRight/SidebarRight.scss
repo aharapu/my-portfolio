@@ -1,8 +1,8 @@
 .sidebar-right {
 	position: fixed;
 	right: 0;
-	padding: 1rem;
-	background-color: $color-first;
+	padding: 1.5rem;
+	background-color: $color-third-dark-op66;
 	grid-column-start: 3;
 	grid-column-end: 4;
 	grid-row-start: 2;
@@ -21,26 +21,23 @@
 		justify-content: center;
 		align-items: flex-start;
 		.link-list-title {
-			color: $color-second-dark;
+			color: $color-third-dark;
 			font-size: $fsize-xsmall;
-			text-align: center;
 			width: 100%;
 			margin-bottom: $rem-m;
 		}
 
 		a.link-project {
-			color: $color-second-dark;
+			color: $color-third-dark;
 			font-size: $fsize-xsmall;
 			font-weight: 400;
-			// text-indent: $rem-ms;
-			text-align: center;
 			white-space: nowrap;
 			text-overflow: ellipsis;
 			padding: $rem-s 0;
 			width: 100%;
 			overflow: hidden;
 			&:hover {
-				background: $color-second-transparent;
+				background: $color-first-light-transparent;
 			}
 		}
 		.link-project + .link-project {

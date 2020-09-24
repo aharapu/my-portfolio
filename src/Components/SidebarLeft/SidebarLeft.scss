@@ -37,3 +37,8 @@
 	}
 }
 
+@include media-xl{
+	.sidebar-left {
+		padding-left: 20px;
+	}
+}

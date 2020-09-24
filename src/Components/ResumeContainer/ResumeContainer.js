@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
+import { faFileDownload, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import resume from '../../content/resume';
 import { RESUME_ANCHORS } from '../../helpers/constants';
 
@@ -64,7 +64,7 @@ const ResumeContainer = () => {
 	return (
 		<div className='resume-container'>
 			<section className='contact'>
-				<p>Contact: {phone}</p>
+				<p><FontAwesomeIcon icon={faMobileAlt} size='lg' />&nbsp;&nbsp;{phone}</p>
 			</section>
 			<a className='download' href='/assets/cv-harapu.pdf' download='cv-harapu.pdf'>
 				<FontAwesomeIcon icon={faFileDownload} size='lg' />

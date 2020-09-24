@@ -7,10 +7,16 @@ html {
 body {
 	padding: 0;
 	margin: 0;
+	background-color: #FAFAFA;
 	position: relative;
 	box-sizing: border-box;
 }
 
+div, a, p, span, h1, h2, h3, h4, h5, img, svg {
+	background-color: unset;
+}
+
+// attempt at a custom cursor, not working properly, needs further research
 a {
 	// cursor: url(/assets/pointer-v01.png) 1 1, auto;
 }
