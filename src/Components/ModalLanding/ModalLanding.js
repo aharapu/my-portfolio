@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useRecoilState } from 'recoil';
+import { isModalShownAtom } from '../../helpers/recoil-atoms'
 
 const ModalLanding = () => {
-	const [isShown, setIsShown] = useState(true);
+	const [isModalShown, setIsModalShown] = useRecoilState(isModalShownAtom);
+
 	const handleClick = event => {
 		event.preventDefault();
-		setIsShown(false);
+		setIsModalShown(false);
 	};
 	
-	if (!isShown) {
+	if (!isModalShown) {
 		const scrollY = document.body.style.top;
 		document.body.style.position = '';
 		document.body.style.top = '';
@@ -20,7 +23,6 @@ const ModalLanding = () => {
 
 	return (
 		<div className='modal-landing' onClick={handleClick}>
-			<h2 className='landing-warning'>Warning! This website is best viewed on a desktop!</h2>
 			<h3 className='landing-title'>Welcome!</h3>
 			<p className='landing-text'>
 				Hi! I'm Valentin and this is my web-dev portfolio. If you like what you see and want

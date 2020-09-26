@@ -1,0 +1,24 @@
+.scroll-to-top-btn {
+    color: white;
+    font-weight: 900;
+    font-size: 25px;
+    background: $color-second-light-op66;
+    padding: 10px;
+    border-radius: 0 5px 5px 5px;
+    max-height: 30px;
+    cursor: pointer;
+    position: fixed;
+    display: none;
+    right: 16vw;
+    bottom: 8vh;
+    z-index: 99;
+    &:hover {
+        background-color: $color-second-light;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+    .scroll-to-top-btn {
+        right: 4vw;
+    }
+}

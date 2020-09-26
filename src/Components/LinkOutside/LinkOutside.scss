@@ -1,5 +1,6 @@
 .link-outside {
 	margin: $rem-s;
+	cursor: pointer;
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;
@@ -18,18 +19,27 @@
 		margin: 2px 7px 2px 13px;
 		transition-duration: 0.5s;
 	}
-	&:hover {
-		h5 {
-			font-size: $fsize-medsmall;
-		}
-		img {
-			@include icon-m;
+}
+
+@media only screen and (min-width: 1200px) {
+	.link-outside {
+		&:hover {
+			h5 {
+				font-size: $fsize-medsmall;
+			}
+			img {
+				@include icon-m;
+			}
 		}
 	}
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
 	.link-outside {
+		h5 {
+			font-size: $fsize-xsmall;
+		}
+		margin: 10px;
 		flex-direction: column-reverse;
 		align-items: center;
 	}

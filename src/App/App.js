@@ -10,6 +10,7 @@ import SidebarLeft from '../Components/SidebarLeft/SidebarLeft';
 import SectionMain from '../Components/SectionMain';
 import SidebarRight from '../Components/SidebarRight';
 import Footer from '../Components/Footer';
+import ScrollToTopBtn from '../Components/ScrollToTopBtn'
 
 const App = () => {
 	const [, setLinkDataState] = useRecoilState(linkData);
@@ -40,22 +41,18 @@ const App = () => {
 			.catch(err => {
 				setApiErrState(err);
 			});
-		// getQuote()
-		// 	.then(data => setQuoteData(data.contents.quotes[0]))
-		// 	.catch(err => console.error(err));
 	}, [setProjectDataState, setLinkDataState, setApiErrState, setAboutDataState, setQuoteData]);
 
 	return (
 		<Router>
 			<Header />
 			<SidebarLeft />
-			{/* <div className='page-area'> */}
 			<SectionMain>
 				<SidebarRight />
 			</SectionMain>
-			{/* </div> */}
 			<Footer />
 			<ModalLanding />
+			<ScrollToTopBtn />
 		</Router>
 	);
 };

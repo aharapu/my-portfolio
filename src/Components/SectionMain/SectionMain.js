@@ -1,33 +1,41 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Route, Redirect } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil'
+import { sectionMainElemAtom } from '../../helpers/recoil-atoms'
 import { CSSTransition } from 'react-transition-group';
 import { sections } from '../../content/sections';
 import SidebarRight from '../SidebarRight';
-export class SectionMain extends React.Component {
-	render() {
-		return (
-			<div className='section-main'>
-				{sections.map(({ name, comp }) => (
-					<Route key={`/${name}`} exact path={`/${name}`}>
-						{({ match }) => (
-							<CSSTransition
-								in={match != null}
-								timeout={1700}
-								classNames='page'
-								unmountOnExit>
-								<div id='page' className='page'>
-									{comp}
-								</div>
-							</CSSTransition>
-						)}
-					</Route>
-				))}
 
-				<Redirect to='/projects' />
-				<SidebarRight />
-			</div>
-		);
-	}
+const SectionMain = () => {
+	const setSectionMainElem = useSetRecoilState(sectionMainElemAtom)
+	const sectionMainRef = useRef(null)
+	useEffect(() => {
+		if (!sectionMainRef.current)
+		console.log('in sec main, about to set state with ref')
+		setSectionMainElem(sectionMainRef.current)
+	}, [sectionMainRef])
+	return (
+		<div ref={sectionMainRef} className='section-main'>
+			{sections.map(({ name, comp }) => (
+				<Route key={`/${name}`} exact path={`/${name}`}>
+					{({ match }) => (
+						<CSSTransition
+							in={match != null}
+							timeout={1700}
+							classNames='page'
+							unmountOnExit>
+							<div id='page' className='page'>
+								{comp}
+							</div>
+						</CSSTransition>
+					)}
+				</Route>
+			))}
+
+			<Redirect to='/projects' />
+			<SidebarRight />
+		</div>
+	);
 }
 
 export default SectionMain;

@@ -14,7 +14,6 @@ export const Preview = ({ websiteUrl, githubRepo, linkIcon, preview }) => {
 		event.preventDefault();
 		imageWrapRef.current.classList.remove('preview-hover');
 		projectLinkRef.current.classList.remove('preview-hover');
-		console.log('event triggered');
 	};
 	return (
 		<>

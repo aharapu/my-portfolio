@@ -21,3 +21,12 @@ export const quoteAtom = atom({
 	key: 'quoteAtom',
 	default: null,
 });
+export const isModalShownAtom = atom({
+	key: 'isModalShown',
+	default: true,
+});
+export const sectionMainElemAtom = atom({
+	key: 'sectionMainElem',
+	default: null,
+});
+
