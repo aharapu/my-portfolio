@@ -13,7 +13,7 @@
 }
 
 // routing animation classes
-.page {
+.page, .page-reverse {
 	position: relative;
 	padding: 6% 10%;
 	width: 67vw;
@@ -23,7 +23,6 @@
 .page-enter {
 	position: absolute;
 	transform: translateX(-300vw);
-	transition: transform 1700ms;
 }
 
 .page-enter-active {
@@ -35,12 +34,33 @@
 .page-exit {
 	position: absolute;
 	transform: translateX(0);
-	transition: transform 1700ms;
 }
 
 .page-exit-active {
 	position: absolute;
 	transform: translateX(300vw);
+	transition: transform 1700ms;
+}
+
+.page-reverse-enter {
+	position: absolute;
+	transform: translateX(300vw);
+}
+
+.page-reverse-enter-active {
+	position: relative;
+	transform: translateX(0);
+	transition: transform 1700ms;
+}
+
+.page-reverse-exit {
+	position: absolute;
+	transform: translateX(0);
+}
+
+.page-reverse-exit-active {
+	position: absolute;
+	transform: translateX(-300vw);
 	transition: transform 1700ms;
 }
 

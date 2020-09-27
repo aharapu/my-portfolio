@@ -7,7 +7,7 @@ export const sections = [
 	{
 		id: 0,
 		name: 'about',
-		text: 'about me',
+		text: 'about',
 		comp: <AboutContainer />,
 	},
 	{

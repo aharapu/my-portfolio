@@ -50,13 +50,18 @@
 		grid-column-end: 2;
 		grid-row-start: 1;
 		grid-row-end: 2;
-		padding: 0.8rem;
-		height: unset;
+		padding: 0.3rem 0;
+		height: 5rem;
 		width: unset;
 		flex-direction: column;
+		justify-content: space-around;
 		.logo {
 			height: 2rem;
 			width: 100%;
+			justify-content: center;
+			.logo-component {
+				display: none;
+			}
 			h2 {
 				font-size: 1.1rem;
 			}

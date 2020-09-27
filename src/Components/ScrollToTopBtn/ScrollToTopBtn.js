@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react'
 import { useRecoilValue } from 'recoil'
 import { isModalShownAtom, sectionMainElemAtom } from '../../helpers/recoil-atoms'
 
+const pageWidth = document.body.offsetWidth
+
 const ScrollToTopBtn = () => {
     const isModalShown = useRecoilValue(isModalShownAtom)
     const sectionMainElem = useRecoilValue(sectionMainElemAtom)

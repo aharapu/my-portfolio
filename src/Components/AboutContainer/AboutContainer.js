@@ -52,7 +52,7 @@ const AboutContainer = () => {
 					</div>
 					<div className='field'>
 						<label>Message*</label>
-						<textarea placeholder='Enter Message' name='message_html' minlength="20" required />
+						<textarea placeholder='Enter Message' name='message_html' minLength="20" required />
 					</div>
 					<input className='ui button send-btn' type='submit' value='Send' />
 				</form>

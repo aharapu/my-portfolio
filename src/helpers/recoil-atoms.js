@@ -29,4 +29,7 @@ export const sectionMainElemAtom = atom({
 	key: 'sectionMainElem',
 	default: null,
 });
-
+export const transitionReverseAtom = atom({
+	key: 'isReverse',
+	default: true,
+});
