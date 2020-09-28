@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
-import { useSetRecoilState } from 'recoil'
-import { transitionReverseAtom } from '../../helpers/recoil-atoms'
+import { useRecoilValue, useSetRecoilState } from 'recoil'
+import { transitionReverseAtom, sectionMainElemAtom } from '../../helpers/recoil-atoms'
 import { HashLink as Link } from 'react-router-hash-link';
 import { Stagger, Fade } from 'react-animation-components';
 import { sections } from '../../content/sections';
@@ -10,8 +10,11 @@ const pageWidth = document.body.offsetWidth
 
 const NavBar = ({history}) => {
 	const setIsReverse = useSetRecoilState(transitionReverseAtom)
+	const sectionMainElem = useRecoilValue(sectionMainElemAtom)
 	const touchStart = useRef({})
 	const lastTouchEvent = useRef(null)
+
+
 
 	useEffect(() => {  // add swipe to change pages
 		if (pageWidth > 1200) return
@@ -23,7 +26,7 @@ const NavBar = ({history}) => {
 			document.removeEventListener('touchmove', handleTouchMove)
 			document.removeEventListener('touchend', handleTouchEnd)
 		}
-	}, [])
+	}, [sectionMainElem])
 
 	const handleTouchStart = (event) => {
 		lastTouchEvent.current = event
@@ -59,18 +62,19 @@ const NavBar = ({history}) => {
 			}
 
 			history.push(`/${sections[nextIndex].name}#page`)
+			sectionMainElem.scrollTo({ behavior: 'smooth', top: 0, left: 0 })
 		}
 	}
 
+	// !! ATT - the <Link> scroll prop take the routed element as an argument. however, it is simply being used as a callback
 	return (
 			<Stagger in delay={130} duration={1000} className='nav-bar'>
 				{sections.map(({ id, name, text }) => (
 					<Fade className='link-fade-wrap' in key={id}>
 						<Link
 							to={`/${name}#page`}
-							smooth
 							className='nav-link'
-							scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+							scroll={() => sectionMainElem.scrollTo({ behavior: 'smooth', top: 0, left: 0 })}
 							>
 							{text}
 						</Link>

@@ -11,8 +11,7 @@ const SectionMain = () => {
 	const isReverse = useRecoilValue(transitionReverseAtom)
 	const sectionMainRef = useRef(null)
 	useEffect(() => {
-		if (!sectionMainRef.current)
-		console.log('in sec main, about to set state with ref')
+		if (!sectionMainRef.current) return
 		setSectionMainElem(sectionMainRef.current)
 	}, [sectionMainRef])
 	return (

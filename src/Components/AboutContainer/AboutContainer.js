@@ -1,6 +1,5 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
-// const ReactMarkdown = require('react-markdown');
 import ReactMarkdown from 'react-markdown';
 import { useRecoilValue } from 'recoil';
 import { aboutData } from '../../helpers/recoil-atoms';
@@ -26,13 +25,12 @@ const AboutContainer = () => {
 	if (!aboutDataState) return null;
 	return (
 		<div className='about-container'>
-			<h3 id={ABOUT_ANCHORS.data[0].id} className='about-title'>Introduction</h3>
+			<h3 id={ABOUT_ANCHORS.data[0].id} className='about-title'>A little history</h3>
 			<img
 				className='valentin'
 				src={aboutDataState.includes.Asset[0].fields.file.url}
 				alt='portrait'
 			/>
-			
 			<ReactMarkdown source={aboutDataState.items[0].fields.description} />
 			<section id={ABOUT_ANCHORS.data[1].id} id='contact' className='contact'>
 				<h3>Get In Touch</h3>
