@@ -15,10 +15,21 @@
     &:hover {
         background-color: $color-second-light;
     }
+    transition: all 0.5s ease-in-out;
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
     .scroll-to-top-btn {
         right: 4vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .scroll-to-top-btn {
+        right: 6vw;
+        bottom: 3vh;
+        &:hover {
+            background-color: $color-second-light-op66;   // prevent it from getting opacity 1 after touching it
+        }
     }
 }

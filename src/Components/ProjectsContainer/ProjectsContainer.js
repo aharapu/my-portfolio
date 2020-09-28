@@ -12,7 +12,7 @@ const ProjectsContainer = () => {
 
 	if (!projectData && !apiErrState) {
 		const loadingText = '...loading content';
-		return <ModalSpinner className='modal-spinner' text={loadingText} />;
+		return <ModalSpinner className='modal-spinner at80vh' text={loadingText} />;
 	}
 
 	if (apiErrState) {
