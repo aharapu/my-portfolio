@@ -1,57 +1,50 @@
 ## Hello World!
 
 As a webDev, how could I not build _my own portfolio_ website? That would be crazy!
-This repo is a demo in itself. I integrated a bunch of technologies just to prove that I can.
 
-Here's a list:
+This repo is a demo in itself. I integrated several technologies just for experimentation.
 
--   **[React](https://github.com/facebook/create-react-app)** for a cool PWA feel
--   FakerJS to get mock data during development
-    -   this was fun
-
----
-
-## Design Doc
-
-### Color palette
-
-![image name](https://images.ctfassets.net/al1ikk93hxev/zqr41QDJmBiKzetFJcfO2/7c661b0e8325350c40595ddd9c09147c/portfolio-gif.gif?h=250)
-
-1. alice-blue: #d8e3e8;
-1. cool-grey: #959bba;
-1. purple-navy: #52528c;
-1. russian-violet: #2e1f47;
-1. saffron: #e7bc23;
-1. maize-crayola: #ebc747;
-
-### Project GIFs - 500x281, 64colors
+Here are some of them:
+-   **[React](https://reactjs.org/)** - because SPAs and PWAs are the future of the internet
+-   **[Recoil](https://recoiljs.org/)** - trying out modern state management tools
+-   **[FakerJS](https://github.com/marak/Faker.js/)** - to get mock data during development
+-   **[Contentful](https://www.contentful.com/)** - easily manage website content
 
 ---
 
-Fun fact, there is a `JSON.statham()` being used to enhance the power
+## Design Documentation
+<br/>
+
+### Color Palette
+Color ranges for backgrounds, sidebars, buttons and othe assets.
+
+<img src="https://images.ctfassets.net/al1ikk93hxev/4foUwVl8vmiH8xHQbpjWfD/1c2620ff17dd6a98925f5ee44e9bf2fd/color_pallette.svg" width="300">
+<br/>
+<br/>
+
+### Color Range List:
+
+| Name            | Hash Value      |
+| --------------- | --------------- |
+| Chestnut Rose   | #CB515A         |
+| Carnation       | #F3575A         |
+| Mandy's Pink    | #F7B9BA         |
+| Gallery         | #F0F0F0         |
+| Botticelli      | #C9E2E3         |
+| Rhino Light     | #30406C         |
+| Rhino Dark      | #2B385A         |
+<br/>
+<br/>
+
+### Avatar
+Use this for the about section.
+
+<img src="https://images.ctfassets.net/al1ikk93hxev/2z4gqwjNdJEm6XRDA5dIJe/f579f707ed02d1915ad4d63df89bb004/portrait.svg" width="300">
+<br/>
+<br/>
+
+---
+
+###### FUN FACT
+There is a `JSON.statham()` being used to enhance the power
 of JavaScript objects. If the object is not strong enough, however, it may get killed. Use with caution!
-
-
-###### NOTE
-This is a note. There are many like it, but this one is mine.
-
-<!-- Github specific markdown -->
-
-```bash
-npm install
-npm start
-```
-
-```javascript
-function add(num, char) {
-	return num + char;
-}
-```
-
-| vasile | email                       |
-| ------ | --------------------------- |
-| valle  | name@valle.yeah             |
-| gugu   | bafta.luigugu@dutevino.coco |
-
-
-Some more text for testing purposes.
