@@ -2,34 +2,9 @@ import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useRecoilValue } from 'recoil';
 import { Fade } from 'react-animation-components';
-import { projectDataState, quoteAtom } from '../../helpers/recoil-atoms';
+import { projectDataState } from '../../helpers/recoil-atoms';
 import { useLocation } from 'react-router-dom';
 import { ABOUT_ANCHORS, RESUME_ANCHORS } from '../../helpers/constants';
-
-const SectionQuote = ({ route, quoteData }) => {
-	const { quote, author } = quoteData;
-
-	return (
-		<Fade className='route-text-desc' in={route}>
-			<p>{quote}</p>
-			<p>{author}</p>
-			<span style={{ zIndex: '50', fontSize: '0.9em', fontWeight: 'bold' }}>
-				<img
-					src='https://theysaidso.com/branding/theysaidso.png'
-					height='20'
-					width='20'
-					alt='theysaidso.com'
-				/>
-				<a
-					href='https://theysaidso.com'
-					title='Powered by quotes from theysaidso.com'
-					style={{ color: '#ccc', marginLeft: '4px', verticalAlign: 'middle' }}>
-					They Said So®
-				</a>
-			</span>
-		</Fade>
-	);
-};
 
 const ProjectLinkList = ({ data }) => {
 	return (
@@ -64,7 +39,6 @@ const AnchorLinkList = ({ page, title, data }) => {
 
 const SidebarRight = () => {
 	const projectData = useRecoilValue(projectDataState);
-	const quoteData = useRecoilValue(quoteAtom);
 	const location = useLocation();
 	const isProjectsRouted = location.pathname === '/projects';
 	const isAboutRouted = location.pathname === '/about';

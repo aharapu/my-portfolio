@@ -12,8 +12,12 @@
 	position: relative;
 }
 
+.page-container {
+	// transition: transform 0.5s ease-out; TODO -> find a way to make this a smooth experience
+}
+
 // routing animation classes
-.page {
+.page, .page-reverse {
 	position: relative;
 	padding: 6% 10%;
 	width: 67vw;

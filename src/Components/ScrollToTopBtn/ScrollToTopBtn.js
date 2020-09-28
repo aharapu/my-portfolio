@@ -9,8 +9,6 @@ const ScrollToTopBtn = () => {
     const sectionMainElem = useRecoilValue(sectionMainElemAtom)
     const btnRef = useRef(null)
 
-    console.log('sec main from scroll btn: ', sectionMainElem)
-
     useEffect(() => {
         if (!sectionMainElem) return
 

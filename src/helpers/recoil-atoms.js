@@ -17,10 +17,6 @@ export const aboutData = atom({
 	key: 'aboutData',
 	default: null,
 });
-export const quoteAtom = atom({
-	key: 'quoteAtom',
-	default: null,
-});
 export const isModalShownAtom = atom({
 	key: 'isModalShown',
 	default: true,
@@ -32,4 +28,8 @@ export const sectionMainElemAtom = atom({
 export const transitionReverseAtom = atom({
 	key: 'isReverse',
 	default: true,
+});
+export const pageContainerAtom = atom({
+	key: 'pageElement',
+	default: null,
 });
