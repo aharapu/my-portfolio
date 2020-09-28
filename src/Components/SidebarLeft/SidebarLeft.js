@@ -22,7 +22,7 @@ const SectionLinkOutside = () => {
 	return (
 		<Stagger in delay={130} duration={1000} className='sidebar-left'>
 			{linkDataState.items.map(({ sys, fields }) => (
-				<Fade in  key={sys.id}>
+				<Fade in key={sys.id} className='link-outside-wrap'>
 					<LinkOutside info={fields} />
 				</Fade>
 			))}

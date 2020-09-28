@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { BrowserRouter as Router } from 'react-router-dom';
 import callContentful from '../helpers/callContentful';
-import { getQuote } from '../helpers/qouteAPI';
 import { linkData, projectDataState, apiErr, aboutData, quoteAtom } from '../helpers/recoil-atoms';
 import ModalLanding from '../Components/ModalLanding';
 import Header from '../Components/Header';
@@ -11,6 +10,8 @@ import SectionMain from '../Components/SectionMain';
 import SidebarRight from '../Components/SidebarRight';
 import Footer from '../Components/Footer';
 import ScrollToTopBtn from '../Components/ScrollToTopBtn'
+
+let vh = window.innerHeight * 0.01
 
 const App = () => {
 	const [, setLinkDataState] = useRecoilState(linkData);
@@ -41,6 +42,10 @@ const App = () => {
 			.catch(err => {
 				setApiErrState(err);
 			});
+		
+		console.log('vh = ', vh)
+		document.documentElement.style.setProperty('--vh', `${vh}px`)
+
 	}, [setProjectDataState, setLinkDataState, setApiErrState, setAboutDataState, setQuoteData]);
 
 	return (

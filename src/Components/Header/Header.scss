@@ -1,5 +1,5 @@
 .header {
-	background-color: $color-second-light-op99;
+	background: rgba(246, 152, 154, 0.9);
 	padding: 1.3rem;
 	grid-column-start: 1;
 	grid-column-end: 4;
@@ -7,11 +7,13 @@
 	grid-row-end: 2;
 	height: 10vh;
 	width: 100vw;
+	z-index: 99;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	overflow: hidden;
+	transition: all 0.5s;
 	.logo {
 		height: 100%;
 		display: flex;
@@ -53,6 +55,8 @@
 		padding: 0.3rem 0;
 		height: 5rem;
 		width: unset;
+		position: sticky;
+		top: -5rem;
 		flex-direction: column;
 		justify-content: space-around;
 		.logo {

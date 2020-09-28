@@ -13,7 +13,7 @@ const NavBar = ({history}) => {
 	const touchStart = useRef({})
 	const lastTouchEvent = useRef(null)
 
-	useEffect(() => {
+	useEffect(() => {  // add swipe to change pages
 		if (pageWidth > 1200) return
 		document.addEventListener('touchstart', handleTouchStart)
 		document.addEventListener('touchmove', handleTouchMove)
@@ -63,20 +63,20 @@ const NavBar = ({history}) => {
 	}
 
 	return (
-		<Stagger in delay={130} duration={1000} className='nav-bar'>
-			{sections.map(({ id, name, text }) => (
-				<Fade className='link-fade-wrap' in key={id}>
-					<Link
-						to={`/${name}#page`}
-						smooth
-						className='nav-link'
-						scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-						>
-						{text}
-					</Link>
-				</Fade>
-			))}
-		</Stagger>
+			<Stagger in delay={130} duration={1000} className='nav-bar'>
+				{sections.map(({ id, name, text }) => (
+					<Fade className='link-fade-wrap' in key={id}>
+						<Link
+							to={`/${name}#page`}
+							smooth
+							className='nav-link'
+							scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+							>
+							{text}
+						</Link>
+					</Fade>
+				))}
+			</Stagger>
 	);
 };
 

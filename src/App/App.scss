@@ -16,7 +16,7 @@ div, a, p, span, h1, h2, h3, h4, h5, h6, img, svg {
 	background-color: unset;
 }
 
-// attempt at a custom cursor, not working properly, needs further research
+// attempt at a custom cursor, not working properly, TODO -> needs further research
 a {
 	// cursor: url(/assets/pointer-v01.png) 1 1, auto;
 }
@@ -40,6 +40,7 @@ h6 {
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
 	.grid-container {
 		grid-template-columns: 16vw 84vw;
+		height: calc(var(--vh) * 100);
 	}
 }
 
@@ -50,14 +51,3 @@ h6 {
 		height: unset;
 	}
 }
-
-// @media only screen and (max-width: 300px) {
-// 	.grid-container {
-// 		grid-template-rows: 4rem 3rem auto 3rem 2rem;
-// 	}
-
-// 	.section-footer {
-// 		background-color: $color-third;
-// 		padding-top: 0.1rem;
-// 	}
-// }
