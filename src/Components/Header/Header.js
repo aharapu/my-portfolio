@@ -23,7 +23,6 @@ export const Header = () => {
 
 	const handleWindowScroll = (event) => {
 		let currentScrollOffset = window.pageYOffset
-		console.log('nav elem', headerElem.current)
 		if (prevScrollOffset.current > currentScrollOffset) {
 			headerElem.current.style.top = '0'
 		  } else {

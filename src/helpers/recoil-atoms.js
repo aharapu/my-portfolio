@@ -25,11 +25,3 @@ export const sectionMainElemAtom = atom({
 	key: 'sectionMainElem',
 	default: null,
 });
-export const transitionReverseAtom = atom({
-	key: 'isReverse',
-	default: true,
-});
-export const pageContainerAtom = atom({
-	key: 'pageElement',
-	default: null,
-});

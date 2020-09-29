@@ -1,36 +1,43 @@
 import React, { useRef } from 'react';
 import faker from 'faker';
+import Slider from "react-slick"
 import linkIcon from './link-icon.svg';
 
-export const Preview = ({ websiteUrl, githubRepo, linkIcon, preview }) => {
-	const imageWrapRef = useRef(null);
+const CustomArrow = (props) => {
+	const { className, onClick } = props;
+	return (
+		<div className={`${className} carousel-arrows`} onClick={onClick}>
+			{'>'}
+		</div>
+	);
+}
+
+const Preview = ({ websiteUrl, githubRepo, linkIcon }) => {
 	const projectLinkRef = useRef(null);
-	const addProjectHover = event => {
-		event.preventDefault();
-		imageWrapRef.current.classList.add('preview-hover');
-		projectLinkRef.current.classList.add('preview-hover');
-	};
-	const removeProjectHover = event => {
-		event.preventDefault();
-		imageWrapRef.current.classList.remove('preview-hover');
-		projectLinkRef.current.classList.remove('preview-hover');
-	};
+
+	const carouselSettings = {
+		dots: false,
+		infinite: true,
+		speed: 500,
+		fade: false,		
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false, // TODO -> add or remove arrows based on browser window width
+		nextArrow: <CustomArrow />,
+      	prevArrow: <CustomArrow />
+	}
+
 	return (
 		<>
-			<a
-				onMouseEnter={addProjectHover}
-				onMouseLeave={removeProjectHover}
-				className='preview-link-wrap'
-				href={websiteUrl}
-				target='_blank'
-				rel='noopener noreferrer'>
-				<img
-					ref={imageWrapRef}
-					className='project-preview'
-					alt='project preview'
-					src={preview.fields.file.url}
-				/>
-			</a>
+			<Slider {...carouselSettings} className='card-carousel'>
+				{/* map a list of images */}
+				<div>
+					<div style={{width: 600, height: 400, background: '#AAA'}}></div>
+				</div>
+				<div>
+					<div style={{width: 600, height: 400, backgroundImage: 'url("https://source.unsplash.com/random")', backgroundSize: 'cover'}} />
+				</div>
+			</Slider>
 			<div className='project-card-links'>
 				<a
 					className='card-link'
@@ -42,8 +49,6 @@ export const Preview = ({ websiteUrl, githubRepo, linkIcon, preview }) => {
 				</a>
 				<a
 					ref={projectLinkRef}
-					onMouseEnter={addProjectHover}
-					onMouseLeave={removeProjectHover}
 					className='card-link'
 					href={websiteUrl}
 					target='_blank'
@@ -61,7 +66,7 @@ const ProjectCard = ({ id, cardData }) => {
 
 	return (
 		<div id={id} className='project-card'>
-			<h3>{name}</h3>
+			<h3>{name}</h3>			
 			<Preview
 				websiteUrl={websiteUrl}
 				githubRepo={githubRepo}

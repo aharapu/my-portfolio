@@ -25,7 +25,7 @@ const AboutContainer = () => {
 	if (!aboutDataState) return null;
 	return (
 		<div className='about-container'>
-			<h3 id={ABOUT_ANCHORS.data[0].id} className='about-title'>A little history</h3>
+			<h3 id={ABOUT_ANCHORS.data[0].id} className='about-title'>A short history</h3>
 			<img
 				className='valentin'
 				src={aboutDataState.includes.Asset[0].fields.file.url}

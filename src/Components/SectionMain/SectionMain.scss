@@ -12,12 +12,8 @@
 	position: relative;
 }
 
-.page-container {
-	// transition: transform 0.5s ease-out; TODO -> find a way to make this a smooth experience
-}
-
 // routing animation classes
-.page, .page-reverse {
+.page {
 	position: relative;
 	padding: 6% 10%;
 	width: 67vw;
@@ -26,46 +22,24 @@
 
 .page-enter {
 	position: absolute;
-	transform: translateX(-300vw);
+	opacity: 0;
 }
 
 .page-enter-active {
 	position: relative;
-	transform: translateX(0);
-	transition: transform 1700ms;
+	opacity: 1;
+	transition: opacity 500ms;
 }
 
 .page-exit {
 	position: absolute;
-	transform: translateX(0);
+	opacity: 1;
 }
 
 .page-exit-active {
 	position: absolute;
-	transform: translateX(300vw);
-	transition: transform 1700ms;
-}
-
-.page-reverse-enter {
-	position: absolute;
-	transform: translateX(300vw);
-}
-
-.page-reverse-enter-active {
-	position: relative;
-	transform: translateX(0);
-	transition: transform 1700ms;
-}
-
-.page-reverse-exit {
-	position: absolute;
-	transform: translateX(0);
-}
-
-.page-reverse-exit-active {
-	position: absolute;
-	transform: translateX(-300vw);
-	transition: transform 1700ms;
+	opacity: 0;
+	transition: opacity 500ms;
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1200px) {

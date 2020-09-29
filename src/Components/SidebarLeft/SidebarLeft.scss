@@ -12,10 +12,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	overflow-y: scroll;
-
-	.link-outside-wrap{
-	}
+	overflow: hidden;
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
