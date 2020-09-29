@@ -12,7 +12,7 @@ const CustomArrow = (props) => {
 	);
 }
 
-const Preview = ({ websiteUrl, githubRepo, linkIcon }) => {
+const Preview = ({ websiteUrl, githubRepo, linkIcon, previewImages }) => {
 	const projectLinkRef = useRef(null);
 
 	const carouselSettings = {
@@ -22,33 +22,32 @@ const Preview = ({ websiteUrl, githubRepo, linkIcon }) => {
 		fade: false,		
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows: false, // TODO -> add or remove arrows based on browser window width
+		arrows: true, // TODO -> add or remove arrows based on browser window width
 		nextArrow: <CustomArrow />,
       	prevArrow: <CustomArrow />
 	}
 
+	console.log('previewImages', previewImages)
 	return (
 		<>
 			<Slider {...carouselSettings} className='card-carousel'>
 				{/* map a list of images */}
-				<div>
-					<div style={{width: 600, height: 400, background: '#AAA'}}></div>
-				</div>
-				<div>
-					<div style={{width: 600, height: 400, backgroundImage: 'url("https://source.unsplash.com/random")', backgroundSize: 'cover'}} />
-				</div>
+				{previewImages.map( (item, idx) => (
+					<div key={idx}>
+						<div style={{width: 800, height: 450, backgroundImage: `url("${item.fields.file.url}")`, backgroundSize: 'cover'}} />
+					</div>
+				))}
 			</Slider>
 			<div className='project-card-links'>
-				<a
+				{githubRepo && <a
 					className='card-link'
 					href={githubRepo}
 					target='_blank'
 					rel='noopener noreferrer'>
 					<img className='link-icon' alt='link icon' src={linkIcon} />
 					<h6 className='link-text'>GITHUB</h6>
-				</a>
+				</a>}
 				<a
-					ref={projectLinkRef}
 					className='card-link'
 					href={websiteUrl}
 					target='_blank'
@@ -62,7 +61,7 @@ const Preview = ({ websiteUrl, githubRepo, linkIcon }) => {
 };
 
 const ProjectCard = ({ id, cardData }) => {
-	const { name, description, preview, technologies, githubRepo, websiteUrl } = { ...cardData };
+	const { name, description, preview, technologies, githubRepo, websiteUrl, previewImages } = { ...cardData };
 
 	return (
 		<div id={id} className='project-card'>
@@ -72,6 +71,7 @@ const ProjectCard = ({ id, cardData }) => {
 				githubRepo={githubRepo}
 				linkIcon={linkIcon}
 				preview={preview}
+				previewImages={previewImages}
 			/>
 			<p>{description}</p>
 			<div className='tech-stack'>
@@ -79,7 +79,8 @@ const ProjectCard = ({ id, cardData }) => {
 				{technologies.map((item, index) => (
 					<img
 						key={index}
-						alt='link icon'
+						alt={item}
+						title={item}
 						src={`${process.env.PUBLIC_URL}/assets/static/${item}.svg`}
 					/>
 				))}

@@ -24,11 +24,11 @@ const ProjectsContainer = () => {
 			<h2 className='projects-container-title'>My Projects</h2>
 			<p className='projects-container-description'>{PROJECT_DESC}</p>
 			<div className='project-container-cards'>
-				{projectData.items.map(project => (
+				{projectData.items.map(({sys, fields}) => (
 					<ProjectCard
-						id={project.sys.id}
-						key={project.sys.id}
-						cardData={project.fields}
+						id={sys.id}
+						key={sys.id}
+						cardData={fields}
 					/>
 				))}
 			</div>

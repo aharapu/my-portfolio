@@ -15,9 +15,9 @@
 	}
 
 	.card-carousel {
-		width: 600px;
-		height: 400px;
-		margin: 50px;
+		width: 800px;
+		height: 450px;
+		margin-bottom: 10px;
 
 		.carousel-arrows {
 			height: 20px;
@@ -29,19 +29,20 @@
 			align-items: center;
 			&::before{
 				font-size: 10px;
-				font-weight: 900;
-				
+				font-weight: 900;				
 				padding-bottom: 2px;
 				transform: scaleY(2.1);
 			}
 		}
 		.carousel-arrows.slick-prev {
+			left: -40px;
 			&::before{
 				content: '<';
 				padding-right: 2.5px;
 			}
 		}
 		.carousel-arrows.slick-next {
+			right: -40px;
 			&::before{
 				content: '>';
 				padding-left: 2.5px;
