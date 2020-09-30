@@ -1,7 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import faker from 'faker';
 import Slider from "react-slick"
 import linkIcon from './link-icon.svg';
+
+const pageWidth = document.body.offsetWidth
 
 const CustomArrow = (props) => {
 	const { className, onClick } = props;
@@ -12,30 +14,29 @@ const CustomArrow = (props) => {
 	);
 }
 
-const Preview = ({ websiteUrl, githubRepo, linkIcon, previewImages }) => {
-	const projectLinkRef = useRef(null);
+const carouselSettings = {
+	dots: false,
+	adaptiveHeight: false,
+	infinite: true,
+	speed: 500,
+	fade: false,		
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: pageWidth > 800 ? true : false, 
+	nextArrow: <CustomArrow />,
+	prevArrow: <CustomArrow />
+}
 
-	const carouselSettings = {
-		dots: false,
-		adaptiveHeight: false,
-		infinite: true,
-		speed: 500,
-		fade: false,		
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: true, // TODO -> add or remove arrows based on browser window width
-		nextArrow: <CustomArrow />,
-      	prevArrow: <CustomArrow />
-	}
-
-	// TODO -> to make the carousel responsive, it is best to make the image divs responsive	
-	// the height is dictated by the inner div, the width is dictated by the carousel, which is a 100% of project card width
+const Preview = ({ websiteUrl, githubRepo, linkIcon, previewImages, cardElem }) => {
+	let carouselImgHeight
+	if (cardElem) carouselImgHeight = cardElem.clientWidth * 0.5625	// a 16/9 aspect ratio
+	
 	return (
 		<>
 			<Slider {...carouselSettings} className='card-carousel'>
 				{previewImages.map( (item, idx) => (
 					<div key={idx}>
-						<div style={{width: 'auto', height: 400, backgroundImage: `url("${item.fields.file.url}")`, backgroundSize: 'cover'}} />
+						<div style={{width: 'auto', height: carouselImgHeight || 400, backgroundImage: `url("${item.fields.file.url}")`, backgroundSize: 'cover'}} />
 					</div>
 				))}
 			</Slider>
@@ -63,9 +64,15 @@ const Preview = ({ websiteUrl, githubRepo, linkIcon, previewImages }) => {
 
 const ProjectCard = ({ id, cardData }) => {
 	const { name, description, preview, technologies, githubRepo, websiteUrl, previewImages } = { ...cardData };
+	const cardElemRef = useRef(null)
+	const [cardElem, setCardElem] = useState(null)
+
+	useEffect(() => {
+		setCardElem(cardElemRef.current)
+	}, [])
 
 	return (
-		<div id={id} className='project-card'>
+		<div id={id} className='project-card' ref={cardElemRef}>
 			<h3>{name}</h3>			
 			<Preview
 				websiteUrl={websiteUrl}
@@ -73,6 +80,7 @@ const ProjectCard = ({ id, cardData }) => {
 				linkIcon={linkIcon}
 				preview={preview}
 				previewImages={previewImages}
+				cardElem={cardElem}
 			/>
 			<p>{description}</p>
 			<div className='tech-stack'>
