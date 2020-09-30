@@ -130,8 +130,14 @@
 
 @media only screen and (max-width: 800px) {
 	.project-card {
-		.preview-link-wrap {
-			width: 100%;
+		.card-carousel {
+			width: 96vw;
+			margin-bottom: 24px;
+		}
+		.project-card-links {
+			a.card-link {
+				margin: 0.5rem 0.8rem;
+			}
 		}
 		p {
 			padding: 0 5%;

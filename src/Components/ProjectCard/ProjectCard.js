@@ -15,7 +15,7 @@ const CustomArrow = (props) => {
 }
 
 const carouselSettings = {
-	dots: false,
+	dots:  pageWidth < 800 ? true : false,
 	adaptiveHeight: false,
 	infinite: true,
 	speed: 500,
