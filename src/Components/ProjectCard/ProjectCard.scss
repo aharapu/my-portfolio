@@ -1,6 +1,6 @@
 .project-card {
 	color: $color-third;
-	// border-bottom: 2px solid $color-first-op88;
+	width: 100%;
 	padding: 5rem 0;
 	display: flex;
 	flex-direction: column;
@@ -15,8 +15,7 @@
 	}
 
 	.card-carousel {
-		width: 800px;
-		height: 450px;
+		width: 100%;
 		margin-bottom: 10px;
 
 		.carousel-arrows {
@@ -49,25 +48,7 @@
 			}
 		}
 	}
-
-	.preview-link-wrap {
-		margin-bottom: 1.4rem;
-		position: relative;
-		width: 115%;
-
-		img.project-preview {
-			width: 100%;
-			border-radius: 0 25px 25px 25px;
-			box-shadow: 7px 6px $color-second-transparent;
-			display: block;
-			transition: opacity ease-out 250ms;
-
-		}
-
-		img.preview-hover {
-			filter: brightness(0.6) blur(1px);
-		}
-	}
+	
 
 	.project-card-links {
 		width: 220px;

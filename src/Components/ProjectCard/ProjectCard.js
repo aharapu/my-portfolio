@@ -17,6 +17,7 @@ const Preview = ({ websiteUrl, githubRepo, linkIcon, previewImages }) => {
 
 	const carouselSettings = {
 		dots: false,
+		adaptiveHeight: false,
 		infinite: true,
 		speed: 500,
 		fade: false,		
@@ -27,14 +28,14 @@ const Preview = ({ websiteUrl, githubRepo, linkIcon, previewImages }) => {
       	prevArrow: <CustomArrow />
 	}
 
-	console.log('previewImages', previewImages)
+	// TODO -> to make the carousel responsive, it is best to make the image divs responsive	
+	// the height is dictated by the inner div, the width is dictated by the carousel, which is a 100% of project card width
 	return (
 		<>
 			<Slider {...carouselSettings} className='card-carousel'>
-				{/* map a list of images */}
 				{previewImages.map( (item, idx) => (
 					<div key={idx}>
-						<div style={{width: 800, height: 450, backgroundImage: `url("${item.fields.file.url}")`, backgroundSize: 'cover'}} />
+						<div style={{width: 'auto', height: 400, backgroundImage: `url("${item.fields.file.url}")`, backgroundSize: 'cover'}} />
 					</div>
 				))}
 			</Slider>
