@@ -11,9 +11,16 @@ const ModalLanding = () => {
 	};
 	
 	if (!isModalShown) {
-		const scrollY = document.body.style.top;
 		document.body.style.position = '';
 		document.body.style.top = '';
+		console.log('document.body.scrollHeight', document.body.scrollHeight)
+		if (document.body.offsetWidth < 1200 && document.body.offsetWidth > 800 ) {
+			// document.documentElement.scrollTo({x: 0,y: document.body.scrollHeight, behavior: 'smooth'})
+			// document.documentElement.scrollTo({x: 0,y: 20, behavior: 'smooth'})
+			// document.documentElement.requestFullscreen()
+			return null
+		}
+		const scrollY = document.body.style.top;
 		window.scrollTo(0, parseInt(scrollY || '0') * -1);
 		return null;
 	} 

@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import { useSetRecoilState } from 'recoil';
 import { isModalShownAtom } from '../../helpers/recoil-atoms'
 import NavBar from '../NavBar';
-import { ReactComponent as Logo } from './logo-v05.svg';
+import { ReactComponent as Logo } from './logo.svg';
 
 const pageWidth = document.body.offsetWidth
 

@@ -27,7 +27,6 @@ const App = () => {
 		})
 		.catch( err => setApiErrState(err))
 		document.documentElement.style.setProperty('--vh', `${vh}px`)
-
 	}, [setProjectDataState, setLinkDataState, setApiErrState, setAboutDataState]);
 
 	return (
