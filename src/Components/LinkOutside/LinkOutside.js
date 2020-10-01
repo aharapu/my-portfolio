@@ -4,8 +4,7 @@ import icons from './styledIcons';
 
 class LinkOutside extends React.PureComponent {
 	render() {
-		console.log('this.props: ', this.props);
-		const { name, icon, linkSrc } = { ...this.props.info };
+		const { name, linkSrc } = { ...this.props.info };
 		return (
 			<a className='link-outside' href={linkSrc} target='_blank' rel='noopener noreferrer'>
 				<h5>{name}</h5>

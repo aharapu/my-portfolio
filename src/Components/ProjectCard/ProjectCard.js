@@ -49,14 +49,14 @@ const Preview = ({ websiteUrl, githubRepo, linkIcon, previewImages, cardElem }) 
 					<img className='link-icon' alt='link icon' src={linkIcon} />
 					<h6 className='link-text'>GITHUB</h6>
 				</a>}
-				<a
+				{websiteUrl && <a
 					className='card-link'
 					href={websiteUrl}
 					target='_blank'
 					rel='noopener noreferrer'>
 					<img className='link-icon' alt='link icon' src={linkIcon} />
 					<h6 className='link-text'>WEBSITE</h6>
-				</a>
+				</a>}
 			</div>
 		</>
 	);

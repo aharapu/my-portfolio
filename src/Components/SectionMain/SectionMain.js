@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
 import { sections } from '../../content/sections'
@@ -8,9 +8,15 @@ const pageWidth = document.body.offsetWidth
 
 const SectionMain = () => {
 	const sectionMainRef = useRef(null)
+	const [refLoaded, setRefLoaded] = useState(false)
 
+	useEffect(() => {
+		if (sectionMainRef.current) setRefLoaded(true)
+	}, [sectionMainRef])
 	const scrollToTop = () => {
-		if (sectionMainRef.current & pageWidth > 800) sectionMainRef.current.scrollTo({ behavior: 'smooth', top: 0, left: 0 })
+		if (refLoaded & pageWidth > 800) {
+			sectionMainRef.current.scrollTo({ behavior: 'smooth', top: 0, left: 0 })
+		}
 		else window.scrollTo({ behavior: 'smooth', top: 50, left: 0 })
 	}
 
@@ -25,7 +31,7 @@ const SectionMain = () => {
 							classNames='page'
 							onEntered={scrollToTop}
 							unmountOnExit>
-							<div id='page' className='page'>
+							<div className='page'>
 								{comp}
 							</div>
 						</CSSTransition>

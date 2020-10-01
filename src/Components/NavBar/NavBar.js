@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashLink as Link } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 import { Stagger, Fade } from 'react-animation-components'
 import { sections } from '../../content/sections'
 
@@ -9,7 +9,7 @@ const NavBar = () => {
 				{sections.map(({ id, name, text }) => (
 					<Fade className='link-fade-wrap' in key={id}>
 						<Link
-							to={`/${name}#page`}
+							to={`/${name}`}
 							className='nav-link'
 							>
 							{text}
