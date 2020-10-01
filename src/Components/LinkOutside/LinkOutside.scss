@@ -9,15 +9,15 @@
 		color: $color-first-light;
 		text-decoration: none;
 		font-family: 'Noto Sans', sans-serif;
-		font-size: $fsize-small;
+		font-size: 1.2rem;
 		font-weight: 300;
-		transition-duration: 0.5s;
+		transition-duration: 0.3s;
 	}
-	img {
+	.styledIcon {
 		width: 32px;
 		height: 32px;
 		margin: 2px 7px 2px 13px;
-		transition-duration: 0.5s;
+		transition-duration: 0.3s;
 	}
 }
 
@@ -25,10 +25,7 @@
 	.link-outside {
 		&:hover {
 			h5 {
-				font-size: $fsize-medsmall;
-			}
-			img {
-				@include icon-m;
+				font-size: 1.35rem;
 			}
 		}
 	}
@@ -56,7 +53,7 @@
 
 @include media-xl {
 	.link-outside {
-		img {
+		.styledIcon {
 			margin: 5px 10px 5px 20px;
 		}
 	}
