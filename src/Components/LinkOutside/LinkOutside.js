@@ -3,8 +3,11 @@ import faker from 'faker';
 import icons from './styledIcons';
 
 class LinkOutside extends React.PureComponent {
+	
+
 	render() {
 		const { name, linkSrc } = { ...this.props.info };
+		console.log('this.props.info', this.props.info);
 		return (
 			<a className='link-outside' href={linkSrc} target='_blank' rel='noopener noreferrer'>
 				<h5>{name}</h5>

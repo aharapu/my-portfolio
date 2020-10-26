@@ -19,6 +19,8 @@ const SectionLinkOutside = () => {
 		const errorText = 'Oh, no! It crashed...';
 		return <ErrorMessage className='sidebar-left' text={errorText} />;
 	}
+
+	console.log('linkDataState', linkDataState)
 	return (
 		<Stagger in delay={130} duration={1000} className='sidebar-left'>
 			{linkDataState.items.map(({ sys, fields }) => (
