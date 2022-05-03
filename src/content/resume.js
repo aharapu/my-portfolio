@@ -20,6 +20,12 @@ export const resume = {
 	],
 	exp: [
 		{
+			company: 'Victory Square Partners',
+			location: 'Timisoara Romania',
+			title: 'Seniot Web Developer',
+			desc: 'Various projects with different stacks, mostly frontend.',
+		},
+		{
 			company: 'ReboTime',
 			location: 'Timisoara Romania',
 			title: 'Web Development Internship',
